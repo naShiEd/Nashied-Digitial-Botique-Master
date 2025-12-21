@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nashied Digital Boutique - Bold & Creative Design System */
+
+@layer base {
+  :root {
+    /* Nashied Brand Palette - Premium Light */
+    --background: 0 0% 100%;
+    --foreground: 225 44% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 44% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 44% 7%;
+
+    /* Primary: Golden Yellow (#ff8c04) */
+    --primary: 33 100% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary & Accent */
+    --secondary: 225 44% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted: Soft Gray */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 33 100% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 33 100% 51%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 240 5% 64.9%;
+
+    /* Nashied Brand Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 20% 98%));
+    --gradient-bold: linear-gradient(135deg, hsl(33 100% 51%), hsl(30 100% 45%));
+    --gradient-navy: linear-gradient(180deg, hsl(225 44% 7%), hsl(225 44% 12%));
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(33 100% 51% / 0.1), transparent 70%);
+
+    /* Bold Shadows */
+    --shadow-bold: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px hsl(33 100% 51% / 0.2);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+    /* Smooth Transitions */
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .dark {
+    --background: 225 44% 7%;
+    --foreground: 0 0% 100%;
+
+    --card: 225 44% 9%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 225 44% 9%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 33 100% 51%;
+    --primary-foreground: 227 45% 4%;
+
+    --secondary: 33 100% 51%;
+    --secondary-foreground: 227 45% 4%;
+
+    --muted: 227 45% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 33 100% 51%;
+    --accent-foreground: 227 45% 4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 227 45% 12%;
+    --input: 227 45% 10%;
+    --ring: 33 100% 51%;
+
+    --sidebar-background: 227 45% 3%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 33 100% 51%;
+    --sidebar-primary-foreground: 227 45% 4%;
+    --sidebar-accent: 227 45% 8%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 227 45% 10%;
+    --sidebar-ring: 33 100% 51%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(225 44% 7%), hsl(225 44% 12%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Nashied Bold Typography */
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+
+  .text-bold-heading {
+    font-family: 'Syne', sans-serif;
+    @apply tracking-[-0.02em] leading-[1.1] font-bold;
+  }
+
+  .text-minimal {
+    @apply tracking-[0.2em] uppercase text-xs font-semibold;
+  }
+
+  /* Hero Gradient Overlay */
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+
+  /* Orange Glow Effect */
+  .glow-orange {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Bold Reveal Animation */
+  .reveal {
+    @apply opacity-0 translate-y-8;
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .reveal-delayed {
+    @apply opacity-0 translate-y-8;
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  }
+
+  .reveal-delayed-2 {
+    @apply opacity-0 translate-y-8;
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  }
+
+  @keyframes reveal {
+    to {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, hsl(36 95% 54% / 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  /* Pulse Glow */
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(36 95% 54% / 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 40px hsl(36 95% 54% / 0.5);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}

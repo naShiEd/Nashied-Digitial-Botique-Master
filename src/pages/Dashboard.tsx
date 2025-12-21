@@ -119,8 +119,8 @@ const Dashboard = () => {
                 <div className="bg-card border border-border/40 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-2xl shadow-primary/5">
                     <div className="space-y-1">
                         <div className="flex items-center gap-3">
-                            <h2 className="text-3xl font-black font-display tracking-tight text-foreground uppercase">System: Online</h2>
-                            <Badge variant={isWorkHours ? "outline" : "secondary"} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-primary/5 text-primary border-primary/20">
+                            <h2 className="text-3xl font-bold font-display tracking-tight text-foreground uppercase">System: Online</h2>
+                            <Badge variant={isWorkHours ? "outline" : "secondary"} className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-primary/5 text-primary border-primary/20">
                                 {isWorkHours ? "In-Work Session" : "Standby Mode"}
                             </Badge>
                         </div>
@@ -131,11 +131,11 @@ const Dashboard = () => {
                     {isAdmin && (
                         <div className="flex gap-3">
                             {daySession?.status !== 'open' ? (
-                                <Button onClick={() => toggleDay('start')} className="h-12 px-8 bg-green-600 hover:bg-green-700 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl shadow-green-600/20">
+                                <Button onClick={() => toggleDay('start')} className="h-12 px-8 bg-green-600 hover:bg-green-700 rounded-xl font-bold text-[11px] uppercase tracking-widest shadow-xl shadow-green-600/20">
                                     <Zap className="mr-2 h-4 w-4" /> Initialize Workspace
                                 </Button>
                             ) : (
-                                <Button onClick={() => toggleDay('close')} variant="destructive" className="h-12 px-8 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl shadow-red-600/20">
+                                <Button onClick={() => toggleDay('close')} variant="destructive" className="h-12 px-8 rounded-xl font-bold text-[11px] uppercase tracking-widest shadow-xl shadow-red-600/20">
                                     <ZapOff className="mr-2 h-4 w-4" /> Close Operations
                                 </Button>
                             )}
@@ -155,7 +155,7 @@ const Dashboard = () => {
                     {/* RISK MONITOR */}
                     <Card className="lg:col-span-1 border-border/40 shadow-2xl rounded-3xl bg-card overflow-hidden">
                         <CardHeader className="p-8 border-b border-border/10">
-                            <CardTitle className="text-sm font-black uppercase tracking-widest flex items-center justify-between">
+                            <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center justify-between">
                                 Risk Inventory <Activity className="h-4 w-4 text-primary" />
                             </CardTitle>
                         </CardHeader>
@@ -176,7 +176,7 @@ const Dashboard = () => {
                     <Card className="lg:col-span-2 border-border/40 shadow-2xl rounded-3xl bg-card overflow-hidden">
                         <CardHeader className="p-8 border-b border-border/10 flex flex-row items-center justify-between">
                             <div className="space-y-1">
-                                <CardTitle className="text-sm font-black uppercase tracking-widest">Revenue Velocity</CardTitle>
+                                <CardTitle className="text-sm font-bold uppercase tracking-widest">Revenue Velocity</CardTitle>
                                 <p className="text-[10px] font-bold text-muted-foreground uppercase opacity-50">6-Month Liquidity Path</p>
                             </div>
                             <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg"><ChevronDown className="h-4 w-4" /></Button>
@@ -209,8 +209,8 @@ const Dashboard = () => {
 
 const WatchItem = ({ label, value, color }: any) => (
     <div className="flex justify-between items-center group">
-        <span className="text-[11px] font-black uppercase tracking-tight text-muted-foreground group-hover:text-foreground transition-colors">{label}</span>
-        <span className={cn("text-xs font-black tabular-nums", color)}>{value}</span>
+        <span className="text-[11px] font-bold uppercase tracking-tight text-muted-foreground group-hover:text-foreground transition-colors">{label}</span>
+        <span className={cn("text-xs font-bold tabular-nums", color)}>{value}</span>
     </div>
 );
 
@@ -221,13 +221,13 @@ const StatsCard = ({ title, value, icon: Icon, trend, color }: any) => (
                 <div className={cn("p-3 rounded-2xl bg-muted transition-transform group-hover:scale-110", color)}>
                     <Icon className="h-6 w-6" />
                 </div>
-                <Badge className="bg-muted text-muted-foreground text-[9px] font-black uppercase tracking-widest border-none">Sync active</Badge>
+                <Badge className="bg-muted text-muted-foreground text-[9px] font-bold uppercase tracking-widest border-none">Sync active</Badge>
             </div>
             <div>
-                <p className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-1">{title}</p>
+                <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-widest mb-1">{title}</p>
                 <div className="flex items-baseline gap-2">
-                    <h3 className="text-3xl font-black font-display tracking-tight text-foreground">{value}</h3>
-                    <span className="text-[10px] font-black text-green-500 uppercase tracking-tighter">{trend}</span>
+                    <h3 className="text-3xl font-bold font-display tracking-tight text-foreground">{value}</h3>
+                    <span className="text-[10px] font-bold text-green-500 uppercase tracking-tighter">{trend}</span>
                 </div>
             </div>
         </CardContent>

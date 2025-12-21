@@ -146,16 +146,16 @@ const Reports = () => {
                     </div>
                     <div className="relative z-10 space-y-2">
                         <div className="flex items-center gap-3">
-                            <h2 className="text-4xl font-black font-display tracking-tight text-foreground uppercase">Revenue Matrix</h2>
-                            <Badge className="bg-primary/10 text-primary border-primary/20 font-black text-[10px] uppercase tracking-widest px-3 py-1">2025 FISCAL</Badge>
+                            <h2 className="text-4xl font-bold font-display tracking-tight text-foreground uppercase">Revenue Matrix</h2>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 font-bold text-[10px] uppercase tracking-widest px-3 py-1">2025 FISCAL</Badge>
                         </div>
                         <p className="text-sm font-bold text-muted-foreground uppercase tracking-[0.3em] opacity-60">Architecting global agency performance data</p>
                     </div>
                     <div className="flex gap-4 relative z-10">
-                        <Button variant="outline" className="h-12 rounded-xl border-border/60 font-black text-[11px] uppercase tracking-widest px-8 hover:bg-muted transition-all">
+                        <Button variant="outline" className="h-12 rounded-xl border-border/60 font-bold text-[11px] uppercase tracking-widest px-8 hover:bg-muted transition-all">
                             <Download className="mr-3 h-4 w-4" /> Export Financial PDF
                         </Button>
-                        <Button className="h-12 rounded-xl bg-primary hover:bg-primary/95 font-black text-[11px] uppercase tracking-widest px-8 shadow-xl shadow-primary/20 transition-all">
+                        <Button className="h-12 rounded-xl bg-primary hover:bg-primary/95 font-bold text-[11px] uppercase tracking-widest px-8 shadow-xl shadow-primary/20 transition-all">
                             <Calendar className="mr-3 h-4 w-4" /> Global Filter
                         </Button>
                     </div>
@@ -175,7 +175,7 @@ const Reports = () => {
                     {/* Monthly Trajectory (Recharts AreaChart) */}
                     <Card className="lg:col-span-2 border-border/40 shadow-2xl rounded-3xl bg-card overflow-hidden">
                         <CardHeader className="p-8 border-b border-border/10">
-                            <CardTitle className="text-lg font-black uppercase tracking-tight flex items-center gap-2">
+                            <CardTitle className="text-lg font-bold uppercase tracking-tight flex items-center gap-2">
                                 <TrendingUp className="h-5 w-5 text-primary" /> Performance Trajectory
                             </CardTitle>
                             <CardDescription className="text-[10px] uppercase font-bold tracking-widest opacity-60">6-Month Revenue vs Expenditure Analysis</CardDescription>
@@ -210,7 +210,7 @@ const Reports = () => {
                     {/* Aged Receivables (Recharts BarChart) */}
                     <Card className="border-border/40 shadow-2xl rounded-3xl bg-card overflow-hidden">
                         <CardHeader className="p-8 border-b border-border/10">
-                            <CardTitle className="text-lg font-black uppercase tracking-tight flex items-center gap-2">
+                            <CardTitle className="text-lg font-bold uppercase tracking-tight flex items-center gap-2">
                                 <CreditCard className="h-5 w-5 text-orange-500" /> Aged Receivables
                             </CardTitle>
                             <CardDescription className="text-[10px] uppercase font-bold tracking-widest opacity-60">Outstanding Debt Distribution</CardDescription>
@@ -260,11 +260,11 @@ const Reports = () => {
                                 </ResponsiveContainer>
                             </div>
                             <div className="w-1/2 space-y-4">
-                                <h3 className="text-xl font-black uppercase tracking-tighter">Proposal Velocity</h3>
+                                <h3 className="text-xl font-bold uppercase tracking-tighter">Proposal Velocity</h3>
                                 <p className="text-xs text-muted-foreground font-medium italic">Breakdown of current sales efforts and conversion health.</p>
                                 <div className="space-y-2 pt-4">
                                     {data.pipelineStatus.map((p: any, i: number) => (
-                                        <div key={i} className="flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
+                                        <div key={i} className="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
                                             <div className="flex items-center gap-2">
                                                 <div className="h-2 w-2 rounded-full" style={{ backgroundColor: ['#6366f1', '#3b82f6', '#10b981', '#ef4444'][i % 4] }} />
                                                 {p.name}
@@ -283,24 +283,24 @@ const Reports = () => {
                             <Target className="h-48 w-48 text-primary" />
                         </div>
                         <CardHeader className="p-10 pb-4">
-                            <CardTitle className="text-xl font-black uppercase tracking-tighter text-primary">Regional Compliance Hub</CardTitle>
+                            <CardTitle className="text-xl font-bold uppercase tracking-tighter text-primary">Regional Compliance Hub</CardTitle>
                             <CardDescription className="text-xs font-bold uppercase tracking-widest opacity-60">Estimated Statutory Projections (Zimbabwe Jurisdiction)</CardDescription>
                         </CardHeader>
                         <CardContent className="p-10 pt-0 grid grid-cols-2 gap-10">
                             <div className="space-y-1">
-                                <p className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Estimated Q1 CIT</p>
-                                <p className="text-3xl font-black text-foreground">${(data.stats.profit * 0.25).toLocaleString()}</p>
+                                <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-widest">Estimated Q1 CIT</p>
+                                <p className="text-3xl font-bold text-foreground">${(data.stats.profit * 0.25).toLocaleString()}</p>
                             </div>
                             <div className="space-y-1">
-                                <p className="text-[10px] font-black uppercase text-muted-foreground tracking-widest">Aggregate VAT Pool</p>
-                                <p className="text-3xl font-black text-foreground">${(data.stats.revenue * 0.15).toLocaleString()}</p>
+                                <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-widest">Aggregate VAT Pool</p>
+                                <p className="text-3xl font-bold text-foreground">${(data.stats.revenue * 0.15).toLocaleString()}</p>
                             </div>
                             <div className="col-span-2 p-6 rounded-2xl bg-white/50 border border-primary/10 flex items-center justify-between">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-green-500 rounded-lg"><Activity className="h-4 w-4 text-white" /></div>
-                                    <span className="text-xs font-black uppercase">Statutory Safety Margin</span>
+                                    <span className="text-xs font-bold uppercase">Statutory Safety Margin</span>
                                 </div>
-                                <span className="text-xl font-black text-green-600">35.4%</span>
+                                <span className="text-xl font-bold text-green-600">35.4%</span>
                             </div>
                         </CardContent>
                     </Card>
@@ -319,13 +319,13 @@ const KPICard = ({ title, value, trend, icon: Icon, color }: any) => (
                 <div className={cn("p-3 rounded-2xl bg-muted transition-transform group-hover:scale-110", color)}>
                     <Icon className="h-6 w-6" />
                 </div>
-                <Badge className="bg-muted text-muted-foreground text-[9px] font-black uppercase tracking-widest border-none">Live Sync</Badge>
+                <Badge className="bg-muted text-muted-foreground text-[9px] font-bold uppercase tracking-widest border-none">Live Sync</Badge>
             </div>
             <div>
-                <p className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-1">{title}</p>
+                <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-widest mb-1">{title}</p>
                 <div className="flex items-baseline gap-2">
-                    <h3 className="text-3xl font-black font-display tracking-tight text-foreground">{value}</h3>
-                    <span className="text-[10px] font-black text-green-500 uppercase tracking-tighter">{trend}</span>
+                    <h3 className="text-3xl font-bold font-display tracking-tight text-foreground">{value}</h3>
+                    <span className="text-[10px] font-bold text-green-500 uppercase tracking-tighter">{trend}</span>
                 </div>
             </div>
         </CardContent>

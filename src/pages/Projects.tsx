@@ -243,7 +243,7 @@ const Projects = () => {
                                         {isAddClientOpen ? (
                                             <div className="space-y-4 animate-in slide-in-from-top-1 duration-300 bg-primary/5 p-4 rounded-xl border border-primary/20">
                                                 <div className="flex items-center gap-4">
-                                                    <Label className="text-[10px] font-black uppercase">Type:</Label>
+                                                    <Label className="text-[10px] font-bold uppercase">Type:</Label>
                                                     <div className="flex gap-2">
                                                         {['Business', 'Individual'].map(t => (
                                                             <button
@@ -325,7 +325,7 @@ const Projects = () => {
             <div className="bg-card border border-border/50 rounded-2xl shadow-sm overflow-hidden">
                 <table className="w-full text-left border-collapse">
                     <thead className="bg-muted/30 border-b border-border/50 animate-in fade-in duration-500">
-                        <tr className="text-[10px] uppercase tracking-widest font-black text-muted-foreground">
+                        <tr className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
                             <th className="px-6 py-4">Project Architecture</th>
                             <th className="px-6 py-4">Client</th>
                             <th className="px-6 py-4 text-center">Status</th>
@@ -350,7 +350,7 @@ const Projects = () => {
                                         <span className="text-xs font-bold text-primary">{project.client?.company_name}</span>
                                     </td>
                                     <td className="px-6 py-4 text-center">
-                                        <Badge className={cn("text-[10px] font-black uppercase tracking-tighter rounded-full px-3",
+                                        <Badge className={cn("text-[10px] font-bold uppercase tracking-tighter rounded-full px-3",
                                             project.status === 'Draft' ? "bg-muted text-muted-foreground" :
                                                 project.status === 'Active' ? "bg-blue-500 text-white shadow-lg shadow-blue-500/20" :
                                                     project.status === 'Completed' ? "bg-green-500 text-white" : "bg-red-500 text-white"
@@ -420,7 +420,7 @@ const Projects = () => {
                                                         <Lock className="h-4 w-4" /> Cancel Project
                                                     </DropdownMenuItem>
                                                     <DropdownMenuItem
-                                                        className="gap-2 font-black uppercase text-[10px]"
+                                                        className="gap-2 font-bold uppercase text-[10px]"
                                                         asChild
                                                     >
                                                         <Link to={`/dashboard/projects/${project.id}`}>

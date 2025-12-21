@@ -221,8 +221,8 @@ const SalesHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Pending Receivables</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">${stats.totalReceivables.toLocaleString()}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Pending Receivables</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">${stats.totalReceivables.toLocaleString()}</h3>
                                     <p className="text-xs text-red-500 font-bold mt-1 flex items-center gap-1">
                                         <AlertTriangle className="h-3 w-3" /> {stats.pendingInvoices} Overdue / Unpaid
                                     </p>
@@ -238,8 +238,8 @@ const SalesHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Revenue Potential</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">${stats.revenuePotential.toLocaleString()}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Revenue Potential</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">${stats.revenuePotential.toLocaleString()}</h3>
                                     <p className="text-xs text-green-500 font-bold mt-1 flex items-center gap-1">
                                         <CheckCircle2 className="h-3 w-3" /> From Accepted Quotes
                                     </p>
@@ -255,8 +255,8 @@ const SalesHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Active Quotes</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">{quotes.filter(q => q.status === 'sent').length}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Active Quotes</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">{quotes.filter(q => q.status === 'sent').length}</h3>
                                     <p className="text-xs text-blue-500 font-bold mt-1">Awaiting Client Response</p>
                                 </div>
                                 <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
@@ -287,19 +287,19 @@ const SalesHub = () => {
                                 </DialogTrigger>
                                 <DialogContent className="max-w-2xl bg-card border-border shadow-2xl rounded-2xl p-0 overflow-hidden">
                                     <DialogHeader className="p-6 bg-muted/30 border-b border-border/50">
-                                        <DialogTitle className="text-xl font-black uppercase tracking-tighter">Create New {transactionType}</DialogTitle>
+                                        <DialogTitle className="text-xl font-bold uppercase tracking-tighter">Create New {transactionType}</DialogTitle>
                                     </DialogHeader>
                                     <div className="p-6 space-y-4 max-h-[70vh] overflow-y-auto">
                                         <div className="grid grid-cols-2 gap-4">
                                             <div className="space-y-2">
-                                                <Label className="text-[10px] uppercase font-black text-muted-foreground">Type</Label>
+                                                <Label className="text-[10px] uppercase font-bold text-muted-foreground">Type</Label>
                                                 <Select value={transactionType} onValueChange={(val: any) => setTransactionType(val)}>
                                                     <SelectTrigger className="rounded-xl bg-muted/50 border-border/50"><SelectValue /></SelectTrigger>
                                                     <SelectContent className="rounded-xl"><SelectItem value="invoice">Invoice</SelectItem><SelectItem value="quote">Quote</SelectItem></SelectContent>
                                                 </Select>
                                             </div>
                                             <div className="space-y-2">
-                                                <Label className="text-[10px] uppercase font-black text-muted-foreground">Client</Label>
+                                                <Label className="text-[10px] uppercase font-bold text-muted-foreground">Client</Label>
                                                 <Select value={newTransaction.client_id} onValueChange={(val) => setNewTransaction({ ...newTransaction, client_id: val })}>
                                                     <SelectTrigger className="rounded-xl bg-muted/50 border-border/50"><SelectValue placeholder="Select Client" /></SelectTrigger>
                                                     <SelectContent className="rounded-xl">
@@ -311,7 +311,7 @@ const SalesHub = () => {
 
                                         <div className="grid grid-cols-2 gap-4">
                                             <div className="space-y-2">
-                                                <Label className="text-[10px] uppercase font-black text-muted-foreground">Project (Optional)</Label>
+                                                <Label className="text-[10px] uppercase font-bold text-muted-foreground">Project (Optional)</Label>
                                                 <Select value={newTransaction.project_id} onValueChange={(val) => setNewTransaction({ ...newTransaction, project_id: val })}>
                                                     <SelectTrigger className="rounded-xl bg-muted/50 border-border/50"><SelectValue placeholder="Select Project" /></SelectTrigger>
                                                     <SelectContent className="rounded-xl">
@@ -320,15 +320,15 @@ const SalesHub = () => {
                                                 </Select>
                                             </div>
                                             <div className="space-y-2">
-                                                <Label className="text-[10px] uppercase font-black text-muted-foreground">Due Date</Label>
+                                                <Label className="text-[10px] uppercase font-bold text-muted-foreground">Due Date</Label>
                                                 <Input type="date" value={newTransaction.due_date} onChange={(e) => setNewTransaction({ ...newTransaction, due_date: e.target.value })} className="rounded-xl bg-muted/50 border-border/50 px-4" />
                                             </div>
                                         </div>
 
                                         <div className="space-y-3 pt-4">
                                             <div className="flex justify-between items-center">
-                                                <Label className="text-[10px] uppercase font-black text-primary tracking-widest">Line Items</Label>
-                                                <Button size="sm" variant="ghost" onClick={() => setNewTransaction({ ...newTransaction, items: [...newTransaction.items, { description: '', quantity: 1, rate: 0 }] })} className="h-6 text-[9px] font-black uppercase text-primary bg-primary/10 rounded-full px-3">Add Item</Button>
+                                                <Label className="text-[10px] uppercase font-bold text-primary tracking-widest">Line Items</Label>
+                                                <Button size="sm" variant="ghost" onClick={() => setNewTransaction({ ...newTransaction, items: [...newTransaction.items, { description: '', quantity: 1, rate: 0 }] })} className="h-6 text-[9px] font-bold uppercase text-primary bg-primary/10 rounded-full px-3">Add Item</Button>
                                             </div>
                                             {newTransaction.items.map((item, idx) => (
                                                 <div key={idx} className="grid grid-cols-12 gap-2 items-start bg-muted/20 p-3 rounded-xl border border-border/30">
@@ -377,9 +377,9 @@ const SalesHub = () => {
                         <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-xl shadow-primary/5">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-muted/30 border-b border-border/50">
-                                    <tr className="text-[10px] uppercase tracking-[0.2em] font-black text-muted-foreground/60">
+                                    <tr className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground/60">
                                         <th className="px-6 py-5 w-10"><Input type="checkbox" className="h-3.5 w-3.5 rounded border-border/50" /></th>
-                                        <th className="px-4 py-5 font-black">Date</th>
+                                        <th className="px-4 py-5 font-bold">Date</th>
                                         <th className="px-4 py-5">Invoice#</th>
                                         <th className="px-4 py-5">Project</th>
                                         <th className="px-4 py-5">Customer Name</th>
@@ -402,11 +402,11 @@ const SalesHub = () => {
                                                     {new Date(inv.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
                                                 </td>
                                                 <td className="px-4 py-4">
-                                                    <span className="font-black font-mono text-xs text-primary group-hover:underline cursor-pointer" onClick={() => handleViewInvoice(inv)}>
+                                                    <span className="font-bold font-mono text-xs text-primary group-hover:underline cursor-pointer" onClick={() => handleViewInvoice(inv)}>
                                                         NASH-{inv.invoice_number || inv.id.slice(0, 5).toUpperCase()}
                                                     </span>
                                                 </td>
-                                                <td className="px-4 py-4 text-[10px] font-black uppercase text-muted-foreground/50 tracking-tighter">
+                                                <td className="px-4 py-4 text-[10px] font-bold uppercase text-muted-foreground/50 tracking-tighter">
                                                     {inv.project?.name || '---'}
                                                 </td>
                                                 <td className="px-4 py-4">
@@ -414,11 +414,11 @@ const SalesHub = () => {
                                                 </td>
                                                 <td className="px-4 py-4">
                                                     {isOverdue ? (
-                                                        <span className="text-[9px] font-black text-red-500 uppercase tracking-widest bg-red-500/5 px-2 py-1 rounded-full border border-red-500/10">
+                                                        <span className="text-[9px] font-bold text-red-500 uppercase tracking-widest bg-red-500/5 px-2 py-1 rounded-full border border-red-500/10">
                                                             OVERDUE BY {overdueDays} DAYS
                                                         </span>
                                                     ) : (
-                                                        <Badge variant="outline" className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3",
+                                                        <Badge variant="outline" className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3",
                                                             inv.status === 'paid' ? "bg-green-500 text-white border-none shadow-sm" :
                                                                 "bg-muted text-muted-foreground"
                                                         )}>
@@ -429,10 +429,10 @@ const SalesHub = () => {
                                                 <td className="px-4 py-4 text-[11px] font-bold text-muted-foreground/80">
                                                     {new Date(inv.due_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
                                                 </td>
-                                                <td className="px-4 py-4 text-right font-black text-xs">
+                                                <td className="px-4 py-4 text-right font-bold text-xs">
                                                     ${inv.total_amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                                                 </td>
-                                                <td className="px-4 py-4 text-right font-black text-xs text-foreground/80">
+                                                <td className="px-4 py-4 text-right font-bold text-xs text-foreground/80">
                                                     ${(inv.total_amount - (inv.amount_paid || 0)).toLocaleString('en-US', { minimumFractionDigits: 2 })}
                                                 </td>
                                                 <td className="px-6 py-4 text-right">
@@ -484,7 +484,7 @@ const SalesHub = () => {
                         <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-sm">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-muted/30 border-b border-border/50">
-                                    <tr className="text-[10px] uppercase tracking-widest font-black text-muted-foreground">
+                                    <tr className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
                                         <th className="px-6 py-4">Quote #</th>
                                         <th className="px-6 py-4">Client / Project</th>
                                         <th className="px-6 py-4">Expiry Date</th>
@@ -496,7 +496,7 @@ const SalesHub = () => {
                                 <tbody className="divide-y divide-border/30">
                                     {quotes.map((quote) => (
                                         <tr key={quote.id} className="group hover:bg-muted/20 transition-all">
-                                            <td className="px-6 py-4 font-black font-mono text-sm">
+                                            <td className="px-6 py-4 font-bold font-mono text-sm">
                                                 QUO-{quote.quote_number || quote.id.slice(0, 5).toUpperCase()}
                                             </td>
                                             <td className="px-6 py-4">
@@ -511,10 +511,10 @@ const SalesHub = () => {
                                                 </div>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <p className="font-black text-sm">${quote.total_amount.toLocaleString()}</p>
+                                                <p className="font-bold text-sm">${quote.total_amount.toLocaleString()}</p>
                                             </td>
                                             <td className="px-6 py-4 text-center">
-                                                <Badge className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3",
+                                                <Badge className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3",
                                                     quote.status === 'accepted' ? "bg-green-500 text-white" :
                                                         quote.status === 'draft' ? "bg-muted text-muted-foreground border border-border" :
                                                             quote.status === 'declined' ? "bg-red-500/10 text-red-600 border border-red-500/20" : "bg-blue-500 text-white"

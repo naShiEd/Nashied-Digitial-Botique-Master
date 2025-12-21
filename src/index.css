@@ -10,13 +10,13 @@
   :root {
     /* Nashied Brand Palette - Premium Light */
     --background: 0 0% 100%;
-    --foreground: 225 44% 7%;
+    --foreground: 224 50% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 225 44% 7%;
+    --card-foreground: 224 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 225 44% 7%;
+    --popover-foreground: 224 50% 15%;
 
     /* Primary: Golden Yellow (#ff8c04) */
     --primary: 33 100% 51%;
@@ -54,7 +54,7 @@
     /* Nashied Brand Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 20% 98%));
     --gradient-bold: linear-gradient(135deg, hsl(33 100% 51%), hsl(30 100% 45%));
-    --gradient-navy: linear-gradient(180deg, hsl(225 44% 7%), hsl(225 44% 12%));
+    --gradient-navy: linear-gradient(180deg, hsl(224 50% 15%), hsl(224 50% 20%));
     --gradient-glow: radial-gradient(circle at 50% 0%, hsl(33 100% 51% / 0.1), transparent 70%);
 
     /* Bold Shadows */
@@ -68,13 +68,13 @@
   }
 
   .dark {
-    --background: 225 44% 7%;
+    --background: 224 50% 15%;
     --foreground: 0 0% 100%;
 
-    --card: 225 44% 9%;
+    --card: 224 50% 18%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 225 44% 9%;
+    --popover: 224 50% 18%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 33 100% 51%;
@@ -105,7 +105,23 @@
     --sidebar-border: 227 45% 10%;
     --sidebar-ring: 33 100% 51%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(225 44% 7%), hsl(225 44% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(224 50% 15%), hsl(224 50% 20%));
+  }
+
+  @keyframes bounce-subtle {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 3s ease-in-out infinite;
   }
 }
 

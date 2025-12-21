@@ -127,8 +127,8 @@ const Settings = () => {
                 <div className="flex justify-between items-end bg-card p-8 rounded-3xl border border-border/50 shadow-xl shadow-primary/5">
                     <div className="space-y-1">
                         <div className="flex items-center gap-2">
-                            <h2 className="text-3xl font-black font-display tracking-tight text-foreground">Command Center</h2>
-                            <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20 text-[10px] font-black uppercase tracking-widest">Version 4.0.1</Badge>
+                            <h2 className="text-3xl font-bold font-display tracking-tight text-foreground">Command Center</h2>
+                            <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20 text-[10px] font-bold uppercase tracking-widest">Version 4.0.1</Badge>
                         </div>
                         <p className="text-xs font-bold text-muted-foreground uppercase tracking-[0.2em] opacity-60">Architecting the global operations of {org.name}</p>
                     </div>
@@ -161,7 +161,7 @@ const Settings = () => {
                                         <Building2 className="h-5 w-5 text-primary" />
                                     </div>
                                     <div>
-                                        <CardTitle className="text-xl font-black uppercase tracking-tighter">Business Infrastructure</CardTitle>
+                                        <CardTitle className="text-xl font-bold uppercase tracking-tighter">Business Infrastructure</CardTitle>
                                         <CardDescription>Legal registration and contact parameters for the master entity.</CardDescription>
                                     </div>
                                 </div>
@@ -169,30 +169,30 @@ const Settings = () => {
                             <CardContent className="p-8 pt-4 space-y-8">
                                 <div className="grid grid-cols-2 gap-8">
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Trade Name</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Trade Name</Label>
                                         <Input value={org.name} onChange={e => setOrg({ ...org, name: e.target.value })} className="h-12 rounded-xl border-border/60 bg-muted/20 font-bold" />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Legal Entity Name</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Legal Entity Name</Label>
                                         <Input value={org.legal_name} onChange={e => setOrg({ ...org, legal_name: e.target.value })} placeholder="Full Corporate Name" className="h-12 rounded-xl" />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-3 gap-6">
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Tax ID / VAT Number</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Tax ID / VAT Number</Label>
                                         <Input value={org.tax_number} onChange={e => setOrg({ ...org, tax_number: e.target.value })} className="h-11 rounded-xl" />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Business Reg Number</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Business Reg Number</Label>
                                         <Input value={org.reg_number} onChange={e => setOrg({ ...org, reg_number: e.target.value })} className="h-11 rounded-xl" />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Support Email</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Support Email</Label>
                                         <Input value={org.email} onChange={e => setOrg({ ...org, email: e.target.value })} placeholder="hello@youragency.com" className="h-11 rounded-xl" />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground text-primary">Regional Operations HQ</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground text-primary">Regional Operations HQ</Label>
                                     <div className="grid grid-cols-3 gap-4">
                                         <Input value={org.address_street} onChange={e => setOrg({ ...org, address_street: e.target.value })} placeholder="Street Address" className="h-11 rounded-xl col-span-2" />
                                         <Input value={org.address_city} onChange={e => setOrg({ ...org, address_city: e.target.value })} placeholder="City" className="h-11 rounded-xl" />
@@ -200,7 +200,7 @@ const Settings = () => {
                                 </div>
                             </CardContent>
                             <CardFooter className="p-8 bg-muted/5 border-t border-border/10 flex justify-end">
-                                <Button onClick={handleSaveOrg} disabled={loading} className="rounded-xl font-black uppercase text-[11px] h-12 tracking-widest px-10 shadow-xl shadow-primary/20">
+                                <Button onClick={handleSaveOrg} disabled={loading} className="rounded-xl font-bold uppercase text-[11px] h-12 tracking-widest px-10 shadow-xl shadow-primary/20">
                                     {loading ? "Syncing..." : "Finalize Parameters"}
                                 </Button>
                             </CardFooter>
@@ -217,41 +217,41 @@ const Settings = () => {
                                             <CreditCard className="h-5 w-5 text-orange-600" />
                                         </div>
                                         <div>
-                                            <CardTitle className="text-xl font-black uppercase tracking-tighter text-orange-600">Monetary Core</CardTitle>
+                                            <CardTitle className="text-xl font-bold uppercase tracking-tighter text-orange-600">Monetary Core</CardTitle>
                                             <CardDescription>Default currencies and transaction behaviors.</CardDescription>
                                         </div>
                                     </div>
                                 </CardHeader>
                                 <CardContent className="p-8 pt-0 space-y-6">
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Base Operations Currency</Label>
-                                        <Input value={org.base_currency} onChange={e => setOrg({ ...org, base_currency: e.target.value })} className="h-12 rounded-xl font-black text-lg bg-orange-50 border-orange-200" />
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Base Operations Currency</Label>
+                                        <Input value={org.base_currency} onChange={e => setOrg({ ...org, base_currency: e.target.value })} className="h-12 rounded-xl font-bold text-lg bg-orange-50 border-orange-200" />
                                         <p className="text-[10px] text-muted-foreground/60 italic font-medium">All analytics and Profit & Loss reports will be indexed in this currency.</p>
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground">Invoice Prefix</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground">Invoice Prefix</Label>
                                             <Input value={org.invoice_prefix} onChange={e => setOrg({ ...org, invoice_prefix: e.target.value })} className="h-11 rounded-xl" />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground">Quote Prefix</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground">Quote Prefix</Label>
                                             <Input value={org.quote_prefix} onChange={e => setOrg({ ...org, quote_prefix: e.target.value })} className="h-11 rounded-xl" />
                                         </div>
                                     </div>
                                 </CardContent>
                                 <CardFooter className="p-8 bg-muted/5 border-t border-border/10 flex justify-end">
-                                    <Button onClick={handleSaveOrg} disabled={loading} className="bg-orange-600 hover:bg-orange-700 rounded-xl font-black uppercase text-[11px] h-12 tracking-widest px-10 shadow-xl shadow-orange-600/20">Save Financial Matrix</Button>
+                                    <Button onClick={handleSaveOrg} disabled={loading} className="bg-orange-600 hover:bg-orange-700 rounded-xl font-bold uppercase text-[11px] h-12 tracking-widest px-10 shadow-xl shadow-orange-600/20">Save Financial Matrix</Button>
                                 </CardFooter>
                             </Card>
 
                             <Card className="border-primary/20 bg-primary/5 shadow-2xl rounded-3xl overflow-hidden border">
                                 <CardHeader className="p-8">
-                                    <CardTitle className="text-xl font-black uppercase tracking-tight flex items-center gap-3">
+                                    <CardTitle className="text-xl font-bold uppercase tracking-tight flex items-center gap-3">
                                         <CheckCircle2 className="h-5 w-5 text-primary" /> Intelligence Status
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-8 pt-0 flex flex-col items-center justify-center min-h-[200px] text-center space-y-4">
-                                    <Badge className="bg-green-500 text-white border-none py-1.5 px-4 font-black uppercase tracking-widest">Financial Core Online</Badge>
+                                    <Badge className="bg-green-500 text-white border-none py-1.5 px-4 font-bold uppercase tracking-widest">Financial Core Online</Badge>
                                     <p className="text-sm font-medium text-muted-foreground max-w-[280px]">Your business data is currently being reconciled across all active ledgers.</p>
                                 </CardContent>
                             </Card>
@@ -267,7 +267,7 @@ const Settings = () => {
                                         <Palette className="h-5 w-5 text-pink-600" />
                                     </div>
                                     <div>
-                                        <CardTitle className="text-xl font-black uppercase tracking-tighter text-pink-600">Visual DNA</CardTitle>
+                                        <CardTitle className="text-xl font-bold uppercase tracking-tighter text-pink-600">Visual DNA</CardTitle>
                                         <CardDescription>Configure how your documents appear to clients.</CardDescription>
                                     </div>
                                 </div>
@@ -275,21 +275,21 @@ const Settings = () => {
                             <CardContent className="p-8 pt-0 space-y-8">
                                 <div className="flex gap-12 items-start">
                                     <div className="space-y-4">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Primary Logo (For Invoices/Quotes)</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Primary Logo (For Invoices/Quotes)</Label>
                                         <div className="h-48 w-48 rounded-3xl border-2 border-dashed border-border/60 flex flex-col items-center justify-center gap-3 bg-muted/20 group hover:border-primary transition-all cursor-pointer overflow-hidden p-4">
                                             {org.logo_url ? (
                                                 <img src={org.logo_url} alt="Logo Preview" className="max-h-full max-w-full object-contain" />
                                             ) : (
                                                 <>
                                                     <Building2 className="h-10 w-10 text-muted-foreground group-hover:text-primary" />
-                                                    <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Drop Vector Logo</span>
+                                                    <span className="text-[10px] font-bold uppercase tracking-widest opacity-40">Drop Vector Logo</span>
                                                 </>
                                             )}
                                         </div>
                                     </div>
                                     <div className="flex-1 space-y-6">
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground">Logo URL (Remote Resource)</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground">Logo URL (Remote Resource)</Label>
                                             <Input value={org.logo_url} onChange={e => setOrg({ ...org, logo_url: e.target.value })} placeholder="https://cdn.example.com/logo.png" className="h-12 rounded-xl" />
                                         </div>
                                         <div className="p-6 rounded-2xl bg-muted/30 border border-border/50">
@@ -302,7 +302,7 @@ const Settings = () => {
                                 </div>
                             </CardContent>
                             <CardFooter className="p-8 bg-muted/5 border-t border-border/10 flex justify-end">
-                                <Button onClick={handleSaveOrg} disabled={loading} className="bg-pink-600 hover:bg-pink-700 rounded-xl font-black uppercase text-[11px] h-12 tracking-widest px-10 shadow-xl shadow-pink-600/20">Archive Branding</Button>
+                                <Button onClick={handleSaveOrg} disabled={loading} className="bg-pink-600 hover:bg-pink-700 rounded-xl font-bold uppercase text-[11px] h-12 tracking-widest px-10 shadow-xl shadow-pink-600/20">Archive Branding</Button>
                             </CardFooter>
                         </Card>
                     </TabsContent>
@@ -312,16 +312,16 @@ const Settings = () => {
                         <div className="grid grid-cols-2 gap-8">
                             <Card className="border-border/40 shadow-2xl rounded-3xl overflow-hidden bg-white/50">
                                 <CardHeader className="p-8">
-                                    <CardTitle className="text-xl font-black uppercase tracking-tighter flex items-center gap-3"><User className="h-5 w-5" /> Account Profile</CardTitle>
+                                    <CardTitle className="text-xl font-bold uppercase tracking-tighter flex items-center gap-3"><User className="h-5 w-5" /> Account Profile</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-8 pt-0 space-y-6">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground">Identity</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground">Identity</Label>
                                             <Input value={fullName} onChange={e => setFullName(e.target.value)} className="h-11 rounded-xl" />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground">Registered Email</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground">Registered Email</Label>
                                             <Input value={user?.email || ""} disabled className="h-11 rounded-xl bg-muted/40 opacity-60" />
                                         </div>
                                     </div>
@@ -333,12 +333,12 @@ const Settings = () => {
 
                             <Card className="border-border/40 shadow-2xl rounded-3xl overflow-hidden bg-white/50">
                                 <CardHeader className="p-8">
-                                    <CardTitle className="text-xl font-black uppercase tracking-tighter flex items-center gap-3"><Shield className="h-5 w-5" /> Security Protocol</CardTitle>
+                                    <CardTitle className="text-xl font-bold uppercase tracking-tighter flex items-center gap-3"><Shield className="h-5 w-5" /> Security Protocol</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-8 pt-0 space-y-6 text-center">
                                     <div className="p-6 rounded-3xl bg-primary/5 border border-primary/10 inline-block mb-4">
                                         <Badge className="bg-primary text-white mb-2">{profile?.role || "Subscriber"}</Badge>
-                                        <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Architect Access Level</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">Architect Access Level</p>
                                     </div>
                                     <div className="flex justify-center gap-3">
                                         <Button variant="outline" className="rounded-xl font-bold uppercase text-[10px] tracking-widest">Rotate Password</Button>

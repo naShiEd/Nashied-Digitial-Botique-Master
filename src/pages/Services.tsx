@@ -63,9 +63,9 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full backdrop-blur-md">
               <Zap className="w-3 h-3 text-orange-500 fill-orange-500" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-orange-500">Capabilities Matrix</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-orange-500">Capabilities Matrix</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-tight uppercase text-foreground">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight uppercase text-foreground">
               The <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Nashied</span> <br />
               Output Engine
             </h1>
@@ -90,7 +90,7 @@ const Services = () => {
                     <svc.icon className="h-7 w-7 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-2xl font-black uppercase tracking-tight text-foreground group-hover:text-orange-500 transition-colors">{svc.title}</h3>
+                    <h3 className="text-2xl font-bold uppercase tracking-tight text-foreground group-hover:text-orange-500 transition-colors">{svc.title}</h3>
                     <p className="text-muted-foreground leading-relaxed font-normal">
                       {svc.description}
                     </p>
@@ -98,7 +98,7 @@ const Services = () => {
 
                   <ul className="space-y-3 pt-4">
                     {svc.benefits.map((b, i) => (
-                      <li key={i} className="flex items-center gap-3 text-[10px] font-black text-foreground/40 uppercase tracking-widest">
+                      <li key={i} className="flex items-center gap-3 text-[10px] font-bold text-foreground/40 uppercase tracking-widest">
                         <CheckCircle2 className="w-3.5 h-3.5 text-orange-500" />
                         {b}
                       </li>
@@ -106,7 +106,7 @@ const Services = () => {
                   </ul>
                 </div>
 
-                <Link to="/project-inquiry" className="pt-10 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-white/20 group-hover:text-orange-500 transition-colors">
+                <Link to="/project-inquiry" className="pt-10 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/20 group-hover:text-orange-500 transition-colors">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -123,7 +123,7 @@ const Services = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase text-background">
+              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none uppercase text-background">
                 5X Efficiency <br />
                 <span className="text-background/40">Is No Longer <br /> A Secret.</span>
               </h2>
@@ -131,7 +131,7 @@ const Services = () => {
                 By integrating AI into every stage of the creative pipeline, we eliminate the friction of traditional production. We focus on the big idea, while AI handles the heavy lifting.
               </p>
               <Link to="/about">
-                <Button variant="outline" className="h-14 px-10 rounded-2xl border-background/10 font-black uppercase text-xs tracking-widest hover:bg-background hover:text-foreground transition-all">
+                <Button variant="outline" className="h-14 px-10 rounded-2xl border-background/10 font-bold uppercase text-xs tracking-widest hover:bg-background hover:text-foreground transition-all">
                   Learn Our Rules
                 </Button>
               </Link>
@@ -149,9 +149,9 @@ const Services = () => {
 
       {/* CTA */}
       <section className="py-40 text-center space-y-12">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">Ready to Deploy?</h2>
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase">Ready to Deploy?</h2>
         <Link to="/contact">
-          <Button className="h-20 px-12 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-black uppercase text-sm tracking-widest shadow-2xl shadow-orange-500/20">
+          <Button className="h-20 px-12 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-sm tracking-widest shadow-2xl shadow-orange-500/20">
             Start Your Service Consultation
           </Button>
         </Link>
@@ -164,8 +164,8 @@ const Services = () => {
 
 const ValueCard = ({ label, value }: { label: string, value: string }) => (
   <div className="p-8 bg-background/5 rounded-[32px] border border-background/5 space-y-1">
-    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40">{label}</p>
-    <p className="text-3xl font-black text-background">{value}</p>
+    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">{label}</p>
+    <p className="text-3xl font-bold text-background">{value}</p>
   </div>
 );
 

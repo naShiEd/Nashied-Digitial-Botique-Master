@@ -96,8 +96,8 @@ const PayrollHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Active Staff</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">{stats.activeEmployees}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Active Staff</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">{stats.activeEmployees}</h3>
                                     <p className="text-xs text-blue-500 font-bold mt-1">Full-time & Contract</p>
                                 </div>
                                 <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
@@ -111,8 +111,8 @@ const PayrollHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Monthly Payroll Cost</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">${stats.lastMonthGross.toLocaleString()}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Monthly Payroll Cost</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">${stats.lastMonthGross.toLocaleString()}</h3>
                                     <p className="text-xs text-green-500 font-bold mt-1 flex items-center gap-1">
                                         <CheckCircle2 className="h-3 w-3" /> Last Run Total
                                     </p>
@@ -128,8 +128,8 @@ const PayrollHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Pending Runs</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">{stats.pendingRuns}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Pending Runs</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">{stats.pendingRuns}</h3>
                                     <p className="text-xs text-orange-500 font-bold mt-1 flex items-center gap-1">
                                         <AlertTriangle className="h-3 w-3" /> Requires Approval
                                     </p>
@@ -162,7 +162,7 @@ const PayrollHub = () => {
                         <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-sm">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-muted/30 border-b border-border/50">
-                                    <tr className="text-[10px] uppercase tracking-widest font-black text-muted-foreground">
+                                    <tr className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
                                         <th className="px-6 py-4">Period</th>
                                         <th className="px-6 py-4">Year</th>
                                         <th className="px-6 py-4">Gross Total</th>
@@ -174,20 +174,20 @@ const PayrollHub = () => {
                                 <tbody className="divide-y divide-border/30">
                                     {payrollRuns.map((run) => (
                                         <tr key={run.id} className="group hover:bg-muted/20 transition-all">
-                                            <td className="px-6 py-4 font-black text-sm uppercase">
+                                            <td className="px-6 py-4 font-bold text-sm uppercase">
                                                 {run.month}
                                             </td>
                                             <td className="px-6 py-4 text-xs font-semibold text-muted-foreground">
                                                 {run.year}
                                             </td>
                                             <td className="px-6 py-4">
-                                                <p className="font-black text-sm">${run.total_gross.toLocaleString()}</p>
+                                                <p className="font-bold text-sm">${run.total_gross.toLocaleString()}</p>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <p className="font-black text-sm text-green-600">${run.total_net.toLocaleString()}</p>
+                                                <p className="font-bold text-sm text-green-600">${run.total_net.toLocaleString()}</p>
                                             </td>
                                             <td className="px-6 py-4 text-center">
-                                                <Badge className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3",
+                                                <Badge className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3",
                                                     run.status === 'paid' ? "bg-green-500 text-white shadow-lg shadow-green-500/20" :
                                                         run.status === 'processed' ? "bg-blue-500 text-white" : "bg-muted text-muted-foreground"
                                                 )}>
@@ -228,7 +228,7 @@ const PayrollHub = () => {
                         <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-sm">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-muted/30 border-b border-border/50">
-                                    <tr className="text-[10px] uppercase tracking-widest font-black text-muted-foreground">
+                                    <tr className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
                                         <th className="px-6 py-4">Employee</th>
                                         <th className="px-6 py-4">Job Title</th>
                                         <th className="px-6 py-4">Basic Salary</th>
@@ -241,7 +241,7 @@ const PayrollHub = () => {
                                         <tr key={emp.id} className="group hover:bg-muted/20 transition-all">
                                             <td className="px-6 py-4">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-black text-[10px]">
+                                                    <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-[10px]">
                                                         {emp.profile?.full_name?.split(' ').map((n: string) => n[0]).join('')}
                                                     </div>
                                                     <div>
@@ -254,10 +254,10 @@ const PayrollHub = () => {
                                                 <p className="text-xs font-bold text-muted-foreground uppercase">{emp.job_title || 'Unassigned'}</p>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <p className="font-black text-sm">${emp.basic_salary.toLocaleString()}</p>
+                                                <p className="font-bold text-sm">${emp.basic_salary.toLocaleString()}</p>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <Badge className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3",
+                                                <Badge className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3",
                                                     emp.status === 'active' ? "bg-green-500/10 text-green-600 border border-green-500/20" : "bg-muted text-muted-foreground"
                                                 )}>
                                                     {emp.status}

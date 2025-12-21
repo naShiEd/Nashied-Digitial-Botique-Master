@@ -137,7 +137,7 @@ const Documents = () => {
                             <div className="p-2.5 bg-primary/10 rounded-xl">
                                 <FolderLock className="h-6 w-6 text-primary" />
                             </div>
-                            <h2 className="text-3xl font-black font-display tracking-tight text-foreground uppercase">Cloud Repository</h2>
+                            <h2 className="text-3xl font-bold font-display tracking-tight text-foreground uppercase">Cloud Repository</h2>
                         </div>
                         <p className="text-xs font-bold text-muted-foreground uppercase tracking-[0.2em] opacity-60">Architecting Secure Access to Agency Intellectual Property</p>
                     </div>
@@ -154,17 +154,17 @@ const Documents = () => {
                         </div>
                         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                             <DialogTrigger asChild>
-                                <Button className="h-12 px-8 rounded-xl font-black uppercase text-[11px] tracking-widest shadow-xl shadow-primary/20">
+                                <Button className="h-12 px-8 rounded-xl font-bold uppercase text-[11px] tracking-widest shadow-xl shadow-primary/20">
                                     <Plus className="mr-2 h-4 w-4" /> Register Resource
                                 </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-lg rounded-[32px] border-none shadow-2xl">
                                 <DialogHeader className="p-6 pb-0">
-                                    <DialogTitle className="text-2xl font-black uppercase tracking-tighter">Vault Registration</DialogTitle>
+                                    <DialogTitle className="text-2xl font-bold uppercase tracking-tighter">Vault Registration</DialogTitle>
                                 </DialogHeader>
                                 <form onSubmit={handleCreateDoc} className="p-6 space-y-6">
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Master Account Association</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Master Account Association</Label>
                                         <Select
                                             value={newDoc.client_id}
                                             onValueChange={(val) => setNewDoc({ ...newDoc, client_id: val })}
@@ -177,7 +177,7 @@ const Documents = () => {
                                         </Select>
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Identifier / Name</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Identifier / Name</Label>
                                         <Input
                                             value={newDoc.name}
                                             onChange={(e) => setNewDoc({ ...newDoc, name: e.target.value })}
@@ -187,7 +187,7 @@ const Documents = () => {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Resource Point (Cloud URL)</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Resource Point (Cloud URL)</Label>
                                         <Input
                                             value={newDoc.url}
                                             onChange={(e) => setNewDoc({ ...newDoc, url: e.target.value })}
@@ -197,7 +197,7 @@ const Documents = () => {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground">Security Protocol (Access Level)</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground">Security Protocol (Access Level)</Label>
                                         <Select
                                             value={newDoc.access_level}
                                             onValueChange={(val) => setNewDoc({ ...newDoc, access_level: val as any })}
@@ -210,7 +210,7 @@ const Documents = () => {
                                             </SelectContent>
                                         </Select>
                                     </div>
-                                    <Button type="submit" className="w-full h-14 rounded-2xl font-black uppercase text-xs tracking-widest shadow-2xl shadow-primary/20 mt-4">Execute Registration</Button>
+                                    <Button type="submit" className="w-full h-14 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-2xl shadow-primary/20 mt-4">Execute Registration</Button>
                                 </form>
                             </DialogContent>
                         </Dialog>
@@ -243,12 +243,12 @@ const Documents = () => {
                                         </div>
 
                                         <div className="space-y-1">
-                                            <h3 className="font-black text-lg tracking-tight truncate uppercase leading-tight">{doc.name}</h3>
-                                            <p className="text-[10px] font-black uppercase text-primary tracking-widest truncate">{doc.client?.company_name || 'Internal Operations'}</p>
+                                            <h3 className="font-bold text-lg tracking-tight truncate uppercase leading-tight">{doc.name}</h3>
+                                            <p className="text-[10px] font-bold uppercase text-primary tracking-widest truncate">{doc.client?.company_name || 'Internal Operations'}</p>
                                         </div>
 
                                         <div className="flex items-center gap-3 pt-2">
-                                            <Badge variant="outline" className={cn("text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full border-none", meta.color)}>
+                                            <Badge variant="outline" className={cn("text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border-none", meta.color)}>
                                                 <AccessIcon className="h-3 w-3 mr-1.5" /> {meta.label}
                                             </Badge>
                                             <div className="flex-1 h-px bg-divider/10" />
@@ -259,7 +259,7 @@ const Documents = () => {
                                         <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase opacity-60">
                                             <Calendar className="h-3 w-3" /> {new Date(doc.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
                                         </div>
-                                        <Button variant="ghost" size="sm" className="h-8 rounded-lg font-black uppercase text-[10px] tracking-widest hover:text-primary group" asChild>
+                                        <Button variant="ghost" size="sm" className="h-8 rounded-lg font-bold uppercase text-[10px] tracking-widest hover:text-primary group" asChild>
                                             <a href={doc.url} target="_blank" rel="noopener noreferrer">
                                                 Launch <ExternalLink className="h-3.5 w-3.5 ml-1.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                             </a>
@@ -276,10 +276,10 @@ const Documents = () => {
                                 <FolderLock className="h-10 w-10 text-muted-foreground" />
                             </div>
                             <div className="space-y-1">
-                                <p className="text-sm font-black uppercase tracking-widest text-muted-foreground">Repository Empty</p>
+                                <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Repository Empty</p>
                                 <p className="text-[10px] font-medium text-muted-foreground/60 uppercase racking-tight">No secure resources identified in the vault.</p>
                             </div>
-                            <Button onClick={() => setIsDialogOpen(true)} variant="outline" className="rounded-xl border-dashed px-8 h-10 text-[10px] font-black uppercase tracking-widest">Initialize Registry</Button>
+                            <Button onClick={() => setIsDialogOpen(true)} variant="outline" className="rounded-xl border-dashed px-8 h-10 text-[10px] font-bold uppercase tracking-widest">Initialize Registry</Button>
                         </div>
                     )}
                 </div>

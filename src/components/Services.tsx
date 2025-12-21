@@ -33,9 +33,9 @@ const Services = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 bg-foreground/5 border border-foreground/10 px-4 py-2 rounded-full">
                 <Zap className="w-3 h-3 text-[#ff8c04] fill-[#ff8c04]" />
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#ff8c04]/60">Capabilities Matrix</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#ff8c04]/60">Capabilities Matrix</span>
               </div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none uppercase">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-none uppercase">
                 The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c04] via-[#ff8c04] to-[#e67a00]">Output</span> <br />
                 Engine.
               </h2>
@@ -56,7 +56,7 @@ const Services = () => {
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-black uppercase tracking-tight text-foreground group-hover:text-[#ff8c04] transition-colors">
+                    <h3 className="text-2xl font-bold uppercase tracking-tight text-foreground group-hover:text-[#ff8c04] transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed font-medium">
@@ -66,7 +66,7 @@ const Services = () => {
 
                   <ul className="space-y-3 pt-4">
                     {service.benefits.map((b, i) => (
-                      <li key={i} className="flex items-center gap-3 text-[10px] font-black text-foreground/40 uppercase tracking-widest">
+                      <li key={i} className="flex items-center gap-3 text-[10px] font-bold text-foreground/40 uppercase tracking-widest">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#ff8c04]" />
                         {b}
                       </li>

@@ -13,9 +13,9 @@ const About = () => {
             <div className="space-y-10">
               <div className="inline-flex items-center gap-2 text-[#ff8c04] px-0 py-3 rounded-full">
                 <Zap className="w-5 h-5 fill-[#ff8c04]" />
-                <span className="font-black text-xs uppercase tracking-widest text-[#ff8c04]">The Nashied Mandate</span>
+                <span className="font-bold text-xs uppercase tracking-widest text-[#ff8c04]">The Nashied Mandate</span>
               </div>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] uppercase">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.85] uppercase">
                 Creativity <br />
                 <span className="text-[#ff8c04]">Is Life.</span>
               </h2>
@@ -24,12 +24,12 @@ const About = () => {
               </p>
               <div className="flex gap-12 pt-4">
                 <div>
-                  <p className="text-4xl font-black text-foreground tabular-nums tracking-tighter">5X</p>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-[#ff8c04] mt-1">Faster Production</p>
+                  <p className="text-4xl font-bold text-foreground tabular-nums tracking-tighter">5X</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#ff8c04] mt-1">Faster Production</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-black text-foreground tabular-nums tracking-tighter">150+</p>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-[#ff8c04] mt-1">Impact Milestones</p>
+                  <p className="text-4xl font-bold text-foreground tabular-nums tracking-tighter">150+</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#ff8c04] mt-1">Impact Milestones</p>
                 </div>
               </div>
             </div>
@@ -51,8 +51,8 @@ const ValueCard = ({ icon: Icon, label, value }: { icon: any, label: string, val
   <div className="p-10 bg-white/50 backdrop-blur-sm rounded-[40px] border border-foreground/5 space-y-4 hover:bg-[#ff8c04] hover:text-white transition-all duration-500 group shadow-sm hover:shadow-2xl hover:shadow-[#ff8c04]/20 group cursor-default">
     <Icon className="h-10 w-10 text-[#ff8c04] group-hover:text-white transition-colors" />
     <div className="space-y-1">
-      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40 group-hover:text-white/60">{label}</p>
-      <p className="text-3xl font-black uppercase tracking-tight text-foreground group-hover:text-white">{value}</p>
+      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40 group-hover:text-white/60">{label}</p>
+      <p className="text-3xl font-bold uppercase tracking-tight text-foreground group-hover:text-white">{value}</p>
     </div>
   </div>
 );

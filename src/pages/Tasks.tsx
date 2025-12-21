@@ -236,17 +236,17 @@ const Taskmaster = () => {
                     <div className="flex items-center gap-4 w-full lg:w-auto">
                         <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
                             <DialogTrigger asChild>
-                                <Button className="h-16 px-10 rounded-[20px] font-black uppercase text-[11px] tracking-widest shadow-2xl shadow-primary/20 transition-all hover:-translate-y-1 active:scale-95">
+                                <Button className="h-16 px-10 rounded-[20px] font-bold uppercase text-[11px] tracking-widest shadow-2xl shadow-primary/20 transition-all hover:-translate-y-1 active:scale-95">
                                     <Plus className="mr-2 h-5 w-5" /> Deploy Task
                                 </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-lg rounded-[40px] border-none shadow-2xl p-8">
                                 <DialogHeader>
-                                    <DialogTitle className="text-3xl font-black uppercase tracking-tighter">Task Deployment</DialogTitle>
+                                    <DialogTitle className="text-3xl font-bold uppercase tracking-tighter">Task Deployment</DialogTitle>
                                 </DialogHeader>
                                 <form onSubmit={handleCreateTask} className="space-y-6 pt-4">
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground ml-1">Project Link</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground ml-1">Project Link</Label>
                                         <Select onValueChange={(v) => setNewTask({ ...newTask, project_id: v })} required>
                                             <SelectTrigger className="h-14 rounded-2xl"><SelectValue placeholder="Select Parent Project" /></SelectTrigger>
                                             <SelectContent className="rounded-2xl">
@@ -255,12 +255,12 @@ const Taskmaster = () => {
                                         </Select>
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase text-muted-foreground ml-1">Task Specification</Label>
+                                        <Label className="text-[10px] font-bold uppercase text-muted-foreground ml-1">Task Specification</Label>
                                         <Input required value={newTask.title} onChange={(e) => setNewTask({ ...newTask, title: e.target.value })} placeholder="e.g. Identity Design Sprint Phase 1" className="h-14 rounded-2xl font-bold" />
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground ml-1">Priority</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground ml-1">Priority</Label>
                                             <Select onValueChange={(v) => setNewTask({ ...newTask, priority: v })} defaultValue="medium">
                                                 <SelectTrigger className="h-12 rounded-xl"><SelectValue /></SelectTrigger>
                                                 <SelectContent className="rounded-xl">
@@ -272,11 +272,11 @@ const Taskmaster = () => {
                                             </Select>
                                         </div>
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground ml-1">Deadline Point</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground ml-1">Deadline Point</Label>
                                             <Input type="date" value={newTask.due_date} onChange={(e) => setNewTask({ ...newTask, due_date: e.target.value })} className="h-12 rounded-xl" />
                                         </div>
                                     </div>
-                                    <Button type="submit" className="w-full h-16 rounded-[24px] font-black uppercase text-xs tracking-widest shadow-2xl shadow-primary/20 mt-4">Commit to Pipeline</Button>
+                                    <Button type="submit" className="w-full h-16 rounded-[24px] font-bold uppercase text-xs tracking-widest shadow-2xl shadow-primary/20 mt-4">Commit to Pipeline</Button>
                                 </form>
                             </DialogContent>
                         </Dialog>
@@ -289,11 +289,11 @@ const Taskmaster = () => {
                         <div key={pId} className="space-y-4 group">
                             <div className="flex items-end justify-between px-2">
                                 <div className="space-y-0.5">
-                                    <h3 className="text-2xl font-black tracking-tighter uppercase text-foreground">{group.client} <span className="text-primary opacity-40 mx-2">—</span> {group.name}</h3>
+                                    <h3 className="text-2xl font-bold tracking-tighter uppercase text-foreground">{group.client} <span className="text-primary opacity-40 mx-2">—</span> {group.name}</h3>
                                     <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60">Project Command Node</p>
                                 </div>
                                 <div className="h-px flex-1 mx-8 bg-divider/10 mb-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <Badge variant="outline" className="h-8 rounded-xl px-4 font-black text-[9px] uppercase tracking-widest border-divider/10 bg-muted/20">
+                                <Badge variant="outline" className="h-8 rounded-xl px-4 font-bold text-[9px] uppercase tracking-widest border-divider/10 bg-muted/20">
                                     {group.tasks.length} Deliverables
                                 </Badge>
                             </div>
@@ -301,7 +301,7 @@ const Taskmaster = () => {
                             <Card className="border-border/40 shadow-2xl rounded-[40px] overflow-hidden bg-white/50 backdrop-blur-xl border-none ring-1 ring-black/5">
                                 <table className="w-full text-left border-collapse">
                                     <thead className="bg-[#111] text-white">
-                                        <tr className="text-[10px] uppercase tracking-[0.2em] font-black">
+                                        <tr className="text-[10px] uppercase tracking-[0.2em] font-bold">
                                             <th className="px-8 py-5">Task Architecture</th>
                                             <th className="px-8 py-5">Assigned</th>
                                             <th className="px-8 py-5 text-center">Status</th>
@@ -317,16 +317,16 @@ const Taskmaster = () => {
                                             )}>
                                                 <td className="px-8 py-6">
                                                     <div className="space-y-1.5">
-                                                        <div className="font-black text-sm uppercase tracking-tight text-foreground">{task.title}</div>
+                                                        <div className="font-bold text-sm uppercase tracking-tight text-foreground">{task.title}</div>
                                                         <div className="flex gap-2">
-                                                            <Badge className={cn("text-[8px] font-black uppercase tracking-widest px-2 py-0 border-none",
+                                                            <Badge className={cn("text-[8px] font-bold uppercase tracking-widest px-2 py-0 border-none",
                                                                 task.priority === 'urgent' ? 'bg-red-500 text-white' :
                                                                     task.priority === 'high' ? 'bg-orange-500 text-white' : 'bg-muted text-muted-foreground'
                                                             )}>
                                                                 {task.priority || 'NORMAL'}
                                                             </Badge>
                                                             {task.task_category === 'monthly' && (
-                                                                <span className="text-[8px] font-black text-blue-600 bg-blue-50 px-2 py-0 rounded flex items-center gap-1">
+                                                                <span className="text-[8px] font-bold text-blue-600 bg-blue-50 px-2 py-0 rounded flex items-center gap-1">
                                                                     <Repeat className="h-2 w-2" /> RETAINER
                                                                 </span>
                                                             )}
@@ -335,14 +335,14 @@ const Taskmaster = () => {
                                                 </td>
                                                 <td className="px-8 py-6">
                                                     <div className="flex items-center gap-3">
-                                                        <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center text-[10px] font-black text-primary border border-primary/20 shadow-sm">
+                                                        <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary border border-primary/20 shadow-sm">
                                                             {task.owner?.full_name?.charAt(0) || "U"}
                                                         </div>
-                                                        <span className="text-[11px] font-black uppercase tracking-widest text-muted-foreground/80">{task.owner?.full_name?.split(' ')[0]}</span>
+                                                        <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/80">{task.owner?.full_name?.split(' ')[0]}</span>
                                                     </div>
                                                 </td>
                                                 <td className="px-8 py-6 text-center">
-                                                    <Badge className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-4 py-1",
+                                                    <Badge className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-4 py-1",
                                                         task.status === 'completed' ? "bg-green-500 text-white" :
                                                             task.status === 'review' ? "bg-orange-500 text-white" :
                                                                 task.status === 'in_progress' || task.timer_state === 'running' ? "bg-primary text-white" : "bg-muted text-muted-foreground"
@@ -364,7 +364,7 @@ const Taskmaster = () => {
                                                             </button>
                                                         </div>
                                                         <div className={cn(
-                                                            "font-mono text-xl font-black tabular-nums tracking-tighter",
+                                                            "font-mono text-xl font-bold tabular-nums tracking-tighter",
                                                             task.timer_state === 'running' ? "text-primary scale-110 origin-left transition-transform" : "text-muted-foreground/30"
                                                         )}>
                                                             {formatTime(runningTimers[task.id] || task.total_active_seconds || 0)}
@@ -408,8 +408,8 @@ const ProductionStat = ({ label, count, color, icon: Icon, active }: any) => (
         <CardContent className="p-8">
             <div className="flex justify-between items-start">
                 <div className="space-y-1">
-                    <p className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em] opacity-60">{label}</p>
-                    <h3 className={cn("text-4xl font-black font-display tracking-tighter tabular-nums", color)}>{count}</h3>
+                    <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-[0.2em] opacity-60">{label}</p>
+                    <h3 className={cn("text-4xl font-bold font-display tracking-tighter tabular-nums", color)}>{count}</h3>
                 </div>
                 <div className={cn("h-12 w-12 rounded-2xl flex items-center justify-center transition-all group-hover:rotate-12",
                     active ? "bg-primary text-white animate-pulse shadow-lg shadow-primary/20" : "bg-muted/30 text-muted-foreground opacity-40"

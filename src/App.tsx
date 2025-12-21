@@ -30,6 +30,9 @@ import NotFound from "./pages/NotFound";
 
 import ClientPortal from "./pages/ClientPortal";
 import { AuthProvider } from "./contexts/AuthContext";
+import { FloatingInquiry } from "./components/FloatingInquiry";
+
+import { PublicLayout } from "./components/PublicLayout";
 
 const queryClient = new QueryClient();
 
@@ -39,15 +42,10 @@ const App = () => (
       <AuthProvider>
         <Toaster />
         <Sonner />
+        <FloatingInquiry />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/portal/:type/:id" element={<ClientPortal />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/project-inquiry" element={<ProjectInquiry />} />
+            {/* Dashboard and Auth Routes (No Smooth Scroll) */}
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -62,10 +60,19 @@ const App = () => (
             <Route path="/dashboard/services" element={<ServicesDashboard />} />
             <Route path="/dashboard/documents" element={<Documents />} />
             <Route path="/dashboard/settings" element={<Settings />} />
-            <Route path="/work/:slug" element={<ProjectDetail />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/portal/:type/:id" element={<ClientPortal />} />
+
+            {/* Public Routes with Premium Smooth Scroll & Progress */}
+            <Route element={<PublicLayout><Index /></PublicLayout>} path="/" />
+            <Route element={<PublicLayout><Work /></PublicLayout>} path="/work" />
+            <Route element={<PublicLayout><ProjectDetail /></PublicLayout>} path="/work/:slug" />
+            <Route element={<PublicLayout><Services /></PublicLayout>} path="/services" />
+            <Route element={<PublicLayout><About /></PublicLayout>} path="/about" />
+            <Route element={<PublicLayout><Contact /></PublicLayout>} path="/contact" />
+            <Route element={<PublicLayout><ProjectInquiry /></PublicLayout>} path="/project-inquiry" />
+            <Route element={<PublicLayout><Blog /></PublicLayout>} path="/blog" />
+            <Route element={<PublicLayout><BlogPost /></PublicLayout>} path="/blog/:id" />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

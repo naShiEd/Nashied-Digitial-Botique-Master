@@ -166,8 +166,8 @@ const ServicesDashboard = () => {
                         <CardContent className="p-8">
                             <div className="flex justify-between items-start">
                                 <div className="space-y-1">
-                                    <p className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em] opacity-60">Monthly Recurring Revenue</p>
-                                    <h3 className="text-4xl font-black font-display tracking-tighter flex items-center gap-1">
+                                    <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-[0.2em] opacity-60">Monthly Recurring Revenue</p>
+                                    <h3 className="text-4xl font-bold font-display tracking-tighter flex items-center gap-1">
                                         <span className="text-xl font-bold opacity-30">$</span>
                                         {stats.totalRecurring.toLocaleString()}
                                     </h3>
@@ -186,8 +186,8 @@ const ServicesDashboard = () => {
                         <CardContent className="p-8">
                             <div className="flex justify-between items-start">
                                 <div className="space-y-1">
-                                    <p className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em] opacity-60">Active Assets</p>
-                                    <h3 className="text-4xl font-black font-display tracking-tighter">{stats.activeServices}</h3>
+                                    <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-[0.2em] opacity-60">Active Assets</p>
+                                    <h3 className="text-4xl font-bold font-display tracking-tighter">{stats.activeServices}</h3>
                                     <p className="text-[10px] text-blue-600 font-bold uppercase tracking-widest pt-2">Infrastructure Operational</p>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
@@ -201,8 +201,8 @@ const ServicesDashboard = () => {
                         <CardContent className="p-8">
                             <div className="flex justify-between items-start">
                                 <div className="space-y-1">
-                                    <p className="text-[10px] font-black uppercase text-muted-foreground tracking-[0.2em] opacity-60">Renewal Pipeline</p>
-                                    <h3 className="text-4xl font-black font-display tracking-tighter">{stats.expiringSoon}</h3>
+                                    <p className="text-[10px] font-bold uppercase text-muted-foreground tracking-[0.2em] opacity-60">Renewal Pipeline</p>
+                                    <h3 className="text-4xl font-bold font-display tracking-tighter">{stats.expiringSoon}</h3>
                                     <p className="text-[10px] text-orange-600 font-bold uppercase tracking-widest pt-2 flex items-center gap-1.5">
                                         <Clock className="h-3 w-3" /> Due Within 15 Days
                                     </p>
@@ -229,17 +229,17 @@ const ServicesDashboard = () => {
 
                     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                         <DialogTrigger asChild>
-                            <Button className="h-12 px-8 rounded-xl font-black uppercase text-[11px] tracking-widest shadow-xl shadow-primary/20 bg-primary">
+                            <Button className="h-12 px-8 rounded-xl font-bold uppercase text-[11px] tracking-widest shadow-xl shadow-primary/20 bg-primary">
                                 <Plus className="mr-2 h-4 w-4" /> Provision New Asset
                             </Button>
                         </DialogTrigger>
                         <DialogContent className="max-w-xl rounded-[32px] border-none shadow-2xl">
                             <DialogHeader className="p-6 pb-0">
-                                <DialogTitle className="text-2xl font-black uppercase tracking-tighter">Asset Provisioning</DialogTitle>
+                                <DialogTitle className="text-2xl font-bold uppercase tracking-tighter">Asset Provisioning</DialogTitle>
                             </DialogHeader>
                             <form onSubmit={handleCreateService} className="p-6 grid grid-cols-2 gap-6">
                                 <div className="col-span-2 space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Account Holder</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Account Holder</Label>
                                     <Select value={newService.client_id} onValueChange={(val) => setNewService({ ...newService, client_id: val })} required>
                                         <SelectTrigger className="h-12 rounded-xl"><SelectValue placeholder="Select Client Account" /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
@@ -248,11 +248,11 @@ const ServicesDashboard = () => {
                                     </Select>
                                 </div>
                                 <div className="col-span-2 space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Asset Identity / Name</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Asset Identity / Name</Label>
                                     <Input value={newService.name} onChange={(e) => setNewService({ ...newService, name: e.target.value })} required placeholder="e.g. Agency Cloud Cluster 01" className="h-12 rounded-xl" />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Service Architecture</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Service Architecture</Label>
                                     <Select value={newService.type} onValueChange={(val) => setNewService({ ...newService, type: val as any })}>
                                         <SelectTrigger className="h-12 rounded-xl"><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
@@ -264,7 +264,7 @@ const ServicesDashboard = () => {
                                     </Select>
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Billing Frequency</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Billing Frequency</Label>
                                     <Select value={newService.cycle} onValueChange={(val) => setNewService({ ...newService, cycle: val as any })}>
                                         <SelectTrigger className="h-12 rounded-xl"><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
@@ -274,14 +274,14 @@ const ServicesDashboard = () => {
                                     </Select>
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Billing Value (USD)</Label>
-                                    <Input type="number" value={newService.renewal_price} onChange={(e) => setNewService({ ...newService, renewal_price: parseFloat(e.target.value) })} required className="h-12 rounded-xl font-black text-lg" />
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Billing Value (USD)</Label>
+                                    <Input type="number" value={newService.renewal_price} onChange={(e) => setNewService({ ...newService, renewal_price: parseFloat(e.target.value) })} required className="h-12 rounded-xl font-bold text-lg" />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Next Renewal Point</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Next Renewal Point</Label>
                                     <Input type="date" value={newService.next_due_date} onChange={(e) => setNewService({ ...newService, next_due_date: e.target.value })} required className="h-12 rounded-xl" />
                                 </div>
-                                <Button type="submit" className="col-span-2 h-14 rounded-2xl font-black uppercase text-xs tracking-widest shadow-2xl shadow-primary/20 mt-4">Initiate Provisioning</Button>
+                                <Button type="submit" className="col-span-2 h-14 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-2xl shadow-primary/20 mt-4">Initiate Provisioning</Button>
                             </form>
                         </DialogContent>
                     </Dialog>
@@ -302,35 +302,35 @@ const ServicesDashboard = () => {
                                             <Icon className={cn("h-8 w-8", meta.color)} />
                                         </div>
                                         <div className="flex flex-col items-end gap-2">
-                                            <Badge className={cn("text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full border-none",
+                                            <Badge className={cn("text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border-none",
                                                 svc.status === 'active' ? 'bg-green-500 text-white' :
                                                     svc.status === 'suspended' ? 'bg-orange-500 text-white' : 'bg-red-500 text-white'
                                             )}>
                                                 {svc.status}
                                             </Badge>
                                             {isExpiring && svc.status === 'active' && (
-                                                <Badge variant="outline" className="animate-pulse bg-red-50 text-red-600 border-red-100 text-[8px] font-black uppercase tracking-tighter">Renewal Required</Badge>
+                                                <Badge variant="outline" className="animate-pulse bg-red-50 text-red-600 border-red-100 text-[8px] font-bold uppercase tracking-tighter">Renewal Required</Badge>
                                             )}
                                         </div>
                                     </div>
 
                                     <div className="space-y-1">
-                                        <h3 className="font-black text-xl tracking-tighter uppercase leading-tight truncate">{svc.name}</h3>
+                                        <h3 className="font-bold text-xl tracking-tighter uppercase leading-tight truncate">{svc.name}</h3>
                                         <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60 truncate">{svc.client?.company_name}</p>
                                     </div>
 
                                     <div className="flex justify-between items-end bg-muted/20 p-5 rounded-[24px] border border-divider/5">
                                         <div>
-                                            <p className="text-[9px] font-black uppercase text-muted-foreground tracking-widest opacity-50 mb-1">Billing Loop</p>
+                                            <p className="text-[9px] font-bold uppercase text-muted-foreground tracking-widest opacity-50 mb-1">Billing Loop</p>
                                             <div className="flex items-baseline gap-1">
                                                 <span className="text-sm font-bold opacity-30">$</span>
-                                                <span className="text-2xl font-black tracking-tighter">{svc.renewal_price.toLocaleString()}</span>
+                                                <span className="text-2xl font-bold tracking-tighter">{svc.renewal_price.toLocaleString()}</span>
                                                 <span className="text-[10px] font-bold text-muted-foreground uppercase opacity-40 ml-1">/{svc.cycle === 'monthly' ? 'MO' : 'YR'}</span>
                                             </div>
                                         </div>
                                         <div className="text-right">
-                                            <p className="text-[9px] font-black uppercase text-muted-foreground tracking-widest opacity-50 mb-1">Next Cycle</p>
-                                            <p className={cn("text-sm font-black tracking-tight uppercase", isExpiring ? "text-red-600" : "text-foreground")}>
+                                            <p className="text-[9px] font-bold uppercase text-muted-foreground tracking-widest opacity-50 mb-1">Next Cycle</p>
+                                            <p className={cn("text-sm font-bold tracking-tight uppercase", isExpiring ? "text-red-600" : "text-foreground")}>
                                                 {new Date(svc.next_due_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
                                             </p>
                                         </div>
@@ -343,7 +343,7 @@ const ServicesDashboard = () => {
                                     </div>
                                     <DropdownMenu>
                                         <DropdownMenuTrigger asChild>
-                                            <Button variant="ghost" size="sm" className="rounded-xl font-black uppercase text-[10px] tracking-widest gap-2">
+                                            <Button variant="ghost" size="sm" className="rounded-xl font-bold uppercase text-[10px] tracking-widest gap-2">
                                                 Manage <MoreHorizontal className="h-3.5 w-3.5" />
                                             </Button>
                                         </DropdownMenuTrigger>
@@ -365,9 +365,9 @@ const ServicesDashboard = () => {
                             <div className="h-24 w-24 bg-muted rounded-full flex items-center justify-center opacity-20 mb-6">
                                 <ZapOff className="h-12 w-12" />
                             </div>
-                            <p className="text-sm font-black uppercase tracking-[0.3em] text-muted-foreground">Dark Cluster: No Active Infrastructure</p>
+                            <p className="text-sm font-bold uppercase tracking-[0.3em] text-muted-foreground">Dark Cluster: No Active Infrastructure</p>
                             <p className="text-[10px] font-bold text-muted-foreground/40 uppercase mt-2">Provision your first recurring asset to begin telemetry.</p>
-                            <Button onClick={() => setIsDialogOpen(true)} className="mt-8 rounded-2xl h-12 px-10 font-black uppercase text-[11px] tracking-widest shadow-xl shadow-primary/20">Provision Genesis Asset</Button>
+                            <Button onClick={() => setIsDialogOpen(true)} className="mt-8 rounded-2xl h-12 px-10 font-bold uppercase text-[11px] tracking-widest shadow-xl shadow-primary/20">Provision Genesis Asset</Button>
                         </div>
                     )}
                 </div>

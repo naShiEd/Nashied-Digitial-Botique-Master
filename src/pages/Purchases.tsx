@@ -97,8 +97,8 @@ const PurchasesHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Total Payables</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">${stats.totalPayables.toLocaleString()}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Total Payables</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">${stats.totalPayables.toLocaleString()}</h3>
                                     <p className="text-xs text-orange-500 font-bold mt-1 flex items-center gap-1">
                                         <AlertTriangle className="h-3 w-3" /> {stats.pendingBills} Bills Awaiting Payment
                                     </p>
@@ -114,8 +114,8 @@ const PurchasesHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Active Vendors</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">{stats.activeVendors}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Active Vendors</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">{stats.activeVendors}</h3>
                                     <p className="text-xs text-blue-500 font-bold mt-1">Verified Supply Chain</p>
                                 </div>
                                 <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
@@ -129,8 +129,8 @@ const PurchasesHub = () => {
                         <CardContent className="p-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-1">Monthly Spend (Est)</p>
-                                    <h3 className="text-3xl font-black font-display text-foreground tabular-nums">${(stats.totalPayables * 0.8).toLocaleString()}</h3>
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-1">Monthly Spend (Est)</p>
+                                    <h3 className="text-3xl font-bold font-display text-foreground tabular-nums">${(stats.totalPayables * 0.8).toLocaleString()}</h3>
                                     <p className="text-xs text-muted-foreground font-bold mt-1">Projected Operating Expenses</p>
                                 </div>
                                 <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
@@ -161,7 +161,7 @@ const PurchasesHub = () => {
                         <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-sm">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-muted/30 border-b border-border/50">
-                                    <tr className="text-[10px] uppercase tracking-widest font-black text-muted-foreground">
+                                    <tr className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
                                         <th className="px-6 py-4">Bill #</th>
                                         <th className="px-6 py-4">Vendor / Supplier</th>
                                         <th className="px-6 py-4">Due Date</th>
@@ -173,7 +173,7 @@ const PurchasesHub = () => {
                                 <tbody className="divide-y divide-border/30">
                                     {bills.map((bill) => (
                                         <tr key={bill.id} className="group hover:bg-muted/20 transition-all">
-                                            <td className="px-6 py-4 font-black font-mono text-sm">
+                                            <td className="px-6 py-4 font-bold font-mono text-sm">
                                                 BIL-{bill.bill_number || bill.id.slice(0, 5).toUpperCase()}
                                             </td>
                                             <td className="px-6 py-4">
@@ -186,10 +186,10 @@ const PurchasesHub = () => {
                                                 </div>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <p className="font-black text-sm">${bill.total_amount.toLocaleString()}</p>
+                                                <p className="font-bold text-sm">${bill.total_amount.toLocaleString()}</p>
                                             </td>
                                             <td className="px-6 py-4 text-center">
-                                                <Badge className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3",
+                                                <Badge className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3",
                                                     bill.status === 'paid' ? "bg-green-500/10 text-green-600 border border-green-500/20" :
                                                         bill.status === 'pending' ? "bg-orange-500 text-white shadow-lg shadow-orange-500/20" :
                                                             bill.status === 'overdue' ? "bg-red-500 text-white" : "bg-muted text-muted-foreground"
@@ -223,7 +223,7 @@ const PurchasesHub = () => {
                         <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-sm">
                             <table className="w-full text-left border-collapse">
                                 <thead className="bg-muted/30 border-b border-border/50">
-                                    <tr className="text-[10px] uppercase tracking-widest font-black text-muted-foreground">
+                                    <tr className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
                                         <th className="px-6 py-4">Vendor Name</th>
                                         <th className="px-6 py-4">Category</th>
                                         <th className="px-6 py-4">Contact</th>
@@ -244,7 +244,7 @@ const PurchasesHub = () => {
                                                 {vendor.contact_name}
                                             </td>
                                             <td className="px-6 py-4">
-                                                <Badge className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3",
+                                                <Badge className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3",
                                                     vendor.status === 'active' ? "bg-green-500/10 text-green-600" : "bg-muted text-muted-foreground"
                                                 )}>
                                                     {vendor.status}

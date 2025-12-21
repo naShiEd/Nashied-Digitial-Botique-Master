@@ -76,7 +76,7 @@ const Signup = () => {
                 <div className="w-full max-w-[540px] space-y-12 animate-fade-in relative z-10">
                     <div className="text-center space-y-4">
                         <img src={nashiedLogo} alt="Nashied Logo" className="mx-auto h-14 w-auto" />
-                        <h2 className="text-4xl font-black tracking-tighter text-foreground uppercase">
+                        <h2 className="text-4xl font-bold tracking-tighter text-foreground uppercase">
                             Associate Registry
                         </h2>
                         <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
@@ -86,14 +86,14 @@ const Signup = () => {
 
                     <Card className="border-foreground/10 bg-foreground/[0.02] backdrop-blur-2xl shadow-2xl rounded-[40px] overflow-hidden">
                         <CardHeader className="pt-10 px-10">
-                            <CardTitle className="text-2xl font-black uppercase tracking-tight text-foreground flex items-center gap-3">
+                            <CardTitle className="text-2xl font-bold uppercase tracking-tight text-foreground flex items-center gap-3">
                                 <UserPlus className="h-5 w-5 text-orange-500" /> New Account
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="px-10 pb-10">
                             <form onSubmit={handleSignup} className="space-y-6">
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Full Entity Name</Label>
+                                    <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Full Entity Name</Label>
                                     <Input
                                         placeholder="Aris Nashied"
                                         value={fullName}
@@ -104,7 +104,7 @@ const Signup = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">System Email</Label>
+                                    <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">System Email</Label>
                                     <Input
                                         type="email"
                                         placeholder="name@corp.com"
@@ -117,7 +117,7 @@ const Signup = () => {
                                 </div>
                                 <div className="grid grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Access Pass</Label>
+                                        <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Access Pass</Label>
                                         <Input
                                             type="password"
                                             value={password}
@@ -129,7 +129,7 @@ const Signup = () => {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Confirm Pass</Label>
+                                        <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Confirm Pass</Label>
                                         <Input
                                             type="password"
                                             value={confirmPassword}
@@ -142,13 +142,13 @@ const Signup = () => {
                                     </div>
                                 </div>
 
-                                <Button type="submit" className="w-full h-14 rounded-2xl bg-[#ff8c04] hover:bg-[#e67a00] text-white font-black uppercase text-xs tracking-widest shadow-2xl shadow-orange-500/20" disabled={isLoading}>
+                                <Button type="submit" className="w-full h-14 rounded-2xl bg-[#ff8c04] hover:bg-[#e67a00] text-white font-bold uppercase text-xs tracking-widest shadow-2xl shadow-orange-500/20" disabled={isLoading}>
                                     {isLoading ? "Provisioning..." : "Create Security Identity"}
                                 </Button>
                             </form>
                         </CardContent>
                         <CardFooter className="bg-foreground/5 px-10 py-8 border-t border-foreground/5 flex flex-col gap-6">
-                            <div className="text-[10px] font-black uppercase tracking-widest text-center text-foreground/40">
+                            <div className="text-[10px] font-bold uppercase tracking-widest text-center text-foreground/40">
                                 Existing identity?{" "}
                                 <Link to="/login" className="text-orange-500 hover:text-orange-400">
                                     Activate Login Node
@@ -156,7 +156,7 @@ const Signup = () => {
                             </div>
                             <div className="flex items-center justify-center gap-3 px-6 py-3 bg-foreground/5 rounded-xl border border-foreground/10">
                                 <ShieldPlus className="h-4 w-4 text-orange-500" />
-                                <span className="text-[9px] font-black uppercase tracking-[0.2em] text-foreground/30">Registry Governance Protocol Active</span>
+                                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-foreground/30">Registry Governance Protocol Active</span>
                             </div>
                         </CardFooter>
                     </Card>

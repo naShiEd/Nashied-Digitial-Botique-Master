@@ -307,8 +307,8 @@ const Clients = () => {
                 <div className="flex justify-between items-center bg-card p-6 rounded-2xl border border-border/50 shadow-sm">
                     <div className="space-y-1">
                         <div className="flex items-center gap-2">
-                            <h2 className="text-2xl font-black font-display tracking-tight text-foreground">Customer Master</h2>
-                            <Badge variant="outline" className="rounded-full bg-primary/5 text-primary border-primary/20 text-[10px] font-black">{filteredClients.length} Profiles</Badge>
+                            <h2 className="text-2xl font-bold font-display tracking-tight text-foreground">Customer Master</h2>
+                            <Badge variant="outline" className="rounded-full bg-primary/5 text-primary border-primary/20 text-[10px] font-bold">{filteredClients.length} Profiles</Badge>
                         </div>
                         <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest opacity-60">High-Density Intelligence Architecture</p>
                     </div>
@@ -316,20 +316,20 @@ const Clients = () => {
                     <div className="flex items-center gap-3">
                         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                             <DialogTrigger asChild>
-                                <Button size="lg" className="bg-primary hover:bg-primary/95 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-xl shadow-primary/20 px-8 h-12">
+                                <Button size="lg" className="bg-primary hover:bg-primary/95 rounded-xl font-bold text-[11px] uppercase tracking-widest shadow-xl shadow-primary/20 px-8 h-12">
                                     <Plus className="mr-2 h-4 w-4" /> Add Enterprise Record
                                 </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-3xl border-none shadow-2xl">
                                 <div className="bg-primary p-8 text-white">
-                                    <h2 className="text-2xl font-black uppercase tracking-tighter">Register Client Entity</h2>
+                                    <h2 className="text-2xl font-bold uppercase tracking-tighter">Register Client Entity</h2>
                                     <p className="text-xs font-bold opacity-70 uppercase tracking-widest mt-1">Populating Meta-Database for Nashied Creative Cloud</p>
                                 </div>
                                 <form onSubmit={handleCreateClient}>
                                     <div className="p-8 space-y-6 max-h-[70vh] overflow-y-auto">
                                         {/* CUSTOMER TYPE TOGGLE */}
                                         <div className="flex items-center gap-8 mb-4">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Customer Type</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Customer Type</Label>
                                             <div className="flex items-center gap-6">
                                                 <div className="flex items-center gap-2 cursor-pointer" onClick={() => setNewClient({ ...newClient, customer_type: 'Business' })}>
                                                     <div className={cn("h-4 w-4 rounded-full border flex items-center justify-center transition-all", newClient.customer_type === 'Business' ? "border-primary bg-primary" : "border-muted-foreground/30")}>
@@ -348,7 +348,7 @@ const Clients = () => {
 
                                         {/* PRIMARY CONTACT AREA */}
                                         <div className="flex items-start gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px] pt-4">Primary Contact</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px] pt-4">Primary Contact</Label>
                                             <div className="flex-1 grid grid-cols-6 gap-3">
                                                 <div className="col-span-1">
                                                     <Input value={newClient.salutation} onChange={e => setNewClient({ ...newClient, salutation: e.target.value })} placeholder="Salutation" className="h-10 rounded-xl" />
@@ -363,7 +363,7 @@ const Clients = () => {
                                         </div>
 
                                         <div className="flex items-center gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Company Name</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Company Name</Label>
                                             <Input required value={newClient.company_name} onChange={e => {
                                                 const val = e.target.value;
                                                 setNewClient({ ...newClient, company_name: val, display_name: val });
@@ -371,17 +371,17 @@ const Clients = () => {
                                         </div>
 
                                         <div className="flex items-center gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-primary min-w-[120px]">Display Name</Label>
-                                            <Input required value={newClient.display_name} onChange={e => setNewClient({ ...newClient, display_name: e.target.value })} className="flex-1 h-11 rounded-xl font-black bg-primary/5 border-primary/20" />
+                                            <Label className="text-[10px] font-bold uppercase text-primary min-w-[120px]">Display Name</Label>
+                                            <Input required value={newClient.display_name} onChange={e => setNewClient({ ...newClient, display_name: e.target.value })} className="flex-1 h-11 rounded-xl font-bold bg-primary/5 border-primary/20" />
                                         </div>
 
                                         <div className="flex items-center gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Email Address</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Email Address</Label>
                                             <Input type="email" value={newClient.email} onChange={e => setNewClient({ ...newClient, email: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                         </div>
 
                                         <div className="flex items-start gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px] pt-4">Phone</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px] pt-4">Phone</Label>
                                             <div className="flex-1 grid grid-cols-2 gap-4">
                                                 <div className="relative">
                                                     <Input value={newClient.phone_work} onChange={e => setNewClient({ ...newClient, phone_work: e.target.value })} placeholder="Work Phone" className="h-10 rounded-xl pl-4" />
@@ -393,7 +393,7 @@ const Clients = () => {
                                         </div>
 
                                         <div className="flex items-center gap-8 border-b border-border/20 pb-6 mb-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Language</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Language</Label>
                                             <Input value={newClient.customer_language} onChange={e => setNewClient({ ...newClient, customer_language: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                         </div>
 
@@ -406,19 +406,19 @@ const Clients = () => {
 
                                             <TabsContent value="other" className="space-y-6 animate-in fade-in duration-300">
                                                 <div className="flex items-center gap-8">
-                                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Currency</Label>
+                                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Currency</Label>
                                                     <Input value={newClient.currency} onChange={e => setNewClient({ ...newClient, currency: e.target.value })} className="flex-1 h-10 rounded-xl bg-muted/10" />
                                                 </div>
                                                 <div className="flex items-center gap-8">
-                                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Tax Rate</Label>
+                                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Tax Rate</Label>
                                                     <Input value={newClient.tax_rate} onChange={e => setNewClient({ ...newClient, tax_rate: e.target.value })} placeholder="Select a Tax" className="flex-1 h-10 rounded-xl" />
                                                 </div>
                                                 <div className="flex items-center gap-8">
-                                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Payment Terms</Label>
+                                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Payment Terms</Label>
                                                     <Input value={newClient.payment_terms} onChange={e => setNewClient({ ...newClient, payment_terms: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                                 </div>
                                                 <div className="flex items-center gap-8">
-                                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Financials</Label>
+                                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Financials</Label>
                                                     <div className="flex-1 grid grid-cols-2 gap-4">
                                                         <Input type="number" placeholder="Opening Balance" value={newClient.opening_balance} onChange={e => setNewClient({ ...newClient, opening_balance: parseFloat(e.target.value) || 0 })} className="h-10 rounded-xl" />
                                                         <Input type="number" placeholder="Credit Limit" value={newClient.credit_limit} onChange={e => setNewClient({ ...newClient, credit_limit: parseFloat(e.target.value) || 0 })} className="h-10 rounded-xl border-orange-200" />
@@ -429,7 +429,7 @@ const Clients = () => {
                                             <TabsContent value="address" className="space-y-4 animate-in fade-in duration-300">
                                                 <div className="grid grid-cols-2 gap-8">
                                                     <div className="space-y-4">
-                                                        <h4 className="text-[11px] font-black uppercase tracking-widest text-primary/60 border-b border-primary/10 pb-2">Billing Address</h4>
+                                                        <h4 className="text-[11px] font-bold uppercase tracking-widest text-primary/60 border-b border-primary/10 pb-2">Billing Address</h4>
                                                         <div className="space-y-2">
                                                             <Input placeholder="Attention" value={newClient.address_billing?.attention} onChange={e => setNewClient({ ...newClient, address_billing: { ...newClient.address_billing, attention: e.target.value } })} className="h-9 text-[11px] rounded-lg" />
                                                             <Textarea placeholder="Street Address" value={newClient.address_billing?.street1} onChange={e => setNewClient({ ...newClient, address_billing: { ...newClient.address_billing, street1: e.target.value } })} className="min-h-[60px] text-[11px] rounded-lg" />
@@ -445,13 +445,13 @@ const Clients = () => {
                                                     </div>
                                                     <div className="space-y-4">
                                                         <div className="flex items-center justify-between border-b border-border/10 pb-2">
-                                                            <h4 className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">Shipping Address</h4>
+                                                            <h4 className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Shipping Address</h4>
                                                             <Button
                                                                 type="button"
                                                                 variant="outline"
                                                                 size="sm"
                                                                 onClick={() => setNewClient({ ...newClient, address_shipping: { ...newClient.address_billing } })}
-                                                                className="h-6 px-3 rounded-md text-[9px] font-black uppercase tracking-tighter hover:bg-primary/10 hover:text-primary transition-all"
+                                                                className="h-6 px-3 rounded-md text-[9px] font-bold uppercase tracking-tighter hover:bg-primary/10 hover:text-primary transition-all"
                                                             >
                                                                 Copy Billing
                                                             </Button>
@@ -474,7 +474,7 @@ const Clients = () => {
 
                                             <TabsContent value="remarks" className="animate-in fade-in duration-300">
                                                 <div className="space-y-2">
-                                                    <Label className="text-[10px] font-black uppercase text-muted-foreground">Internal Narrative / Remarks</Label>
+                                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground">Internal Narrative / Remarks</Label>
                                                     <Textarea value={newClient.notes} onChange={e => setNewClient({ ...newClient, notes: e.target.value })} placeholder="Confidence level, preferred contact method, etc." className="min-h-[150px] rounded-2xl p-4 bg-muted/5 font-medium text-sm leading-relaxed" />
                                                 </div>
                                             </TabsContent>
@@ -482,11 +482,11 @@ const Clients = () => {
                                     </div>
                                     <div className="p-8 bg-muted/5 border-t border-border/10 flex items-center justify-between">
                                         <div className="flex items-center gap-2">
-                                            <Badge variant="outline" className="h-6 rounded-lg text-[9px] font-black border-dashed opacity-50 uppercase">Schema: Nashied-CRM-v4</Badge>
+                                            <Badge variant="outline" className="h-6 rounded-lg text-[9px] font-bold border-dashed opacity-50 uppercase">Schema: Nashied-CRM-v4</Badge>
                                         </div>
                                         <div className="flex gap-3">
                                             <Button type="button" variant="ghost" onClick={() => setIsDialogOpen(false)} className="rounded-xl font-bold uppercase text-[10px]">Discard</Button>
-                                            <Button type="submit" className="rounded-xl font-black uppercase text-[11px] h-11 tracking-widest px-10 shadow-2xl shadow-primary/30 transition-all hover:scale-[1.02] active:scale-95">Register Entity</Button>
+                                            <Button type="submit" className="rounded-xl font-bold uppercase text-[11px] h-11 tracking-widest px-10 shadow-2xl shadow-primary/30 transition-all hover:scale-[1.02] active:scale-95">Register Entity</Button>
                                         </div>
                                     </div>
                                 </form>
@@ -503,14 +503,14 @@ const Clients = () => {
                             </DialogTrigger>
                             <DialogContent className="max-w-md rounded-3xl border-none shadow-2xl p-0 overflow-hidden">
                                 <div className="bg-blue-600 p-8 text-white">
-                                    <h2 className="text-xl font-black uppercase tracking-tighter">Import Intelligence</h2>
+                                    <h2 className="text-xl font-bold uppercase tracking-tighter">Import Intelligence</h2>
                                     <p className="text-[10px] font-bold opacity-70 uppercase tracking-widest mt-1">Bulk Data Migration Engine</p>
                                 </div>
                                 <div className="p-8 space-y-6">
                                     <div className="border-2 border-dashed border-border/60 rounded-2xl p-10 flex flex-col items-center justify-center gap-4 hover:border-blue-600 transition-all bg-muted/20 relative cursor-pointer">
                                         <Upload className="h-8 w-8 text-muted-foreground" />
                                         <div className="text-center">
-                                            <p className="text-xs font-black uppercase">Click to Deploy CSV</p>
+                                            <p className="text-xs font-bold uppercase">Click to Deploy CSV</p>
                                             <p className="text-[10px] text-muted-foreground mt-1">UTF-8 Encoded Spreadsheets Only</p>
                                         </div>
                                         <input
@@ -531,7 +531,7 @@ const Clients = () => {
                                             <div className="h-2 w-2 rounded-full bg-blue-600 animate-bounce" />
                                             <div className="h-2 w-2 rounded-full bg-blue-600 animate-bounce [animation-delay:-0.15s]" />
                                             <div className="h-2 w-2 rounded-full bg-blue-600 animate-bounce [animation-delay:-0.3s]" />
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 ml-2">Migrating Cluster Data...</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 ml-2">Migrating Cluster Data...</span>
                                         </div>
                                     )}
                                 </div>
@@ -553,7 +553,7 @@ const Clients = () => {
                             />
                         </div>
                         <div className="flex gap-2">
-                            <Button variant="ghost" size="sm" className="rounded-lg text-[10px] font-black uppercase tracking-widest text-muted-foreground"><Filter className="mr-1.5 h-3.5 w-3.5" /> Filter</Button>
+                            <Button variant="ghost" size="sm" className="rounded-lg text-[10px] font-bold uppercase tracking-widest text-muted-foreground"><Filter className="mr-1.5 h-3.5 w-3.5" /> Filter</Button>
                             <Button variant="ghost" size="icon" onClick={fetchClients} className="h-8 w-8 rounded-lg text-primary"><RefreshCw className="h-4 w-4" /></Button>
                         </div>
                     </div>
@@ -561,9 +561,9 @@ const Clients = () => {
                     <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse">
                             <thead>
-                                <tr className="text-[9px] uppercase tracking-[0.25em] font-black text-muted-foreground/40 bg-muted/5 border-b border-border/30">
+                                <tr className="text-[9px] uppercase tracking-[0.25em] font-bold text-muted-foreground/40 bg-muted/5 border-b border-border/30">
                                     <th className="px-6 py-5 w-10"></th>
-                                    <th className="px-4 py-5 font-black whitespace-nowrap cursor-pointer hover:text-primary" onClick={() => handleSort('company_name')}>Display Name <ArrowUpDown className="inline ml-1 h-3 w-3" /></th>
+                                    <th className="px-4 py-5 font-bold whitespace-nowrap cursor-pointer hover:text-primary" onClick={() => handleSort('company_name')}>Display Name <ArrowUpDown className="inline ml-1 h-3 w-3" /></th>
                                     <th className="px-4 py-5">Company Name</th>
                                     <th className="px-4 py-5">Phone</th>
                                     <th className="px-4 py-5">Status</th>
@@ -578,18 +578,18 @@ const Clients = () => {
                                         <td className="px-6 py-4"><Input type="checkbox" className="h-3.5 w-3.5 rounded border-border/50" /></td>
                                         <td className="px-4 py-4">
                                             <div className="flex flex-col">
-                                                <span className="text-xs font-black text-primary hover:underline cursor-pointer uppercase tracking-tight" onClick={() => { setEditingClient(client); setIsEditDialogOpen(true); }}>
+                                                <span className="text-xs font-bold text-primary hover:underline cursor-pointer uppercase tracking-tight" onClick={() => { setEditingClient(client); setIsEditDialogOpen(true); }}>
                                                     {client.display_name || `${client.salutation || ''} ${client.first_name || ''} ${client.last_name || ''}`.trim() || client.company_name}
                                                 </span>
                                                 <span className="text-[10px] text-muted-foreground/50 font-medium lowercase italic">{client.email}</span>
                                             </div>
                                         </td>
                                         <td className="px-4 py-4">
-                                            <span className="text-[10px] font-black uppercase text-muted-foreground">{client.company_name}</span>
+                                            <span className="text-[10px] font-bold uppercase text-muted-foreground">{client.company_name}</span>
                                         </td>
                                         <td className="px-4 py-4 text-[11px] font-bold text-muted-foreground/80">{client.phone_work || '---'}</td>
                                         <td className="px-4 py-4">
-                                            <Badge variant="outline" className={cn("text-[9px] font-black uppercase tracking-widest rounded-full px-3 py-1",
+                                            <Badge variant="outline" className={cn("text-[9px] font-bold uppercase tracking-widest rounded-full px-3 py-1",
                                                 client.status === 'active' ? "bg-green-500/10 text-green-600 border-green-500/20" : "bg-muted text-muted-foreground"
                                             )}>
                                                 {client.status}
@@ -600,7 +600,7 @@ const Clients = () => {
                                         </td>
                                         <td className="px-4 py-4 text-right">
                                             <div className="flex flex-col">
-                                                <span className="text-xs font-black text-foreground">${(client.receivables || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
+                                                <span className="text-xs font-bold text-foreground">${(client.receivables || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
                                                 {client.opening_balance && client.opening_balance > 0 ? (
                                                     <span className="text-[9px] font-bold text-orange-600 uppercase">OB: ${client.opening_balance.toLocaleString()}</span>
                                                 ) : null}
@@ -639,7 +639,7 @@ const Clients = () => {
             <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
                 <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-3xl border-none shadow-2xl">
                     <div className="bg-orange-600 p-8 text-white">
-                        <h2 className="text-2xl font-black uppercase tracking-tighter">Synchronize Entity</h2>
+                        <h2 className="text-2xl font-bold uppercase tracking-tighter">Synchronize Entity</h2>
                         <p className="text-xs font-bold opacity-70 uppercase tracking-widest mt-1">Updating Master Record in Production Database</p>
                     </div>
                     {editingClient && (
@@ -647,7 +647,7 @@ const Clients = () => {
                             <div className="p-8 space-y-6 max-h-[70vh] overflow-y-auto">
                                 {/* CUSTOMER TYPE TOGGLE */}
                                 <div className="flex items-center gap-8 mb-4">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Customer Type</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Customer Type</Label>
                                     <div className="flex items-center gap-6">
                                         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setEditingClient({ ...editingClient, customer_type: 'Business' })}>
                                             <div className={cn("h-4 w-4 rounded-full border flex items-center justify-center transition-all", editingClient.customer_type === 'Business' ? "border-orange-600 bg-orange-600" : "border-muted-foreground/30")}>
@@ -666,7 +666,7 @@ const Clients = () => {
 
                                 {/* PRIMARY CONTACT AREA */}
                                 <div className="flex items-start gap-8">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px] pt-4">Primary Contact</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px] pt-4">Primary Contact</Label>
                                     <div className="flex-1 grid grid-cols-6 gap-3">
                                         <div className="col-span-1">
                                             <Input value={editingClient.salutation || ''} onChange={e => setEditingClient({ ...editingClient, salutation: e.target.value })} placeholder="Salutation" className="h-10 rounded-xl" />
@@ -681,22 +681,22 @@ const Clients = () => {
                                 </div>
 
                                 <div className="flex items-center gap-8">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Company Name</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Company Name</Label>
                                     <Input required value={editingClient.company_name} onChange={e => setEditingClient({ ...editingClient, company_name: e.target.value })} className="flex-1 h-10 rounded-xl font-bold bg-muted/10 border-border/40" />
                                 </div>
 
                                 <div className="flex items-center gap-8">
-                                    <Label className="text-[10px] font-black uppercase text-orange-600 min-w-[120px]">Display Name</Label>
-                                    <Input required value={editingClient.display_name} onChange={e => setEditingClient({ ...editingClient, display_name: e.target.value })} className="flex-1 h-11 rounded-xl font-black bg-orange-50 border-orange-200" />
+                                    <Label className="text-[10px] font-bold uppercase text-orange-600 min-w-[120px]">Display Name</Label>
+                                    <Input required value={editingClient.display_name} onChange={e => setEditingClient({ ...editingClient, display_name: e.target.value })} className="flex-1 h-11 rounded-xl font-bold bg-orange-50 border-orange-200" />
                                 </div>
 
                                 <div className="flex items-center gap-8">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Email Address</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Email Address</Label>
                                     <Input type="email" value={editingClient.email || ''} onChange={e => setEditingClient({ ...editingClient, email: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                 </div>
 
                                 <div className="flex items-start gap-8">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px] pt-4">Phone</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px] pt-4">Phone</Label>
                                     <div className="flex-1 grid grid-cols-2 gap-4">
                                         <Input value={editingClient.phone_work || ''} onChange={e => setEditingClient({ ...editingClient, phone_work: e.target.value })} placeholder="Work Phone" className="h-10 rounded-xl" />
                                         <Input value={editingClient.phone_mobile || ''} onChange={e => setEditingClient({ ...editingClient, phone_mobile: e.target.value })} placeholder="Mobile" className="h-10 rounded-xl" />
@@ -704,7 +704,7 @@ const Clients = () => {
                                 </div>
 
                                 <div className="flex items-center gap-8 border-b border-border/20 pb-6 mb-2">
-                                    <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Language</Label>
+                                    <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Language</Label>
                                     <Input value={editingClient.customer_language || ''} onChange={e => setEditingClient({ ...editingClient, customer_language: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                 </div>
 
@@ -717,15 +717,15 @@ const Clients = () => {
 
                                     <TabsContent value="other" className="space-y-6 animate-in fade-in duration-300">
                                         <div className="flex items-center gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Currency</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Currency</Label>
                                             <Input value={editingClient.currency || ''} onChange={e => setEditingClient({ ...editingClient, currency: e.target.value })} className="flex-1 h-10 rounded-xl bg-orange-50" />
                                         </div>
                                         <div className="flex items-center gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Tax Rate</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Tax Rate</Label>
                                             <Input value={editingClient.tax_rate || ''} onChange={e => setEditingClient({ ...editingClient, tax_rate: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                         </div>
                                         <div className="flex items-center gap-8">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground min-w-[120px]">Payment Terms</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground min-w-[120px]">Payment Terms</Label>
                                             <Input value={editingClient.payment_terms || ''} onChange={e => setEditingClient({ ...editingClient, payment_terms: e.target.value })} className="flex-1 h-10 rounded-xl" />
                                         </div>
                                     </TabsContent>
@@ -733,7 +733,7 @@ const Clients = () => {
                                     <TabsContent value="address" className="space-y-4 animate-in fade-in duration-300">
                                         <div className="grid grid-cols-2 gap-8">
                                             <div className="space-y-4">
-                                                <h4 className="text-[11px] font-black uppercase tracking-widest text-orange-600/60 border-b border-orange-600/10 pb-2">Billing Address</h4>
+                                                <h4 className="text-[11px] font-bold uppercase tracking-widest text-orange-600/60 border-b border-orange-600/10 pb-2">Billing Address</h4>
                                                 <div className="space-y-2">
                                                     <Input placeholder="Attention" value={editingClient.address_billing?.attention || ''} onChange={e => setEditingClient({ ...editingClient, address_billing: { ...editingClient.address_billing, attention: e.target.value } })} className="h-9 text-[11px] rounded-lg" />
                                                     <Textarea placeholder="Street Address" value={editingClient.address_billing?.street1 || ''} onChange={e => setEditingClient({ ...editingClient, address_billing: { ...editingClient.address_billing, street1: e.target.value } })} className="min-h-[60px] text-[11px] rounded-lg" />
@@ -743,13 +743,13 @@ const Clients = () => {
                                             </div>
                                             <div className="space-y-4">
                                                 <div className="flex items-center justify-between border-b border-border/10 pb-2">
-                                                    <h4 className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">Shipping Address</h4>
+                                                    <h4 className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Shipping Address</h4>
                                                     <Button
                                                         type="button"
                                                         variant="outline"
                                                         size="sm"
                                                         onClick={() => setEditingClient({ ...editingClient, address_shipping: { ...editingClient.address_billing } })}
-                                                        className="h-6 px-3 rounded-md text-[9px] font-black uppercase tracking-tighter hover:bg-orange-600/10 hover:text-orange-600 transition-all"
+                                                        className="h-6 px-3 rounded-md text-[9px] font-bold uppercase tracking-tighter hover:bg-orange-600/10 hover:text-orange-600 transition-all"
                                                     >
                                                         Copy Billing
                                                     </Button>
@@ -766,7 +766,7 @@ const Clients = () => {
 
                                     <TabsContent value="remarks" className="animate-in fade-in duration-300">
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase text-muted-foreground">Internal Narrative / Remarks</Label>
+                                            <Label className="text-[10px] font-bold uppercase text-muted-foreground">Internal Narrative / Remarks</Label>
                                             <Textarea value={editingClient.notes || ''} onChange={e => setEditingClient({ ...editingClient, notes: e.target.value })} className="min-h-[150px] rounded-2xl p-4 bg-muted/5 font-medium text-sm border-orange-200" />
                                         </div>
                                     </TabsContent>
@@ -774,7 +774,7 @@ const Clients = () => {
                             </div>
                             <div className="p-8 bg-orange-600/5 border-t border-orange-600/10 flex justify-end gap-3">
                                 <Button type="button" variant="ghost" onClick={() => setIsEditDialogOpen(false)} className="rounded-xl font-bold uppercase text-[10px]">Discard</Button>
-                                <Button type="submit" className="bg-orange-600 hover:bg-orange-700 rounded-xl font-black uppercase text-[11px] h-11 tracking-widest px-10 shadow-2xl shadow-orange-600/30">Apply Sync Changes</Button>
+                                <Button type="submit" className="bg-orange-600 hover:bg-orange-700 rounded-xl font-bold uppercase text-[11px] h-11 tracking-widest px-10 shadow-2xl shadow-orange-600/30">Apply Sync Changes</Button>
                             </div>
                         </form>
                     )}

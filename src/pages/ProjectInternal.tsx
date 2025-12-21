@@ -99,14 +99,14 @@ const ProjectInternal = () => {
 
                 {/* 1️⃣ BREADCRUMB & UTILS */}
                 <div className="flex items-center justify-between">
-                    <Button variant="ghost" onClick={() => navigate('/dashboard/projects')} className="rounded-xl font-black uppercase text-[10px] tracking-widest group px-0 hover:bg-transparent">
+                    <Button variant="ghost" onClick={() => navigate('/dashboard/projects')} className="rounded-xl font-bold uppercase text-[10px] tracking-widest group px-0 hover:bg-transparent">
                         <ChevronLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" /> Back to Project Cluster
                     </Button>
                     <div className="flex gap-3">
-                        <Button variant="outline" className="rounded-xl font-black uppercase text-[10px] tracking-widest border-divider/10 h-10 px-6">
+                        <Button variant="outline" className="rounded-xl font-bold uppercase text-[10px] tracking-widest border-divider/10 h-10 px-6">
                             <Settings className="mr-2 h-3.5 w-3.5" /> Project Config
                         </Button>
-                        <Button className="rounded-xl font-black uppercase text-[10px] tracking-widest h-10 px-8 shadow-xl shadow-primary/20">
+                        <Button className="rounded-xl font-bold uppercase text-[10px] tracking-widest h-10 px-8 shadow-xl shadow-primary/20">
                             Launch Public Preview
                         </Button>
                     </div>
@@ -122,38 +122,38 @@ const ProjectInternal = () => {
                             <CardContent className="p-12 space-y-8 relative z-10">
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3">
-                                        <Badge className="bg-primary text-white border-none px-4 py-1 font-black text-[9px] uppercase tracking-widest rounded-full">{project.status}</Badge>
+                                        <Badge className="bg-primary text-white border-none px-4 py-1 font-bold text-[9px] uppercase tracking-widest rounded-full">{project.status}</Badge>
                                         <div className="h-1 w-1 bg-white/20 rounded-full" />
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/40">{project.type}</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">{project.type}</p>
                                     </div>
-                                    <h2 className="text-6xl font-black tracking-tighter leading-none">{project.name}</h2>
+                                    <h2 className="text-6xl font-bold tracking-tighter leading-none">{project.name}</h2>
                                     <p className="text-xl text-white/60 font-medium max-w-2xl leading-relaxed">{project.description || 'No project description provided in metadata registry.'}</p>
                                 </div>
 
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
                                     <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-2">Master Client</p>
-                                        <p className="text-sm font-black uppercase truncate">{project.client?.company_name}</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2">Master Client</p>
+                                        <p className="text-sm font-bold uppercase truncate">{project.client?.company_name}</p>
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-2">Internal Lead</p>
-                                        <p className="text-sm font-black uppercase truncate">{project.assigned?.full_name || 'Unassigned'}</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2">Internal Lead</p>
+                                        <p className="text-sm font-bold uppercase truncate">{project.assigned?.full_name || 'Unassigned'}</p>
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-2">Timeline Frame</p>
-                                        <p className="text-sm font-black uppercase flex items-center gap-2">
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2">Timeline Frame</p>
+                                        <p className="text-sm font-bold uppercase flex items-center gap-2">
                                             {new Date(project.start_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
                                             <span className="text-white/20">—</span>
                                             {new Date(project.end_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
                                         </p>
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-2">Production Health</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2">Production Health</p>
                                         <div className="flex items-center gap-3">
                                             <div className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
                                                 <div className="h-full bg-primary" style={{ width: `${stats.completedWeight}%` }} />
                                             </div>
-                                            <span className="text-xs font-black">{Math.round(stats.completedWeight)}%</span>
+                                            <span className="text-xs font-bold">{Math.round(stats.completedWeight)}%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -162,16 +162,16 @@ const ProjectInternal = () => {
 
                         <Tabs defaultValue="tasks" className="w-full">
                             <TabsList className="bg-muted/30 p-1.5 rounded-2xl border border-border/50 h-auto gap-2">
-                                <TabsTrigger value="tasks" className="rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-lg font-black text-[10px] uppercase tracking-widest h-12 px-8">Production Tasks</TabsTrigger>
-                                <TabsTrigger value="deliverables" className="rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-lg font-black text-[10px] uppercase tracking-widest h-12 px-8">Asset Repository</TabsTrigger>
-                                <TabsTrigger value="financials" className="rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-lg font-black text-[10px] uppercase tracking-widest h-12 px-8">Project Commercials</TabsTrigger>
+                                <TabsTrigger value="tasks" className="rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-lg font-bold text-[10px] uppercase tracking-widest h-12 px-8">Production Tasks</TabsTrigger>
+                                <TabsTrigger value="deliverables" className="rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-lg font-bold text-[10px] uppercase tracking-widest h-12 px-8">Asset Repository</TabsTrigger>
+                                <TabsTrigger value="financials" className="rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-lg font-bold text-[10px] uppercase tracking-widest h-12 px-8">Project Commercials</TabsTrigger>
                             </TabsList>
 
                             <TabsContent value="tasks" className="mt-8">
                                 <Card className="border-border/40 shadow-2xl rounded-[32px] overflow-hidden bg-white/50 backdrop-blur-xl ring-1 ring-black/5">
                                     <table className="w-full text-left">
                                         <thead className="bg-[#111] text-white">
-                                            <tr className="text-[9px] uppercase tracking-[0.2em] font-black">
+                                            <tr className="text-[9px] uppercase tracking-[0.2em] font-bold">
                                                 <th className="px-8 py-5">Objective</th>
                                                 <th className="px-8 py-5">Assigned</th>
                                                 <th className="px-8 py-5 text-center">Status</th>
@@ -182,26 +182,26 @@ const ProjectInternal = () => {
                                             {tasks.map((task) => (
                                                 <tr key={task.id} className="group hover:bg-white transition-all">
                                                     <td className="px-8 py-6">
-                                                        <p className="font-black text-xs uppercase tracking-tight">{task.title}</p>
+                                                        <p className="font-bold text-xs uppercase tracking-tight">{task.title}</p>
                                                         <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-1">Ref: #{task.id.slice(0, 8).toUpperCase()}</p>
                                                     </td>
                                                     <td className="px-8 py-6">
                                                         <div className="flex items-center gap-3">
-                                                            <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-[10px] font-black text-primary border border-primary/20">
+                                                            <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary border border-primary/20">
                                                                 {task.owner?.full_name?.charAt(0) || "U"}
                                                             </div>
-                                                            <span className="text-[10px] font-black uppercase tracking-widest opacity-60">{task.owner?.full_name}</span>
+                                                            <span className="text-[10px] font-bold uppercase tracking-widest opacity-60">{task.owner?.full_name}</span>
                                                         </div>
                                                     </td>
                                                     <td className="px-8 py-6 text-center">
-                                                        <Badge variant="outline" className={cn("text-[8px] font-black uppercase tracking-widest px-3 py-0.5 rounded-full",
+                                                        <Badge variant="outline" className={cn("text-[8px] font-bold uppercase tracking-widest px-3 py-0.5 rounded-full",
                                                             task.status === 'completed' ? 'border-green-200 text-green-600 bg-green-50' : 'border-orange-200 text-orange-600 bg-orange-50'
                                                         )}>
                                                             {task.status}
                                                         </Badge>
                                                     </td>
                                                     <td className="px-8 py-6 text-right">
-                                                        <span className="font-mono text-sm font-black italic opacity-40">
+                                                        <span className="font-mono text-sm font-bold italic opacity-40">
                                                             {(Number(task.total_active_seconds) / 3600).toFixed(1)}h
                                                         </span>
                                                     </td>
@@ -211,7 +211,7 @@ const ProjectInternal = () => {
                                                 <tr>
                                                     <td colSpan={4} className="px-8 py-20 text-center">
                                                         <Activity className="mx-auto h-10 w-10 opacity-10 mb-4" />
-                                                        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground opacity-40">No production cycles registered for this node.</p>
+                                                        <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground opacity-40">No production cycles registered for this node.</p>
                                                     </td>
                                                 </tr>
                                             )}
@@ -224,24 +224,24 @@ const ProjectInternal = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <Card className="rounded-[32px] border-border/40 p-8 space-y-6">
                                         <div className="flex items-center justify-between">
-                                            <h3 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Accounts Receivable</h3>
+                                            <h3 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Accounts Receivable</h3>
                                             <DollarSign className="h-5 w-5 text-primary" />
                                         </div>
                                         <div className="space-y-1">
-                                            <p className="text-4xl font-black tracking-tighter">${project.invoice_amount?.toLocaleString()}</p>
+                                            <p className="text-4xl font-bold tracking-tighter">${project.invoice_amount?.toLocaleString()}</p>
                                             <div className="flex justify-between items-center text-[10px] font-bold text-muted-foreground uppercase opacity-60">
                                                 <span>Total Contract Value</span>
-                                                <Badge className="bg-blue-50 text-blue-600 border-none font-black">Deposit Recieved: ${project.deposit_amount?.toLocaleString()}</Badge>
+                                                <Badge className="bg-blue-50 text-blue-600 border-none font-bold">Deposit Recieved: ${project.deposit_amount?.toLocaleString()}</Badge>
                                             </div>
                                         </div>
                                     </Card>
                                     <Card className="rounded-[32px] border-border/40 p-8 space-y-6">
                                         <div className="flex items-center justify-between">
-                                            <h3 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Production Burn</h3>
+                                            <h3 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Production Burn</h3>
                                             <TrendingUp className="h-5 w-5 text-orange-500" />
                                         </div>
                                         <div className="space-y-1">
-                                            <p className="text-4xl font-black tracking-tighter">${stats.burnRate}<span className="text-xl opacity-30">/hr</span></p>
+                                            <p className="text-4xl font-bold tracking-tighter">${stats.burnRate}<span className="text-xl opacity-30">/hr</span></p>
                                             <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60">Real-time Efficiency Index</p>
                                         </div>
                                     </Card>
@@ -254,8 +254,8 @@ const ProjectInternal = () => {
                         {/* PROJECT HEALTH PULSE */}
                         <Card className="rounded-[40px] border-border/40 p-10 space-y-10 shadow-2xl bg-white sticky top-32">
                             <div className="space-y-2">
-                                <h4 className="text-[10px] font-black uppercase tracking-widest text-primary">Operational Pulse</h4>
-                                <h3 className="text-3xl font-black tracking-tighter uppercase">Project Integrity</h3>
+                                <h4 className="text-[10px] font-bold uppercase tracking-widest text-primary">Operational Pulse</h4>
+                                <h3 className="text-3xl font-bold tracking-tighter uppercase">Project Integrity</h3>
                             </div>
 
                             <div className="space-y-6">
@@ -266,10 +266,10 @@ const ProjectInternal = () => {
                             </div>
 
                             <div className="pt-8 border-t border-divider/5 space-y-4">
-                                <Button className="w-full h-14 rounded-2xl bg-[#111] hover:bg-black text-white font-black uppercase text-[10px] tracking-widest shadow-2xl">
+                                <Button className="w-full h-14 rounded-2xl bg-[#111] hover:bg-black text-white font-bold uppercase text-[10px] tracking-widest shadow-2xl">
                                     Initiate Quality Audit
                                 </Button>
-                                <Button variant="outline" className="w-full h-14 rounded-2xl border-divider/10 font-black uppercase text-[10px] tracking-widest hover:bg-muted">
+                                <Button variant="outline" className="w-full h-14 rounded-2xl border-divider/10 font-bold uppercase text-[10px] tracking-widest hover:bg-muted">
                                     Open Portal Communication
                                 </Button>
                             </div>
@@ -279,7 +279,7 @@ const ProjectInternal = () => {
                                     <ShieldCheck className="h-4 w-4" />
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-blue-700">Governance Node</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-widest text-blue-700">Governance Node</p>
                                     <p className="text-[10px] text-blue-600/70 font-medium leading-relaxed">
                                         All project telemetry is encrypted and logged for institutional oversight.
                                     </p>
@@ -299,9 +299,9 @@ const PulseItem = ({ icon: Icon, label, value, color }: any) => (
             <div className="h-10 w-10 bg-muted rounded-xl flex items-center justify-center text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-all">
                 <Icon className="h-5 w-5" />
             </div>
-            <p className="text-[10px] font-black uppercase tracking-widest opacity-60">{label}</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">{label}</p>
         </div>
-        <p className={cn("text-lg font-black tracking-tight", color || "text-foreground")}>{value}</p>
+        <p className={cn("text-lg font-bold tracking-tight", color || "text-foreground")}>{value}</p>
     </div>
 );
 

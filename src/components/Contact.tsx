@@ -19,9 +19,9 @@ const Contact = () => {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 bg-foreground/5 border border-foreground/10 px-4 py-2 rounded-full">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40">Nexus Channel Online</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/40">Nexus Channel Online</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase">
+              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none uppercase">
                 Connect <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">The Network.</span>
               </h2>
@@ -54,29 +54,29 @@ const Contact = () => {
           {/* Inquiry Form */}
           <div className="lg:col-span-7">
             <form className="bg-foreground/5 border border-foreground/10 p-10 md:p-16 rounded-[48px] backdrop-blur-xl space-y-8 shadow-2xl relative group">
-              <h3 className="text-3xl font-black uppercase tracking-tighter italic">Inquiry Protocol</h3>
+              <h3 className="text-3xl font-bold uppercase tracking-tighter italic">Inquiry Protocol</h3>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Identity / Full Name</Label>
+                  <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Identity / Full Name</Label>
                   <Input placeholder="Aris Nashied" className="h-16 rounded-2xl bg-foreground/5 border-foreground/10 text-lg font-bold" />
                 </div>
                 <div className="space-y-3">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Communication Endpoint</Label>
+                  <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Communication Endpoint</Label>
                   <Input type="email" placeholder="aris@nashied.agency" className="h-16 rounded-2xl bg-foreground/5 border-foreground/10 text-lg font-bold" />
                 </div>
               </div>
 
               <div className="space-y-3">
-                <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Mission Objective</Label>
+                <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Mission Objective</Label>
                 <Textarea placeholder="Describe the project architecture..." className="min-h-[160px] rounded-[32px] bg-foreground/5 border-foreground/10 text-lg font-bold p-10" />
               </div>
 
-              <Button className="w-full h-14 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-black uppercase text-xs tracking-[0.2em] shadow-2xl shadow-orange-500/20 active:scale-95 transition-all">
+              <Button className="w-full h-14 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase text-xs tracking-[0.2em] shadow-2xl shadow-orange-500/20 active:scale-95 transition-all">
                 Execute Transmission <Send className="ml-3 h-5 w-5" />
               </Button>
 
-              <div className="flex items-center justify-center gap-4 pt-4 text-[10px] font-black uppercase tracking-widest text-foreground/20">
+              <div className="flex items-center justify-center gap-4 pt-4 text-[10px] font-bold uppercase tracking-widest text-foreground/20">
                 <ShieldCheck className="h-4 w-4" /> Secure TLS Encryption Enabled
               </div>
             </form>
@@ -94,8 +94,8 @@ const ContactItem = ({ icon: Icon, label, value, href }: any) => {
         <Icon className="h-6 w-6 text-foreground group-hover:text-white transition-colors" />
       </div>
       <div className="space-y-1">
-        <p className="text-[10px] font-black uppercase tracking-widest text-foreground/20 group-hover:text-orange-500 transition-colors uppercase">{label}</p>
-        <p className="text-2xl font-black uppercase tracking-tight text-foreground">{value}</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/20 group-hover:text-orange-500 transition-colors uppercase">{label}</p>
+        <p className="text-2xl font-bold uppercase tracking-tight text-foreground">{value}</p>
       </div>
     </div>
   );

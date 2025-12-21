@@ -66,7 +66,7 @@ export const InvoiceTemplate = ({
                         <img src={nashiedLogo} alt="Nashied" className="h-10 w-auto mb-2" />
                     )}
                     <div className="text-[11px] leading-relaxed text-muted-foreground uppercase font-bold tracking-wider">
-                        <p className="text-[#111] font-black">{orgProfile?.legal_name || orgProfile?.name || "Nashied Creative"}</p>
+                        <p className="text-[#111] font-bold">{orgProfile?.legal_name || orgProfile?.name || "Nashied Creative"}</p>
                         <p>{orgProfile?.address_street || "3 Anchor House, Jason and First"}</p>
                         <p>{orgProfile?.address_city || "Harare"}, {orgProfile?.address_country || "Zimbabwe"}</p>
                         {orgProfile?.tax_number && <p>VAT: {orgProfile.tax_number}</p>}
@@ -79,7 +79,7 @@ export const InvoiceTemplate = ({
                     <p className="text-sm font-bold text-muted-foreground"># {invoiceNumber}</p>
                     <div className="mt-8">
                         <p className="text-[10px] uppercase font-bold text-muted-foreground">Balance Due</p>
-                        <p className="text-2xl font-black text-[#111]">{symbol}{balanceDue.toLocaleString('en-US', { minimumFractionDigits: 2 })}</p>
+                        <p className="text-2xl font-bold text-[#111]">{symbol}{balanceDue.toLocaleString('en-US', { minimumFractionDigits: 2 })}</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ export const InvoiceTemplate = ({
             <div className="grid grid-cols-2 gap-12 mb-8 border-t border-divider/10 pt-8">
                 <div>
                     <p className="text-[10px] uppercase font-bold text-muted-foreground mb-2">Bill To</p>
-                    <p className="font-black text-sm uppercase text-[#111]">{clientName}</p>
+                    <p className="font-bold text-sm uppercase text-[#111]">{clientName}</p>
                 </div>
                 <div className="space-y-2">
                     <div className="flex justify-between text-[11px]">
@@ -118,7 +118,7 @@ export const InvoiceTemplate = ({
             <div className="mb-8">
                 <table className="w-full text-left border-collapse">
                     <thead>
-                        <tr className="bg-[#111] text-white text-[10px] uppercase font-black tracking-widest">
+                        <tr className="bg-[#111] text-white text-[10px] uppercase font-bold tracking-widest">
                             <th className="px-4 py-3 w-12">#</th>
                             <th className="px-4 py-3">Item & Description</th>
                             <th className="px-4 py-3 text-right w-20">Qty</th>
@@ -151,12 +151,12 @@ export const InvoiceTemplate = ({
                     <span className="font-medium text-[#111]">{subtotal.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 text-xs">
-                    <span className="font-black uppercase text-[#111]">Total</span>
-                    <span className="font-black text-[#111]">{symbol}{total.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
+                    <span className="font-bold uppercase text-[#111]">Total</span>
+                    <span className="font-bold text-[#111]">{symbol}{total.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
                 </div>
                 <div className="flex justify-between items-center py-4 px-4 mt-2 bg-muted/50 rounded-lg">
-                    <span className="font-black uppercase text-sm text-[#111]">Balance Due</span>
-                    <span className="font-black text-sm text-[#111]">{symbol}{balanceDue.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
+                    <span className="font-bold uppercase text-sm text-[#111]">Balance Due</span>
+                    <span className="font-bold text-sm text-[#111]">{symbol}{balanceDue.toLocaleString('en-US', { minimumFractionDigits: 2 })}</span>
                 </div>
             </div>
 

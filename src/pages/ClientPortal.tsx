@@ -103,7 +103,7 @@ const ClientPortal = () => {
                 <div className="flex flex-col items-center gap-6 animate-pulse">
                     <div className="h-16 w-16 border-[6px] border-primary/20 border-t-primary rounded-full animate-spin" />
                     <div className="text-center space-y-2">
-                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Establishing Encrypted Bridge</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Establishing Encrypted Bridge</p>
                         <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest opacity-40 italic">Verifying digital signatures via Nashied Trust Network...</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ const ClientPortal = () => {
                     <div className="h-20 w-20 bg-muted/50 rounded-full flex items-center justify-center mx-auto">
                         <Lock className="h-8 w-8 text-muted-foreground opacity-30" />
                     </div>
-                    <h2 className="text-2xl font-black uppercase tracking-tighter">Access Denied</h2>
+                    <h2 className="text-2xl font-bold uppercase tracking-tighter">Access Denied</h2>
                     <p className="text-xs text-muted-foreground font-medium leading-relaxed uppercase tracking-widest opacity-60">The requested financial artifact has expired or the security token is invalid.</p>
                     <Button variant="outline" className="mt-4 rounded-2xl px-8" onClick={() => window.location.reload()}>Retry Handshake</Button>
                 </div>
@@ -139,17 +139,17 @@ const ClientPortal = () => {
                         </div>
                         <div>
                             <div className="flex items-center gap-2">
-                                <h2 className="text-sm font-black uppercase tracking-tighter leading-none">{orgProfile?.name || 'Nashied Digital'}</h2>
-                                <Badge variant="secondary" className="text-[8px] font-black uppercase tracking-[0.2em] px-2 py-0 border-none bg-blue-50 text-blue-600">Secure Node</Badge>
+                                <h2 className="text-sm font-bold uppercase tracking-tighter leading-none">{orgProfile?.name || 'Nashied Digital'}</h2>
+                                <Badge variant="secondary" className="text-[8px] font-bold uppercase tracking-[0.2em] px-2 py-0 border-none bg-blue-50 text-blue-600">Secure Node</Badge>
                             </div>
                             <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1.5 opacity-60">Verified Document Control Center</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        <Button variant="ghost" className="rounded-2xl font-black uppercase text-[10px] tracking-widest h-12 px-6 group hover:bg-muted" onClick={() => window.close()}>
+                        <Button variant="ghost" className="rounded-2xl font-bold uppercase text-[10px] tracking-widest h-12 px-6 group hover:bg-muted" onClick={() => window.close()}>
                             <ChevronLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" /> Exit Portal
                         </Button>
-                        <Button className="bg-primary hover:bg-primary/95 rounded-2xl font-black uppercase text-[10px] tracking-widest h-12 px-8 shadow-xl shadow-primary/20 transition-all active:scale-95" onClick={handlePrint}>
+                        <Button className="bg-primary hover:bg-primary/95 rounded-2xl font-bold uppercase text-[10px] tracking-widest h-12 px-8 shadow-xl shadow-primary/20 transition-all active:scale-95" onClick={handlePrint}>
                             <Printer className="mr-3 h-4 w-4" /> Generate PDF
                         </Button>
                     </div>
@@ -195,20 +195,20 @@ const ClientPortal = () => {
                             <div className="absolute top-0 right-0 p-10 opacity-10 rotate-12">
                                 <Activity className="h-32 w-32" />
                             </div>
-                            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-primary/80 relative z-10">Outstanding Balance</p>
-                            <h3 className="text-5xl font-black tracking-tighter relative z-10 flex items-baseline gap-1">
+                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/80 relative z-10">Outstanding Balance</p>
+                            <h3 className="text-5xl font-bold tracking-tighter relative z-10 flex items-baseline gap-1">
                                 <span className="text-2xl font-bold opacity-40">$</span>
                                 {outstanding.toLocaleString()}
                             </h3>
                             <div className="flex gap-2 mt-6 relative z-10">
                                 <Badge className={cn(
-                                    "px-3 py-1 rounded-full font-black text-[9px] uppercase tracking-widest border-none",
+                                    "px-3 py-1 rounded-full font-bold text-[9px] uppercase tracking-widest border-none",
                                     document?.status === 'paid' ? 'bg-green-500 text-white' :
                                         document?.status === 'overdue' ? 'bg-red-500 text-white' : 'bg-primary/20 text-primary'
                                 )}>
                                     Status: {document?.status?.toUpperCase()}
                                 </Badge>
-                                <Badge variant="outline" className="px-3 py-1 rounded-full font-black text-[9px] uppercase tracking-widest border-white/20 text-white/60">
+                                <Badge variant="outline" className="px-3 py-1 rounded-full font-bold text-[9px] uppercase tracking-widest border-white/20 text-white/60">
                                     Ref: #{document?.id.slice(0, 8).toUpperCase()}
                                 </Badge>
                             </div>
@@ -216,7 +216,7 @@ const ClientPortal = () => {
 
                         <div className="p-10 space-y-8">
                             <div className="space-y-5">
-                                <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground flex items-center gap-3">
+                                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground flex items-center gap-3">
                                     <div className="h-px bg-divider/10 flex-1" /> Choose Settlement Method <div className="h-px bg-divider/10 flex-1" />
                                 </h4>
                                 <div className="space-y-3">
@@ -250,7 +250,7 @@ const ClientPortal = () => {
                             <Button
                                 disabled={paymentLoading || document?.status === 'paid'}
                                 onClick={handleInitiatePayment}
-                                className="w-full h-16 rounded-[22px] bg-primary hover:bg-primary/95 text-xs font-black uppercase tracking-[0.2em] shadow-2xl shadow-primary/30 transition-all hover:-translate-y-1 active:scale-95 disabled:grayscale disabled:opacity-50 group overflow-hidden relative"
+                                className="w-full h-16 rounded-[22px] bg-primary hover:bg-primary/95 text-xs font-bold uppercase tracking-[0.2em] shadow-2xl shadow-primary/30 transition-all hover:-translate-y-1 active:scale-95 disabled:grayscale disabled:opacity-50 group overflow-hidden relative"
                             >
                                 {paymentLoading ? (
                                     <>
@@ -265,7 +265,7 @@ const ClientPortal = () => {
 
                             <p className="text-[10px] text-center text-muted-foreground font-bold uppercase tracking-widest leading-relaxed opacity-60">
                                 Need technical assistance? Contact our <br />
-                                <span className="text-primary font-black hover:underline cursor-pointer">Global Financial Support Units</span>
+                                <span className="text-primary font-bold hover:underline cursor-pointer">Global Financial Support Units</span>
                             </p>
                         </div>
                     </Card>
@@ -275,7 +275,7 @@ const ClientPortal = () => {
                             <ShieldCheck className="h-5 w-5" />
                         </div>
                         <div className="space-y-1.5 pt-1">
-                            <p className="text-[10px] font-black uppercase tracking-widest text-blue-800">Quantum Grade Encryption</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-blue-800">Quantum Grade Encryption</p>
                             <p className="text-[10px] text-blue-600/70 font-bold leading-relaxed uppercase tracking-tight">
                                 Document integrity is managed via Nashied's Secure Edge. All access telemetry is logged for institutional audit trails.
                             </p>
@@ -314,7 +314,7 @@ const PaymentMethod = ({ label, icon, desc, selected, onClick }: PaymentMethodPr
         <div className="flex items-center gap-5 relative z-10">
             <span className={cn("text-2xl transition-transform group-hover:scale-125 duration-500", selected && "scale-110")}>{icon}</span>
             <div>
-                <p className={cn("text-[11px] font-black uppercase tracking-tight", selected ? "text-primary" : "text-foreground")}>{label}</p>
+                <p className={cn("text-[11px] font-bold uppercase tracking-tight", selected ? "text-primary" : "text-foreground")}>{label}</p>
                 <p className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest opacity-60 mt-0.5">{desc}</p>
             </div>
         </div>

@@ -52,14 +52,14 @@ const Login = () => {
 
                     <Card className="border-foreground/10 bg-foreground/[0.02] backdrop-blur-2xl shadow-2xl rounded-[40px] overflow-hidden">
                         <CardHeader className="pt-10 px-10">
-                            <CardTitle className="text-2xl font-black uppercase tracking-tight text-foreground flex items-center gap-3">
+                            <CardTitle className="text-2xl font-bold uppercase tracking-tight text-foreground flex items-center gap-3">
                                 <Lock className="h-5 w-5 text-orange-500" /> Security Login
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="px-10 pb-10">
                             <form onSubmit={handleLogin} className="space-y-6">
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Personnel Email</Label>
+                                    <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Personnel Email</Label>
                                     <Input
                                         type="email"
                                         placeholder="id@nashied.agency"
@@ -72,7 +72,7 @@ const Login = () => {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex items-center justify-between">
-                                        <Label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-1">Access Protocol (Password)</Label>
+                                        <Label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 ml-1">Access Protocol (Password)</Label>
                                     </div>
                                     <Input
                                         type="password"
@@ -85,19 +85,19 @@ const Login = () => {
                                     />
                                 </div>
 
-                                <Button type="submit" className="w-full h-14 rounded-2xl bg-[#ff8c04] hover:bg-[#e67a00] text-white font-black uppercase text-xs tracking-widest shadow-2xl shadow-orange-500/20" disabled={isLoading}>
+                                <Button type="submit" className="w-full h-14 rounded-2xl bg-[#ff8c04] hover:bg-[#e67a00] text-white font-bold uppercase text-xs tracking-widest shadow-2xl shadow-orange-500/20" disabled={isLoading}>
                                     {isLoading ? "Verifying..." : "Initialize Dashboard Session"}
                                 </Button>
 
                                 <div className="text-center pt-2">
-                                    <a href="#" className="text-[10px] font-black uppercase tracking-widest text-foreground/20 hover:text-orange-500 transition-colors">
+                                    <a href="#" className="text-[10px] font-bold uppercase tracking-widest text-foreground/20 hover:text-orange-500 transition-colors">
                                         Reset Access Credentials
                                     </a>
                                 </div>
                             </form>
                         </CardContent>
                         <CardFooter className="bg-foreground/5 px-10 py-8 border-t border-foreground/5 flex flex-col gap-6">
-                            <div className="text-[10px] font-black uppercase tracking-widest text-center text-foreground/40">
+                            <div className="text-[10px] font-bold uppercase tracking-widest text-center text-foreground/40">
                                 No active account?{" "}
                                 <Link to="/signup" className="text-orange-500 hover:text-orange-400">
                                     Register New Associate
@@ -105,7 +105,7 @@ const Login = () => {
                             </div>
                             <div className="flex items-center justify-center gap-3 px-6 py-3 bg-foreground/5 rounded-xl border border-foreground/10">
                                 <ShieldCheck className="h-4 w-4 text-orange-500" />
-                                <span className="text-[9px] font-black uppercase tracking-[0.2em] text-foreground/30">AES-256 TLS Encryption Active</span>
+                                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-foreground/30">AES-256 TLS Encryption Active</span>
                             </div>
                         </CardFooter>
                     </Card>

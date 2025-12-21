@@ -37,18 +37,18 @@ const BeBold = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-end mb-32">
             <div className="space-y-8">
               <Flame className="w-5 h-5 fill-[#ff8c04] text-[#ff8c04]" />
-              <span className="font-black text-xs uppercase tracking-widest text-[#ff8c04]">#BeBold2026 Initiative</span>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1] uppercase">
+              <span className="font-bold text-xs uppercase tracking-widest text-[#ff8c04]">#BeBold2026 Initiative</span>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] uppercase">
                 The Era of <br />
                 <span className="text-[#ff8c04]">Boldness.</span>
               </h2>
             </div>
             <div className="space-y-8">
               <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed max-w-xl">
-                Talent is rarely the ceiling. <span className="text-foreground font-black">Boldness is.</span> Our #BeBold2026 mandate is a drive to redefine digital performance in emerging markets.
+                Talent is rarely the ceiling. <span className="text-foreground font-bold">Boldness is.</span> Our #BeBold2026 mandate is a drive to redefine digital performance in emerging markets.
               </p>
               <Link to="/about">
-                <Button variant="ghost" className="font-black uppercase text-[10px] tracking-[0.2em] p-0 hover:bg-transparent hover:text-orange-500 group">
+                <Button variant="ghost" className="font-bold uppercase text-[10px] tracking-[0.2em] p-0 hover:bg-transparent hover:text-orange-500 group">
                   Learn the Mandate <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-[#ff8c04]" />
                 </Button>
               </Link>
@@ -66,7 +66,7 @@ const BeBold = () => {
                   <pillar.icon className="w-7 h-7 text-[#ff8c04] group-hover:text-white transition-colors" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="font-black uppercase tracking-tight text-2xl">{pillar.title}</h3>
+                  <h3 className="font-bold uppercase tracking-tight text-2xl">{pillar.title}</h3>
                   <p className="text-muted-foreground font-medium leading-relaxed">{pillar.description}</p>
                 </div>
               </div>
@@ -82,8 +82,8 @@ const BeBold = () => {
 
             <div className="relative z-10 grid lg:grid-cols-12 gap-16 items-center">
               <div className="lg:col-span-4 space-y-6">
-                <div className="h-20 w-20 bg-[#ff8c04] rounded-3xl flex items-center justify-center text-4xl font-black italic shadow-2xl shadow-[#ff8c04]/20">26</div>
-                <h3 className="text-4xl font-black uppercase tracking-tighter">Rules of the <br /> Production Vault.</h3>
+                <div className="h-20 w-20 bg-[#ff8c04] rounded-3xl flex items-center justify-center text-4xl font-bold italic shadow-2xl shadow-[#ff8c04]/20">26</div>
+                <h3 className="text-4xl font-bold uppercase tracking-tighter">Rules of the <br /> Production Vault.</h3>
                 <p className="text-background/60 font-medium">Internal mandates that ensure 5X output and world-class quality for every single project.</p>
               </div>
 
@@ -97,8 +97,8 @@ const BeBold = () => {
                   "Be Different, Not Just Better"
                 ].map((rule, i) => (
                   <div key={i} className="flex gap-4 items-center group/rule">
-                    <span className="text-[#ff8c04] font-black italic">{(i + 1).toString().padStart(2, '0')}</span>
-                    <p className="font-black uppercase tracking-tight text-lg group-hover/rule:text-[#ff8c04] transition-colors">{rule}</p>
+                    <span className="text-[#ff8c04] font-bold italic">{(i + 1).toString().padStart(2, '0')}</span>
+                    <p className="font-bold uppercase tracking-tight text-lg group-hover/rule:text-[#ff8c04] transition-colors">{rule}</p>
                   </div>
                 ))}
               </div>
@@ -106,7 +106,7 @@ const BeBold = () => {
           </div>
 
           <div className="mt-20 text-center">
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/20">"We're going bold. Join us."</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-foreground/20">"We're going bold. Join us."</p>
           </div>
         </div>
       </div>

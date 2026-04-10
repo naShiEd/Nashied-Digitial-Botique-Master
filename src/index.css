@@ -7,21 +7,45 @@
 }
 
 :root {
-  --navy: #001f13;
-  --navy-mid: #002d1c;
-  --navy-light: #003a25;
-  --teal: #00c878;
+  /* Core Brand Colors */
+  --navy: #07145F;
+  --navy-mid: #031042;
+  --navy-light: #0A1E78;
+  --teal: #FF7A00; /* Primary action color (Orange) */
+  --royal-blue: #1B33D8;
   --white: #ffffff;
-  --gray: rgba(255, 255, 255, 0.7);
-  --glass: rgba(0, 45, 28, 0.94);
-  --glass-border: rgba(0, 200, 120, 0.2);
+  --gray: #8A8FA8;
+  --soft-gray: #F2F2F2;
+  
+  /* Semantic UI Roles */
+  --text-primary: #07145F;
+  --text-secondary: #1E243B;
+  --text-muted: #8A8FA8;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F2F2F2;
+  --bg-dark: #07145F;
+  --bg-dark-premium: #031042;
+  --bg-warm: #FFF1DA;
+  
+  /* Glassmorphism */
+  --glass: rgba(3, 16, 66, 0.94);
+  --glass-border: rgba(255, 122, 0, 0.2);
+  
+  /* Typography & Layout */
   --font: 'Plus Jakarta Sans', sans-serif;
   --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --btn-solid-primary: linear-gradient(90deg, #00c878, #007a4b);
-  --btn-grad-primary: linear-gradient(90deg, #007a4b, #00a368);
-  --btn-grad-secondary: linear-gradient(270deg, #002d1c, #005635);
-  --dropdown-grad-hover: linear-gradient(to right, #00a368, #00c878);
+  /* Gradients */
+  --gradient-hero-orange: linear-gradient(135deg, #F9A602 0%, #FF9500 38%, #FF7A00 100%);
+  --gradient-premium-blue: linear-gradient(135deg, #031042 0%, #07145F 52%, #1B33D8 100%);
+  --gradient-brand-mix: linear-gradient(135deg, #FF7A00 0%, #F9A602 35%, #1B33D8 100%);
+  --gradient-soft-glow: linear-gradient(180deg, #FFF1DA 0%, #FFC46B 100%);
+  
+  /* Buttons Mapping */
+  --btn-solid-primary: var(--gradient-hero-orange);
+  --btn-grad-primary: var(--gradient-hero-orange);
+  --btn-grad-secondary: var(--gradient-premium-blue);
+  --dropdown-grad-hover: var(--gradient-hero-orange);
 }
 
 html {

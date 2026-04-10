@@ -14,7 +14,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .navbar.mobile-nav-open {
-  background: #00120b;
+  background: var(--navy-mid);
 }
 
 .navbar-inner {
@@ -75,7 +75,7 @@
   top: 100%;
   left: 0;
   width: 420px;
-  background: #00120b;
+  background: var(--navy-mid);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 16px;
@@ -174,7 +174,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #00120b;
+  background: var(--navy-mid);
   padding: 100px 24px 64px;
   display: flex;
   flex-direction: column;
@@ -229,7 +229,7 @@
 }
 .navbar-light .nav-link:hover,
 .navbar-light .nav-link.active {
-  background: rgba(0, 200, 120, 0.08);
+  background: rgba(255, 122, 0, 0.08);
 }
 .navbar-light .mobile-toggle span {
   background: var(--teal);

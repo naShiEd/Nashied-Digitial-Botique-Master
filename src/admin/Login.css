@@ -1,7 +1,7 @@
 .login-page {
   min-height: 100vh;
   width: 100%;
-  background: radial-gradient(circle at top right, #112D23 0%, #0a0c10 40%, #05070a 100%);
+  background: radial-gradient(circle at top right, var(--navy) 0%, #0a0c10 40%, #05070a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
   right: -10%;
   width: 40%;
   height: 40%;
-  background: radial-gradient(circle, rgba(0, 194, 255, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 122, 0, 0.05) 0%, transparent 70%);
   filter: blur(60px);
   z-index: 1;
 }
@@ -49,8 +49,8 @@
 .login-logo-circle {
   width: 64px;
   height: 64px;
-  background: rgba(0, 194, 255, 0.1);
-  border: 1px solid rgba(0, 194, 255, 0.2);
+  background: rgba(255, 122, 0, 0.1);
+  border: 1px solid rgba(255, 122, 0, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -110,7 +110,7 @@
   outline: none;
   border-color: var(--teal);
   background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 0 0 4px rgba(0, 194, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.1);
 }
 
 .login-error {

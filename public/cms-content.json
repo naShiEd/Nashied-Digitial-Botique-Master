@@ -1,14 +1,14 @@
 {
   "global": {
-    "companyName": "Wordcroft",
+    "companyName": "Nashied Digital Boutique",
     "logo": "/logo.png",
     "contact": {
-      "email": "info@wordcroft.co.zw",
+      "email": "hello@nashied.com",
       "phone": "+263 (0) ...",
-      "whatsapp": "+263771234567",
-      "city": "Mutare",
-      "address": "No. 7785 Longbridge Road, Nyakamete",
-      "postal": "P.O Box 559 Mutare, Zimbabwe"
+      "whatsapp": "+263...",
+      "city": "Harare",
+      "address": "Digital Boutique HQ",
+      "postal": "Zimbabwe"
     },
     "social": {
       "facebook": "#",
@@ -16,314 +16,197 @@
       "twitter": "#"
     },
     "footer": {
-      "text": "© 2026 Wordcroft. All rights reserved.",
-      "tagline": "Moving essential resources reliably and securely across Southern Africa."
+      "text": "© 2026 Nashied Digital Boutique. All rights reserved.",
+      "tagline": "Blending innovation, technology, and marketing to move businesses forward."
     },
     "seo": {
-      "defaultTitle": "Wordcroft | Regional Logistics & Energy Distribution",
-      "defaultDesc": "Your partner in transport and logistics across Zimbabwe and Southern Africa. Moving fuel, dry goods, and general cargo with reliability."
+      "defaultTitle": "Nashied | Creative Agency, Software & Digital Solutions",
+      "defaultDesc": "Nashied is a creative agency that blends innovation, technology, and marketing to help businesses grow through social media, software, and cloud solutions."
     },
     "compliance": [
-      { "name": "NSSA Accredited", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=NSSA" },
-      { "name": "PRAZ Registered", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=PRAZ" },
-      { "name": "ZIMRA Compliant", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=ZIMRA" }
+      { "name": "Creative Agency", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=CA" },
+      { "name": "Digital Solutions", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=DS" },
+      { "name": "Growth Focused", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=GF" }
     ]
   },
   "pages": {
     "home": {
       "hero": {
-        "title": "Your partner in\ntransport and logistics.",
-        "subtitle": "Moving fuel and dry goods.",
-        "primaryBtn": "Let us partner together →",
-        "secondaryBtn": "About us",
-        "bg": "/trucks/1 (1).jpg"
+        "title": "Creative strategy,\ndigital systems,\n& marketing.",
+        "subtitle": "Nashied blends innovation, technology, and marketing to deliver experiences built for growth.",
+        "primaryBtn": "Build your brand →",
+        "secondaryBtn": "Our services",
+        "bg": "/assets/a/services.png"
       },
       "scaleSection": {
-        "badge": "Our Scale",
-        "title": "Built for regional cargo and energy distribution",
+        "badge": "Digital Boutique",
+        "title": "We build stronger brands and smarter systems.",
         "images": [
-          "/trucks/1 (1).jpg",
-          "/trucks/1 (2).jpg",
-          "/trucks/1 (3).jpg",
-          "/trucks/1 (1).png",
-          "/trucks/1 (2).png",
-          "/trucks/1 (3).png",
-          "/trucks/1 (4).png",
-          "/trucks/1 (5).png"
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
         ],
         "imagesRow2": [
-          "/trucks/1 (1).png",
-          "/trucks/1 (2).png",
-          "/trucks/1 (3).png",
-          "/trucks/1 (4).png",
-          "/trucks/1 (5).png",
-          "/trucks/1 (1).jpg",
-          "/trucks/1 (2).jpg",
-          "/trucks/1 (3).jpg"
+          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80",
+          "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80",
+          "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80"
         ]
       },
       "partners": {
-        "badge": "Our Partners",
-        "title": "Trusted by 15+ major companies in the industry",
-        "logos": [
-          "/assets/partners/01 (1).png",
-          "/assets/partners/01 (2).png",
-          "/assets/partners/01 (3).png",
-          "/assets/partners/01 (4).png",
-          "/assets/partners/01 (5).png",
-          "/assets/partners/01 (6).png",
-          "/assets/partners/01 (1).jpg",
-          "/assets/partners/01 (2).jpg"
-        ],
+        "badge": "Our Traction",
+        "title": "Trusted by growing brands and established companies",
+        "logos": [],
         "testimonials": [
           {
-            "quote": "\"Wordcroft has consistently delivered high-standard logistics solutions for our regional operations. Their reliability and discipline make them a preferred partner in Southern Africa.\"",
-            "author": "— Lead Operations, Major Energy Partner"
+            "quote": "\"Nashied does not just make brands look better. They help them perform better. Their integrated model is exactly what modern businesses need.\"",
+            "author": "— Founder, E-commerce Startup"
           },
           {
-            "quote": "\"Their cross-border expertise and commitment to safety have been instrumental in our regional expansion. A true logistics pillar.\"",
-            "author": "— Supply Chain Director, Industrial Group"
+            "quote": "\"A practical partner for brands that want both visibility and operational efficiency. Their technical execution is seamless.\"",
+            "author": "— Director, Professional Services Group"
           }
         ]
       },
       "sectors": {
-        "badge": "Core Sectors",
-        "title": "Our Core Services"
+        "badge": "Service Pillars",
+        "title": "Our Integrated Service Model"
       },
       "cta": {
-        "title": "Your reliable partner in\ntransport and logistics.",
-        "desc": "Wordcroft continues to build a logistics network designed for scale, reliability, and long-term impact across Africa."
+        "title": "Let us help you build a stronger brand.",
+        "desc": "Nashied helps businesses communicate better, operate smarter, and scale with confidence."
       }
     },
     "about": {
       "hero": {
-        "title": "Established 2003",
-        "desc": "Since 2003, Wordcroft has built a reputation grounded in consistency, discipline, and delivery. We ensure operational excellence across every regional movement.",
-        "bg": "/trucks/1 (5).png"
+        "title": "Creativity meets Technology",
+        "desc": "Nashied is a creative agency that blends innovation, technology, and marketing to help businesses grow.",
+        "bg": "/assets/a/about.png"
       },
       "story": {
-        "title": "A Legacy of Trust",
-        "desc1": "At Wordcroft, we have developed a logistics network that connects Zimbabwe with the broader region, ensuring critical energy and dry goods reach their destination safely and on time.",
-        "desc2": "Our foundation is built on transparency and a relentless focus on operational readiness. We serve major industrial partners with absolute accountability.",
-        "historyDesc": "Wordcroft (Pvt) Ltd was founded with a vision to provide specialized logistics services far beyond simple transport. We operate at the intersection of energy security and regional trade readiness.",
-        "historyQuote": "We don’t just move cargo. We manage risk, timing, and reliability across borders."
+        "title": "Beyond Traditional Agencies",
+        "desc1": "We are not only a creative agency in the traditional sense; we are also a digital execution partner for companies that need strong branding, consistent marketing, and reliable technology foundations.",
+        "desc2": "Our approach is built around one clear idea: great brands need more than attractive visuals. They need systems, platforms, infrastructure, and content that work together.",
+        "historyDesc": "Nashied exists to help businesses communicate better, operate smarter, and scale with confidence. We bring marketing, design, and software capability into one integrated service model.",
+        "historyQuote": "We combine creative thinking with technical execution to deliver marketing assets, digital platforms, and business software."
       },
       "reliability": {
-        "title": "One Standard. One Network.",
-        "subtitle": "Reliability at scale.",
-        "desc": "Our logistics model combines a well-maintained fleet with advanced surveillance and dedicated operations to maintain total accountability across the supply chain.",
+        "title": "One Goal. Total Execution.",
+        "subtitle": "Performance at scale.",
+        "desc": "We help businesses build stronger brands and smarter systems by combining creative strategy with technical delivery.",
         "stats": [
-          {
-            "val": "50+",
-            "label": "Specialised Fleet"
-          },
-          {
-            "val": "15+",
-            "label": "Dedicated Team"
-          },
-          {
-            "val": "24/7",
-            "label": "Cargo Monitoring"
-          },
-          {
-            "val": "100%",
-            "label": "Route Planning"
-          }
+          { "val": "Social", "label": "Social Media Management" },
+          { "val": "Software", "label": "Enterprise Systems" },
+          { "val": "Creative", "label": "Marketing Campaigns" },
+          { "val": "Cloud", "label": "Hosting & Solutions" }
         ],
-        "images": [
-          "/trucks/1 (1).jpg",
-          "/trucks/1 (2).jpg",
-          "/trucks/1 (3).jpg"
-        ],
-        "imagesCol2": [
-          "/trucks/1 (1).png",
-          "/trucks/1 (2).png",
-          "/trucks/1 (3).png"
-        ]
+        "images": [],
+        "imagesCol2": []
       },
       "playbook": {
-        "tag": "The Wordcroft Playbook",
-        "title": "Disciplined Operational Model",
-        "sub": "We deliver value through a repeatable, high-standard process designed for safety and speed.",
+        "tag": "How We Work",
+        "title": "Our Process",
+        "sub": "We deliver value through a practical, high-standard process designed for results.",
         "steps": [
-          {
-            "num": "01",
-            "label": "Planning",
-            "desc": "Route optimization and compliance."
-          },
-          {
-            "num": "02",
-            "label": "Preparation",
-            "desc": "Fleet readiness and safety."
-          },
-          {
-            "num": "03",
-            "label": "Monitoring",
-            "desc": "Real-time surveillance tracking."
-          },
-          {
-            "num": "04",
-            "label": "Control",
-            "desc": "Active oversight during transit."
-          },
-          {
-            "num": "05",
-            "label": "Delivery",
-            "desc": "Secure, timely cargo delivery."
-          },
-          {
-            "num": "06",
-            "label": "Reporting",
-            "desc": "Logs and accountability."
-          }
+          { "num": "01", "label": "Discovery", "desc": "We understand the brand, the objective, and the operational need." },
+          { "num": "02", "label": "Strategy", "desc": "We shape the right communication and digital pathway." },
+          { "num": "03", "label": "Creation", "desc": "We design, write, develop, and assemble the solution." },
+          { "num": "04", "label": "Deployment", "desc": "We launch and implement with the right setup." },
+          { "num": "05", "label": "Support", "desc": "We refine, maintain, and improve based on evolving needs." }
         ]
       }
     },
     "missionValues": {
       "hero": {
-        "tag": "Our Foundation",
+        "tag": "Our Core",
         "title": "Mission & Values",
-        "desc": "Since inception, Wordcroft has been guided by a strong value system that shapes every decision.",
+        "desc": "Nashied is guided by a strong value system that shapes every decision and digital product we build.",
         "bg": "/assets/csr/a (10).png"
       },
-      "vision": "To become a leading regional logistics and energy transport partner, known for reliability, efficiency, and operational excellence.",
-      "mission": "To deliver safe, efficient, and transparent logistics solutions that support economic growth across Zimbabwe and the region.",
+      "vision": "To become a leading African creative and digital agency known for blending strategy, innovation, technology, and marketing to help businesses scale with confidence.",
+      "mission": "To deliver creative, technical, and cloud-based solutions that strengthen brands, improve business operations, and unlock sustainable digital growth.",
       "values": [
-        {
-          "label": "Honesty",
-          "val": "Transparent operations and communication"
-        },
-        {
-          "label": "Integrity",
-          "val": "Doing the right thing, even when it’s difficult"
-        },
-        {
-          "label": "Client Value Creation",
-          "val": "Delivering measurable value to every client"
-        },
-        {
-          "label": "Loyalty",
-          "val": "Building long-term partnerships"
-        },
-        {
-          "label": "Diligence",
-          "val": "Attention to detail in every operation"
-        },
-        {
-          "label": "Regional Connectivity",
-          "val": "Strengthening networks across borders"
-        }
+        { "label": "Innovation", "val": "We look for fresh, practical ways to solve real business challenges." },
+        { "label": "Excellence", "val": "We pursue quality in strategy, design, development, and delivery." },
+        { "label": "Reliability", "val": "We aim to be a dependable partner businesses can trust with critical work." },
+        { "label": "Clarity", "val": "We value communication that is simple, direct, and useful." },
+        { "label": "Growth", "val": "We build with long-term business progress in mind." }
       ]
     },
     "partnerships": {
       "hero": {
-        "tag": "Strategic Alliances",
-        "title": "Partnerships",
-        "desc": "Wordcroft collaborates with major energy companies and industrial groups to move Southern Africa’s future.",
+        "tag": "Who We Serve",
+        "title": "Clients & Collabs",
+        "desc": "Nashied is positioned to work with startups, SMEs, and established companies that need a stronger digital presence.",
         "bg": "/assets/csr/a (10).png"
       },
-      "storyTitle": "Building a unified network",
-      "storyDesc": "At Wordcroft, we believe our strength comes from our network. We collaborate with operators and industrial leaders who have proven traction and are ready to scale logistics across Zimbabwe and neighboring countries."
+      "storyTitle": "Practical partner for growth",
+      "storyDesc": "Whether you are an emerging brand or a corporate business, Nashied helps you combine marketing strength with technology-backed execution."
     },
     "news": {
       "hero": {
-        "tag": "Operational Updates",
-        "title": "Wordcroft News",
-        "desc": "Stay informed about our latest regional logistics operations and industrial partnerships.",
+        "tag": "Our Journey",
+        "title": "Nashied Updates",
+        "desc": "Stay informed about our latest projects, creative campaigns, and software launches.",
         "bg": "/assets/csr/a (10).png"
       },
       "announcement": {
-        "title": "Stay informed",
-        "desc": "News articles and announcements regarding Wordcroft and our regional logistics network will be published here. Check back soon for updates."
+        "title": "Creative Excellence",
+        "desc": "Follow our path as we build the next generation of African digital boutiques."
       }
     },
     "insights": {
       "hero": {
-        "tag": "Operational Perspectives",
-        "title": "Insights",
-        "desc": "In-depth analysis of regional trade trends and logistics infrastructure in Southern Africa.",
+        "tag": "Perspectives",
+        "title": "Nashied Insights",
+        "desc": "In-depth analysis of creative marketing, software trends, and digital infrastructure.",
         "bg": "/assets/csr/a (10).png"
       },
       "content": {
-        "title": "Operational & Trade Perspectives",
-        "desc": "Our team regularly publishes perspectives on regional trade trends, supply chain optimization, and logistics infrastructure in Southern Africa. Coming soon."
+        "title": "Strategy & Innovation",
+        "desc": "Our team publishes perspectives on web trends, branding strategy, and operational efficiency."
       }
     },
     "careers": {
       "hero": {
-        "tag": "Join Us",
-        "title": "Careers",
-        "desc": "Discover career opportunities with Wordcroft and help shape the future of regional logistics.",
+        "tag": "Work with us",
+        "title": "Join Nashied",
+        "desc": "Help us build smarter systems and stronger brands. Join our creative and technical teams.",
         "bg": "/assets/csr/a (10).png"
       },
       "status": {
-        "title": "No openings currently",
-        "desc": "We are not currently recruiting, but we are always interested in connecting with logistics professionals. Please check back later for new opportunities."
+        "title": "Always looking for talent",
+        "desc": "We are currently connecting with creative thinkers and software developers."
       }
     },
     "sustainability": {
       "hero": {
-        "tag": "Purpose & Environment",
-        "title": "Sustainability",
-        "desc": "We believe that moving essential resources reliably and securely is critical to the sustainability of the region's industrial backbone.",
+        "tag": "Long-term Impact",
+        "title": "Sustainable Growth",
+        "desc": "We believe in building digital solutions that support long-term business progress and community empowerment.",
         "bg": "/assets/a/sustain.png"
       },
       "impact": {
-        "title": "Delivering impact across the regional logistics network",
-        "desc": "Wordcroft focuses on sectors that power economies. From fuel supply chains to industrial logistics, our work enables businesses, communities, and entire regions to function effectively.",
-        "badge": "Why Our Work Matters",
-        "quote": "\"Reliability in logistics is not optional—it is essential. We strengthen regional networks to power the future of Zimbabwe and its neighbors.\"",
+        "title": "Digital Continuity",
+        "badge": "Why it matters",
+        "quote": "\"We do not just make brands look better. We help them perform better.\"",
+        "desc": "Nashied provides the infrastructure and creative direction that allows businesses to scale with confidence.",
         "stats": [
-          {
-            "label": "Years Experience",
-            "val": "20+"
-          },
-          {
-            "label": "Compliance focus",
-            "val": "100%"
-          }
+          { "label": "Technical", "val": "100%" },
+          { "label": "Creative", "val": "100%" }
         ],
         "values": [
-          {
-            "label": "Honesty",
-            "val": "Transparent operations"
-          },
-          {
-            "label": "Integrity",
-            "val": "Principled delivery"
-          }
+          { "label": "Integrity", "val": "Honest growth" },
+          { "label": "Clarity", "val": "Useful solutions" }
         ]
       },
       "csr": {
         "badge": "Impact",
-        "title": "CSR Initiatives",
-        "impactImages": [
-          "/assets/csr/a (1).jpg",
-          "/assets/csr/a (2).jpg",
-          "/assets/csr/a (1).png",
-          "/assets/csr/a (2).png",
-          "/assets/csr/a (3).png",
-          "/assets/csr/a (4).png",
-          "/assets/csr/a (5).png",
-          "/assets/csr/a (6).png",
-          "/assets/csr/a (7).png",
-          "/assets/csr/a (8).png",
-          "/assets/csr/a (9).png",
-          "/assets/csr/a (10).png"
-        ],
+        "title": "Empowerment",
+        "impactImages": [],
         "items": [
-          {
-            "title": "Community Empowerment",
-            "desc": "We are deeply rooted in the communities we serve. Wordcroft prioritizes local employment and skills development, ensuring that our growth contributes directly to regional economic empowerment."
-          },
-          {
-            "title": "Environmental Stewardship",
-            "desc": "Active participation in regional clean-up campaigns and environmental protection initiatives. We maintain high operational standards to safeguard the ecosystems and communities across our transport routes."
-          },
-          {
-            "title": "Local Connectivity",
-            "desc": "Supporting community-led infrastructure initiatives that strengthen local networks and improve essential service access for the people of Zimbabwe and beyond."
-          }
+          { "title": "Local Talent", "desc": "Supporting African creatives and developers through skills development." },
+          { "title": "Environmental", "desc": "Using energy-efficient cloud solutions to power our clients' digital infrastructure." }
         ]
       }
     }
@@ -332,128 +215,38 @@
     "services": [
       {
         "id": "1",
-        "title": "Fuel Transportation",
-        "desc": "Wordcroft specializes in the high-capacity, specialized movement of bulk liquid fuels, including Diesel, Petrol, and Ethanol. Our well-maintained regional fleet operates across the SADC network, providing 24/7 real-time fleet monitoring, route optimization, and rigorous safety compliance to ensure secure energy distribution across borders.",
-        "img": "/trucks/1 (5).png"
+        "title": "Creative & Marketing",
+        "desc": "Social media management, brand communication, creative campaigns, and content production designed to improve visibility and audience engagement.",
+        "img": "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80"
       },
       {
         "id": "2",
-        "title": "Dry Goods & General Cargo",
-        "desc": "We provide integrated logistics and transportation solutions for essential industrial and commercial materials. From containerized cargo to bulk general materials, Wordcroft's heavy-duty fleet ensures efficient regional transit through advanced route planning, comprehensive supply chain visibility, and consistent delivery standards for Southern Africa's backbone.",
-        "img": "/assets/services/dry good.png"
+        "title": "Digital Products",
+        "desc": "Enterprise software, custom websites, and mobile app development that improve business operations, customer experience, and scalability.",
+        "img": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "3",
+        "title": "Infrastructure & Cloud",
+        "desc": "Reliable hosting, cloud services, and professional business email solutions providing digital security and continuity for modern teams.",
+        "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
       }
     ],
     "team": [
       {
-        "id": "12",
-        "name": "Takunda Basera",
-        "role": "Operation manager",
-        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Takunda+Basera",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "9",
-        "name": "Christal Mandeya",
-        "role": "Logistics Manager",
-        "avatar": "/assets/team/1 (9).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "6",
-        "name": "Nomsa Dhlamini",
-        "role": "Accountant",
-        "avatar": "/assets/team/1 (6).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "13",
-        "name": "Petronella Masvingwe",
-        "role": "HR Manager",
-        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Petronella+Masvingwe",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
         "id": "1",
-        "name": "Lewis Makichi",
-        "role": "SHEQ Officer",
-        "avatar": "/assets/team/1 (1).png",
-        "bio": "A highly committed SHEQ Officer with experience in the fuel and transport logistics sector, specializing in managing safety, health, environmental, and quality risks associated with hazardous materials and fleet operations. Adept at ensuring compliance with industry regulations, safe fuel handling procedures, and transport safety standards.\n\nDemonstrates strong expertise in conducting risk assessments for fuel storage, distribution, and transportation activities, including hazardous substance management and spill prevention. Experienced in fleet safety management, driver compliance, route risk analysis, and incident investigation to reduce accidents and operational disruptions.\n\nSkilled in implementing and maintaining SHEQ management systems, carrying out audits and inspections, and developing corrective actions to improve safety performance. Passionate about promoting a proactive safety culture, environmental protection, and continuous improvement in high-risk logistics environments.\n\nKey Competencies:\n• Hazardous Materials (HAZCAM) Handling & Compliance\n• Fuel Storage & Distribution Safety\n• Fleet & Driver Safety Management\n• Risk Assessment & Route Hazard Analysis\n• Incident & Accident Investigation\n• Spill Prevention & Environmental Protection\n• SHEQ Audits, Inspections & Reporting\n• Legal & Regulatory Compliance\n• Emergency Response & Crisis Management\n• Safety Training & Toolbox Talks",
-        "linkedIn": "#"
-      },
-      {
-        "id": "2",
-        "name": "Calvin Munodawafa",
-        "role": "Logistics Officer",
-        "avatar": "/assets/team/1 (2).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "3",
-        "name": "Philip Gwazaza",
-        "role": "Accounts Assistant",
-        "avatar": "/assets/team/1 (3).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "4",
-        "name": "Gracious Mukuze",
-        "role": "Accounts Clerk",
-        "avatar": "/assets/team/1 (4).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "5",
-        "name": "Tanaka Muchazoreka",
-        "role": "Team Member",
-        "avatar": "/assets/team/1 (5).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "7",
-        "name": "Pauline Masarapera",
-        "role": "Procurement Officer",
-        "avatar": "/assets/team/1 (7).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "8",
-        "name": "Admire Sithole",
-        "role": "Workshop Manager",
-        "avatar": "/assets/team/1 (8).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "10",
-        "name": "Joseph Nedahwa",
-        "role": "Buyer",
-        "avatar": "/assets/team/1 (10).png",
-        "bio": "",
-        "linkedIn": "#"
-      },
-      {
-        "id": "11",
-        "name": "Isheanesu Makwara",
-        "role": "IT Operation",
-        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Isheanesu+Makwara",
-        "bio": "",
+        "name": "Creative Lead",
+        "role": "Brand & Strategy",
+        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Nashied+Team",
+        "bio": "Expert in brand communication and visual strategy.",
         "linkedIn": "#"
       }
     ],
     "faqs": [
       {
         "id": "1",
-        "question": "What regions do you cover?",
-        "answer": "We operate primarily in Zimbabwe and neighbouring SADC countries."
+        "question": "What is Nashied's core approach?",
+        "answer": "We blend innovation, technology, and marketing to help businesses grow through better communication and smarter systems."
       }
     ],
     "news": [],

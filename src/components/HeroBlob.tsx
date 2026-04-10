@@ -19,8 +19,8 @@ export default function HeroBlob() {
 
     const geometry = new THREE.IcosahedronGeometry(2.2, 64);
     const material = new THREE.MeshPhongMaterial({
-      color: 0x007a4b,
-      emissive: 0x002d1c,
+      color: 0x1b33d8,
+      emissive: 0x031042,
       shininess: 120,
       flatShading: false,
       transparent: true,
@@ -34,11 +34,11 @@ export default function HeroBlob() {
     light1.position.set(5, 5, 5);
     scene.add(light1);
 
-    const light2 = new THREE.PointLight(0x00c878, 2.5, 12);
+    const light2 = new THREE.PointLight(0xff7a00, 2.5, 12);
     light2.position.set(-5, -5, 2);
     scene.add(light2);
 
-    const ambientLight = new THREE.AmbientLight(0x001f13, 1.2);
+    const ambientLight = new THREE.AmbientLight(0x07145f, 1.2);
     scene.add(ambientLight);
 
     camera.position.z = 4.2;

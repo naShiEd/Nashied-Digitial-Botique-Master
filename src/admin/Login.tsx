@@ -31,7 +31,7 @@ export default function Login() {
     <div className="login-container">
       <div className="login-box glass-effect">
         <div className="login-content">
-          <img src="/logo.png" alt="Nashied Logo" className="login-logo" />
+          <img src="/logo-white.png" alt="Nashied Logo" className="login-logo" />
           <h1 className="login-title">Admin Access</h1>
           <p className="login-subtitle">Nashied Digital Boutique Portal</p>
 

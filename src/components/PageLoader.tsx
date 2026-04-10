@@ -13,7 +13,7 @@ export default function PageLoader() {
 
   return (
     <div className={`page-loader ${!loading ? 'fade-out' : ''}`}>
-      <img src="/logo.png" alt="Nashied Digital Boutique Loader" className="loader-logo" />
+      <img src="/logo-white.png" alt="Nashied Digital Boutique Loader" className="loader-logo" />
     </div>
   );
 }

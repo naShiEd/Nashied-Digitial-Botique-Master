@@ -48,12 +48,24 @@ interface CMSContextType {
 
 const CMSContext = createContext<CMSContextType | undefined>(undefined);
 
+// Bump this string on every deploy to force-clear stale localStorage.
+const CMS_BUILD_KEY = '2026-04-10-v4';
+
 export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Always start from the bundled JSON (guaranteed fresh on every deploy)
   const [content, setContent] = useState<CMSContent>(initialContent as CMSContent);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Auto-clear stale localStorage when a new build is detected
+    const storedBuildKey = localStorage.getItem('cms_build_key');
+    if (storedBuildKey !== CMS_BUILD_KEY) {
+      localStorage.removeItem('cms_content');
+      localStorage.removeItem('cms_version');
+      localStorage.setItem('cms_build_key', CMS_BUILD_KEY);
+      console.log('[CMS] New build detected — cleared stale cache.');
+    }
+
     const loadCMS = async () => {
       // 1. Try to fetch the live JSON from the server (cache-busted with timestamp)
       try {
@@ -68,14 +80,9 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         console.warn('Could not fetch live cms-content.json, checking for admin saves', err);
       }
 
-      // 2. Only fall back to localStorage if the server fetch failed AND
-      //    the saved version is newer than the bundled content.
-      //    This prevents stale localStorage from overriding fresh deploy data.
+      // 2. Only fall back to localStorage if the server fetch failed
       const savedContent = localStorage.getItem('cms_content');
-      const savedVersion = localStorage.getItem('cms_version');
-      const bundledVersion = (initialContent as any)._version ?? '0';
-
-      if (savedContent && savedVersion && savedVersion > bundledVersion) {
+      if (savedContent) {
         try {
           setContent(JSON.parse(savedContent));
           setIsLoading(false);
@@ -83,7 +90,6 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         } catch (e) {
           console.error('Failed to parse saved content', e);
           localStorage.removeItem('cms_content');
-          localStorage.removeItem('cms_version');
         }
       }
 

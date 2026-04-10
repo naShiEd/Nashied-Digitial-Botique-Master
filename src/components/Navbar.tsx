@@ -61,7 +61,7 @@ export default function Navbar() {
     <header className={`navbar ${isLightPage ? 'navbar-light' : ''} ${scrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-nav-open' : ''}`}>
       <div className="navbar-inner container">
         <Link to="/" className="navbar-logo">
-          <img src={global.logo} alt={global.companyName} style={{ height: '48px', width: 'auto' }} />
+          <img src="/logo-white.png" alt={global.companyName} style={{ height: '48px', width: 'auto' }} />
         </Link>
 
         <nav className="navbar-links" role="navigation">

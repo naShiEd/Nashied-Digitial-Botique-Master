@@ -13,12 +13,12 @@ const navLinks = [
     label: 'About us',
     href: '/about',
     children: [
-      { label: 'About us', description: 'Nashied Digital Boutique as a leading logistics and transportation partner.', href: '/about' },
-      { label: 'Our team', description: 'Meet our key leadership and operational team.', href: '/team' },
-      { label: 'Mission, purpose and values', description: 'Our core commitment to logistics excellence.', href: '/mission-values' },
-      { label: 'Careers', description: 'Join our growing logistics network.', href: '/careers' },
-      { label: 'News', description: 'The latest updates on our regional operations.', href: '/news' },
-      { label: 'Insights', description: 'In-depth views on regional trade and logistics.', href: '/insights' },
+      { label: 'About us', description: 'Nashied Digital Boutique — a creative agency blending technology and marketing.', href: '/about' },
+      { label: 'Our team', description: 'Meet the creative and technical minds behind Nashied.', href: '/team' },
+      { label: 'Mission, purpose and values', description: 'Our core commitment to digital excellence and growth.', href: '/mission-values' },
+      { label: 'Careers', description: 'Join our growing creative and technology team.', href: '/careers' },
+      { label: 'News', description: 'The latest updates from Nashied Digital Boutique.', href: '/news' },
+      { label: 'Insights', description: 'In-depth views on digital marketing, software and cloud.', href: '/insights' },
     ],
   },
   {
@@ -61,7 +61,7 @@ export default function Navbar() {
     <header className={`navbar ${isLightPage ? 'navbar-light' : ''} ${scrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-nav-open' : ''}`}>
       <div className="navbar-inner container">
         <Link to="/" className="navbar-logo">
-          <img src={global.logo} alt={global.companyName} style={{ height: '40px', width: 'auto' }} />
+          <img src={global.logo} alt={global.companyName} style={{ height: '48px', width: 'auto' }} />
         </Link>
 
         <nav className="navbar-links" role="navigation">

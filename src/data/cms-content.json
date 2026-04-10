@@ -25,9 +25,18 @@
       "defaultDesc": "Nashied is a creative agency that blends innovation, technology, and marketing to help businesses grow through social media, software, and cloud solutions."
     },
     "compliance": [
-      { "name": "Creative Agency", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=CA" },
-      { "name": "Digital Solutions", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=DS" },
-      { "name": "Growth Focused", "logo": "https://api.dicebear.com/7.x/initials/svg?seed=GF" }
+      {
+        "name": "Creative Agency",
+        "logo": "https://api.dicebear.com/7.x/initials/svg?seed=CA"
+      },
+      {
+        "name": "Digital Solutions",
+        "logo": "https://api.dicebear.com/7.x/initials/svg?seed=DS"
+      },
+      {
+        "name": "Growth Focused",
+        "logo": "https://api.dicebear.com/7.x/initials/svg?seed=GF"
+      }
     ]
   },
   "pages": {
@@ -96,10 +105,22 @@
         "subtitle": "Performance at scale.",
         "desc": "We help businesses build stronger brands and smarter systems by combining creative strategy with technical delivery.",
         "stats": [
-          { "val": "Social", "label": "Social Media Management" },
-          { "val": "Software", "label": "Enterprise Systems" },
-          { "val": "Creative", "label": "Marketing Campaigns" },
-          { "val": "Cloud", "label": "Hosting & Solutions" }
+          {
+            "val": "Social",
+            "label": "Social Media Management"
+          },
+          {
+            "val": "Software",
+            "label": "Enterprise Systems"
+          },
+          {
+            "val": "Creative",
+            "label": "Marketing Campaigns"
+          },
+          {
+            "val": "Cloud",
+            "label": "Hosting & Solutions"
+          }
         ],
         "images": [],
         "imagesCol2": []
@@ -109,11 +130,31 @@
         "title": "Our Process",
         "sub": "We deliver value through a practical, high-standard process designed for results.",
         "steps": [
-          { "num": "01", "label": "Discovery", "desc": "We understand the brand, the objective, and the operational need." },
-          { "num": "02", "label": "Strategy", "desc": "We shape the right communication and digital pathway." },
-          { "num": "03", "label": "Creation", "desc": "We design, write, develop, and assemble the solution." },
-          { "num": "04", "label": "Deployment", "desc": "We launch and implement with the right setup." },
-          { "num": "05", "label": "Support", "desc": "We refine, maintain, and improve based on evolving needs." }
+          {
+            "num": "01",
+            "label": "Discovery",
+            "desc": "We understand the brand, the objective, and the operational need."
+          },
+          {
+            "num": "02",
+            "label": "Strategy",
+            "desc": "We shape the right communication and digital pathway."
+          },
+          {
+            "num": "03",
+            "label": "Creation",
+            "desc": "We design, write, develop, and assemble the solution."
+          },
+          {
+            "num": "04",
+            "label": "Deployment",
+            "desc": "We launch and implement with the right setup."
+          },
+          {
+            "num": "05",
+            "label": "Support",
+            "desc": "We refine, maintain, and improve based on evolving needs."
+          }
         ]
       }
     },
@@ -127,11 +168,26 @@
       "vision": "To become a leading African creative and digital agency known for blending strategy, innovation, technology, and marketing to help businesses scale with confidence.",
       "mission": "To deliver creative, technical, and cloud-based solutions that strengthen brands, improve business operations, and unlock sustainable digital growth.",
       "values": [
-        { "label": "Innovation", "val": "We look for fresh, practical ways to solve real business challenges." },
-        { "label": "Excellence", "val": "We pursue quality in strategy, design, development, and delivery." },
-        { "label": "Reliability", "val": "We aim to be a dependable partner businesses can trust with critical work." },
-        { "label": "Clarity", "val": "We value communication that is simple, direct, and useful." },
-        { "label": "Growth", "val": "We build with long-term business progress in mind." }
+        {
+          "label": "Innovation",
+          "val": "We look for fresh, practical ways to solve real business challenges."
+        },
+        {
+          "label": "Excellence",
+          "val": "We pursue quality in strategy, design, development, and delivery."
+        },
+        {
+          "label": "Reliability",
+          "val": "We aim to be a dependable partner businesses can trust with critical work."
+        },
+        {
+          "label": "Clarity",
+          "val": "We value communication that is simple, direct, and useful."
+        },
+        {
+          "label": "Growth",
+          "val": "We build with long-term business progress in mind."
+        }
       ]
     },
     "hosting": {
@@ -246,12 +302,24 @@
         "quote": "\"We do not just make brands look better. We help them perform better.\"",
         "desc": "Nashied provides the infrastructure and creative direction that allows businesses to scale with confidence.",
         "stats": [
-          { "label": "Technical", "val": "100%" },
-          { "label": "Creative", "val": "100%" }
+          {
+            "label": "Technical",
+            "val": "100%"
+          },
+          {
+            "label": "Creative",
+            "val": "100%"
+          }
         ],
         "values": [
-          { "label": "Integrity", "val": "Honest growth" },
-          { "label": "Clarity", "val": "Useful solutions" }
+          {
+            "label": "Integrity",
+            "val": "Honest growth"
+          },
+          {
+            "label": "Clarity",
+            "val": "Useful solutions"
+          }
         ]
       },
       "csr": {
@@ -259,8 +327,14 @@
         "title": "Empowerment",
         "impactImages": [],
         "items": [
-          { "title": "Local Talent", "desc": "Supporting African creatives and developers through skills development." },
-          { "title": "Environmental", "desc": "Using energy-efficient cloud solutions to power our clients' digital infrastructure." }
+          {
+            "title": "Local Talent",
+            "desc": "Supporting African creatives and developers through skills development."
+          },
+          {
+            "title": "Environmental",
+            "desc": "Using energy-efficient cloud solutions to power our clients' digital infrastructure."
+          }
         ]
       }
     }

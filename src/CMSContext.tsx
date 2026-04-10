@@ -49,13 +49,15 @@ interface CMSContextType {
 const CMSContext = createContext<CMSContextType | undefined>(undefined);
 
 export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Always start from the bundled JSON (guaranteed fresh on every deploy)
   const [content, setContent] = useState<CMSContent>(initialContent as CMSContent);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadCMS = async () => {
+      // 1. Try to fetch the live JSON from the server (cache-busted with timestamp)
       try {
-        const response = await fetch(`/cms-content.json?v=${Date.now()}`);
+        const response = await fetch(`/cms-content.json?cb=${Date.now()}`);
         if (response.ok) {
           const data = await response.json();
           setContent(data);
@@ -63,19 +65,29 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           return;
         }
       } catch (err) {
-        console.warn("Could not fetch live cms-content.json, trying local storage or defaults", err);
+        console.warn('Could not fetch live cms-content.json, checking for admin saves', err);
       }
 
+      // 2. Only fall back to localStorage if the server fetch failed AND
+      //    the saved version is newer than the bundled content.
+      //    This prevents stale localStorage from overriding fresh deploy data.
       const savedContent = localStorage.getItem('cms_content');
-      if (savedContent) {
+      const savedVersion = localStorage.getItem('cms_version');
+      const bundledVersion = (initialContent as any)._version ?? '0';
+
+      if (savedContent && savedVersion && savedVersion > bundledVersion) {
         try {
           setContent(JSON.parse(savedContent));
           setIsLoading(false);
           return;
         } catch (e) {
-          console.error("Failed to parse saved content", e);
+          console.error('Failed to parse saved content', e);
+          localStorage.removeItem('cms_content');
+          localStorage.removeItem('cms_version');
         }
       }
+
+      // 3. Fall back to bundled initial content (already set as default state)
       setIsLoading(false);
     };
 
@@ -87,6 +99,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setContent(newContent);
     try {
       localStorage.setItem('cms_content', JSON.stringify(newContent));
+      localStorage.setItem('cms_version', Date.now().toString());
     } catch (e) {
       console.warn("LocalStorage quota exceeded, local persistence skipped.", e);
     }

@@ -138,17 +138,20 @@ export default function Home() {
           </ScrollReveal>
           <div className="what-we-do-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', maxWidth: '100% ' }}>
             {services.map((sector: any, i: number) => (
-              <ScrollReveal key={sector.title} delay={i * 0.1}>
-                <div className="wwd-card" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '24px', height: '100%', transition: 'all 0.3s ease', overflow: 'hidden' }}>
-                  <div style={{ height: '280px', overflow: 'hidden' }}>
-                    <img src={sector.img} alt={sector.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, transition: 'transform 0.5s ease' }} />
+              <ScrollReveal key={sector.id} delay={i * 0.1}>
+                <Link to={`/services/${sector.id}`} className="wwd-card-link" style={{ display: 'block', height: '100%' }}>
+                  <div className="wwd-card" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '24px', height: '100%', transition: 'all 0.3s ease', overflow: 'hidden' }}>
+                    <div style={{ height: '280px', overflow: 'hidden' }}>
+                      <img src={sector.img} alt={sector.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, transition: 'transform 0.5s ease' }} />
+                    </div>
+                    <div style={{ padding: '32px' }}>
+                      <div style={{ height: '2px', width: '32px', background: 'var(--teal)', marginBottom: '20px' }} />
+                      <h3 style={{ fontSize: '20px', color: 'var(--white)', marginBottom: '12px' }}>{sector.title}</h3>
+                      <p style={{ color: 'var(--gray)', fontSize: '15px', lineHeight: 1.7, textAlign: 'justify', opacity: 0.9 }}>{sector.desc}</p>
+                      <div style={{ marginTop: '20px', color: 'var(--teal)', fontSize: '14px', fontWeight: 700 }}>Learn More →</div>
+                    </div>
                   </div>
-                  <div style={{ padding: '32px' }}>
-                    <div style={{ height: '2px', width: '32px', background: 'var(--teal)', marginBottom: '20px' }} />
-                    <h3 style={{ fontSize: '20px', color: 'var(--white)', marginBottom: '12px' }}>{sector.title}</h3>
-                    <p style={{ color: 'var(--gray)', fontSize: '15px', lineHeight: 1.7, textAlign: 'justify', opacity: 0.9 }}>{sector.desc}</p>
-                  </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>

@@ -15,6 +15,7 @@ import Careers from './pages/Careers';
 import News from './pages/News';
 import Insights from './pages/Insights';
 import TeamMember from './pages/TeamMember';
+import ServiceDetail from './pages/ServiceDetail';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
@@ -83,6 +84,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/news" element={<News />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/services/:id" element={<ServiceDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

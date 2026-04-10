@@ -1180,3 +1180,15 @@
   
   .contact-form { padding: 24px; }
 }
+.wwd-card-link {
+  text-decoration: none;
+}
+.wwd-card-link:hover .wwd-card {
+  border-color: rgba(255, 122, 0, 0.4) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  transform: translateY(-8px);
+}
+.wwd-card-link:hover img {
+  transform: scale(1.08) !important;
+  opacity: 1 !important;
+}

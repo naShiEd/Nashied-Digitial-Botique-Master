@@ -15,67 +15,71 @@ export default function Login() {
     setIsLoading(true);
     setError('');
 
-    // Mock authentication
     setTimeout(() => {
       if (username === 'admin' && password === 'nashied2026') {
         localStorage.setItem('isAdminAuthenticated', 'true');
         navigate('/admin');
       } else {
-        setError('Invalid credentials');
+        setError('Invalid credentials. Please try again.');
       }
       setIsLoading(false);
     }, 1000);
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box glass-effect">
-        <div className="login-content">
-          <img src="/logo-white.png" alt="Nashied Logo" className="login-logo" />
-          <h1 className="login-title">Admin Access</h1>
-          <p className="login-subtitle">Nashied Digital Boutique Portal</p>
+    <div className="login-page">
+      {/* Background glow blobs */}
+      <div className="login-blob login-blob-1" />
+      <div className="login-blob login-blob-2" />
 
-          <form onSubmit={handleSubmit} className="login-form">
-            <div className="input-group">
-              <div className="input-icon">
-                <User size={18} />
-              </div>
-              <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-              />
-            </div>
-
-            <div className="input-group">
-              <div className="input-icon">
-                <Lock size={18} />
-              </div>
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-
-            {error && <div className="login-error">{error}</div>}
-
-            <button type="submit" disabled={isLoading} className="login-button btn-primary">
-              {isLoading ? 'Verifying...' : (
-                <>
-                  Access Dashboard <ArrowRight size={18} />
-                </>
-              )}
-            </button>
-          </form>
-
-          <div className="login-footer">
-            <p>© {new Date().getFullYear()} Nashied. All rights reserved.</p>
+      <div className="login-card">
+        {/* Logo */}
+        <div className="login-header">
+          <img src="/logo-white.png" alt="Nashied" className="login-logo" />
+          <div>
+            <h1>Admin Portal</h1>
+            <p>Nashied Digital Boutique CMS</p>
           </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="input-group">
+            <div className="input-icon"><User size={16} /></div>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              autoComplete="username"
+            />
+          </div>
+
+          <div className="input-group">
+            <div className="input-icon"><Lock size={16} /></div>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              autoComplete="current-password"
+            />
+          </div>
+
+          {error && <div className="login-error">{error}</div>}
+
+          <button type="submit" disabled={isLoading} className="login-button">
+            {isLoading ? (
+              <span className="login-spinner" />
+            ) : (
+              <>Access Dashboard <ArrowRight size={16} /></>
+            )}
+          </button>
+        </form>
+
+        <div className="login-footer">
+          <p>© {new Date().getFullYear()} Nashied Digital Boutique. All rights reserved.</p>
         </div>
       </div>
     </div>

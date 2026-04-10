@@ -21,31 +21,29 @@ export default function Home() {
 
   return (
     <div className="page-enter">
-      {/* Hero - white outer layer, navy content inside */}
-      <div style={{ background: '#ffffff', padding: '4px' }}>
-        <section className="home-hero">
-          <div className="hero-bg-gradient" />
-          <HeroBlob />
-          <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-            <div className="hero-content">
-              <ScrollReveal>
-                <h1 className="hero-title" style={{ fontWeight: 800, color: 'var(--white)', letterSpacing: '-0.04em', maxWidth: '900px', marginBottom: '32px' }}>
-                  {page.hero.title.split('\n').map((line: string, i: number) => (
-                    <span key={i} style={{ display: 'block' }}>{line}</span>
-                  ))}
-                </h1>
-                <p className="hero-subtitle" style={{ fontSize: '20px', color: 'var(--gray)', maxWidth: '600px', margin: '0 auto 48px', lineHeight: 1.6, textAlign: 'center' }}>
-                   {page.hero.subtitle}
-                </p>
-                <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                   <Link to="/contact" className="btn-primary">{page.hero.primaryBtn}</Link>
-                   <Link to="/about" className="btn-outline">{page.hero.secondaryBtn}</Link>
-                </div>
-              </ScrollReveal>
-            </div>
+      {/* Hero — full-bleed navy */}
+      <section className="home-hero">
+        <div className="hero-bg-gradient" />
+        <HeroBlob />
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="hero-content">
+            <ScrollReveal>
+              <h1 className="hero-title" style={{ fontWeight: 800, color: 'var(--white)', letterSpacing: '-0.04em', maxWidth: '900px', marginBottom: '32px' }}>
+                {page.hero.title.split('\n').map((line: string, i: number) => (
+                  <span key={i} style={{ display: 'block' }}>{line}</span>
+                ))}
+              </h1>
+              <p className="hero-subtitle" style={{ fontSize: '20px', color: 'var(--gray)', maxWidth: '600px', margin: '0 auto 48px', lineHeight: 1.6, textAlign: 'center' }}>
+                 {page.hero.subtitle}
+              </p>
+              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                 <Link to="/contact" className="btn-primary">{page.hero.primaryBtn}</Link>
+                 <Link to="/about" className="btn-outline">{page.hero.secondaryBtn}</Link>
+              </div>
+            </ScrollReveal>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {/* Our Scale Section - Pure CSS Marquee */}
       <section className="scale-slider-section" style={{ padding: '120px 0', position: 'relative', background: 'var(--navy-mid)' }}>
@@ -82,50 +80,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partner Showcase (NEW) - Pure CSS Marquee */}
-      <section style={{ padding: '100px 0', background: 'var(--navy-mid)', borderBottom: '1px solid rgba(255,255,255,0.05)', overflow: 'hidden' }}>
-        <div className="container" style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <ScrollReveal>
-             <div className="who-we-are-badge" style={{ marginBottom: '24px', alignSelf: 'center' }}>{page.partners.badge}</div>
-             <h2 style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', color: 'var(--white)', fontWeight: 700 }}>{page.partners.title}</h2>
-          </ScrollReveal>
-        </div>
-
-        <div className="scale-slider-track-wrapper" style={{ opacity: 0.8, padding: '40px 0' }}>
-          <div className="marquee-container">
-            {page.partners.logos.map((p: string, i: number) => (
-              <div key={i} className="scale-card" style={{ width: '220px', height: '110px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '24px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', margin: '0 12px' }}>
-                <img src={p} alt={`Partner ${i}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
-              </div>
-            ))}
-            {/* Duplicate for seamless infinite loop */}
-            {page.partners.logos.map((p: string, i: number) => (
-              <div key={`dup-${i}`} className="scale-card" style={{ width: '220px', height: '110px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '24px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', margin: '0 12px' }}>
-                <img src={p} alt={`Partner Dup ${i}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
-              </div>
-            ))}
+      {/* Client logos — only show if logos exist */}
+      {page.partners.logos?.length > 0 && (
+        <section style={{ padding: '100px 0', background: 'var(--navy-mid)', borderBottom: '1px solid rgba(255,255,255,0.05)', overflow: 'hidden' }}>
+          <div className="container" style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <ScrollReveal>
+               <div className="who-we-are-badge" style={{ marginBottom: '24px', alignSelf: 'center' }}>{page.partners.badge}</div>
+               <h2 style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', color: 'var(--white)', fontWeight: 700 }}>{page.partners.title}</h2>
+            </ScrollReveal>
           </div>
-        </div>
-
-        <div className="container" style={{ textAlign: 'center', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {page.partners.testimonials?.map((t: any, i: number) => (
-            <div 
-              key={i} 
-              style={{ 
-                display: i === currentTestimonial ? 'block' : 'none',
-                animation: 'fadeIn 0.8s ease forwards',
-                maxWidth: '800px',
-                margin: '0 auto'
-              }}
-            >
-              <p style={{ fontSize: '24px', color: 'var(--white)', fontStyle: 'italic', lineHeight: 1.5 }}>
-                {t.quote}
-              </p>
-              <div style={{ marginTop: '24px', color: 'var(--teal)', fontWeight: 700 }}>{t.author}</div>
+          <div className="scale-slider-track-wrapper" style={{ opacity: 0.8, padding: '40px 0' }}>
+            <div className="marquee-container">
+              {[...page.partners.logos, ...page.partners.logos].map((p: string, i: number) => (
+                <div key={i} className="scale-card" style={{ width: '220px', height: '110px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', padding: '24px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', margin: '0 12px' }}>
+                  <img src={p} alt={`Partner ${i}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+          {page.partners.testimonials?.length > 0 && (
+            <div className="container" style={{ textAlign: 'center', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {page.partners.testimonials.map((t: any, i: number) => (
+                <div key={i} style={{ display: i === currentTestimonial ? 'block' : 'none', animation: 'fadeIn 0.8s ease forwards', maxWidth: '800px', margin: '0 auto' }}>
+                  <p style={{ fontSize: '24px', color: 'var(--white)', fontStyle: 'italic', lineHeight: 1.5 }}>{t.quote}</p>
+                  <div style={{ marginTop: '24px', color: 'var(--teal)', fontWeight: 700 }}>{t.author}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Core Sectors */}
       <section style={{ padding: '120px 0' }}>
@@ -166,7 +150,7 @@ export default function Home() {
             <p style={{ color: 'var(--gray)', maxWidth: '700px', margin: '0 auto 44px', fontSize: '18px', lineHeight: 1.6 }}>
               {page.cta.desc}
             </p>
-            <Link to="/contact" className="btn-primary" style={{ background: 'var(--btn-solid-primary)' }}>{page.hero.primaryBtn}</Link>
+            <Link to="/contact" className="btn-primary" style={{ background: 'var(--btn-solid-primary)' }}>{page.cta.btn || page.hero.primaryBtn}</Link>
           </div>
         </div>
       </section>

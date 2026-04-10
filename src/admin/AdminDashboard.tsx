@@ -476,7 +476,7 @@ export default function AdminDashboard() {
               </div>
 
               <div className="admin-card">
-                <h3 className="admin-card-header">The Wordcroft Playbook</h3>
+                <h3 className="admin-card-header">The Nashied Playbook</h3>
                 <div className="admin-grid">
                   <Field label="Section Tag"   value={fd.pages.about.playbook?.tag   || ''} onChange={v => setP('about','playbook','tag',v)} />
                   <Field label="Section Title" value={fd.pages.about.playbook?.title || ''} onChange={v => setP('about','playbook','title',v)} />

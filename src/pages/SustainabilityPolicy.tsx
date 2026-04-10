@@ -11,7 +11,7 @@ export default function SustainabilityPolicy() {
           <p style={{ fontSize: '14px', color: 'var(--gray)', marginBottom: '48px' }}>Standard Operating Procedure: Eco-Responsibility</p>
 
           <div className="legal-content" style={{ lineHeight: 1.8, fontSize: '16px' }}>
-            <p>At Wordcroft, sustainability is integrated into our operational DNA. We align our environmental strategies with the <strong>Environmental Management Act [Chapter 20:27]</strong> of Zimbabwe.</p>
+            <p>At Nashied Digital Boutique, sustainability is integrated into our operational DNA. We align our environmental strategies with the <strong>Environmental Management Act [Chapter 20:27]</strong> of Zimbabwe.</p>
 
             <h2 style={{ fontSize: '24px', margin: '40px 0 20px', color: 'var(--navy)' }}>1. EMA Compliance</h2>
             <p>We work closely with the Environmental Management Agency (EMA) to ensure all our transport operations, especially those involving hazardous materials like fuel, meet the highest environmental safety standards.</p>

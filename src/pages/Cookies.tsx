@@ -11,7 +11,7 @@ export default function Cookies() {
           <p style={{ fontSize: '14px', color: 'var(--gray)', marginBottom: '48px' }}>Last Updated: April 10, 2026</p>
 
           <div className="legal-content" style={{ lineHeight: 1.8, fontSize: '16px' }}>
-            <p>Wordcroft uses cookies to improve your experience on our website. This policy explains what cookies are and how we use them.</p>
+            <p>Nashied Digital Boutique uses cookies to improve your experience on our website. This policy explains what cookies are and how we use them.</p>
 
             <h2 style={{ fontSize: '24px', margin: '40px 0 20px', color: 'var(--navy)' }}>1. What are Cookies?</h2>
             <p>Cookies are small text files stored on your device when you visit a website. They help the website recognize your device and store information about your preferences or past actions.</p>

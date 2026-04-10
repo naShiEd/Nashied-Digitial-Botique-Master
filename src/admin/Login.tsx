@@ -17,27 +17,23 @@ export default function Login() {
 
     // Mock authentication
     setTimeout(() => {
-      if (username === 'admin' && password === 'wordcroft2024') {
+      if (username === 'admin' && password === 'nashied2026') {
         localStorage.setItem('isAdminAuthenticated', 'true');
         navigate('/admin');
       } else {
-        setError('Invalid credentials. Please try again.');
-        setIsLoading(false);
+        setError('Invalid credentials');
       }
+      setIsLoading(false);
     }, 1000);
   };
 
   return (
-    <div className="login-page">
-      <div className="login-container">
-        <div className="login-card glass-effect">
-          <div className="login-header">
-            <div className="login-logo-circle">
-              <ShieldCheck size={32} color="var(--teal)" />
-            </div>
-            <h1>CMS Access</h1>
-            <p>Enter your credentials to manage your content</p>
-          </div>
+    <div className="login-container">
+      <div className="login-box glass-effect">
+        <div className="login-content">
+          <img src="/logo.png" alt="Nashied Logo" className="login-logo" />
+          <h1 className="login-title">Admin Access</h1>
+          <p className="login-subtitle">Nashied Digital Boutique Portal</p>
 
           <form onSubmit={handleSubmit} className="login-form">
             <div className="input-group">
@@ -78,7 +74,7 @@ export default function Login() {
           </form>
 
           <div className="login-footer">
-            <p>© {new Date().getFullYear()} Wordcroft. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Nashied. All rights reserved.</p>
           </div>
         </div>
       </div>

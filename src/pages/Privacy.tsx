@@ -12,7 +12,7 @@ export default function Privacy() {
 
           <div className="legal-content" style={{ lineHeight: 1.8, fontSize: '16px' }}>
             <h2 style={{ fontSize: '24px', margin: '40px 0 20px', color: 'var(--navy)' }}>1. Introduction</h2>
-            <p>Wordcroft ("we", "us", or "our") is committed to protecting your privacy and ensuring that your personal data is handled in a safe and responsible manner. This policy is aligned with the <strong>Data Protection Act [Chapter 11:12]</strong> of Zimbabwe.</p>
+            <p>Nashied Digital Boutique ("we", "us", or "our") is committed to protecting your privacy and ensuring that your personal data is handled in a safe and responsible manner. This policy is aligned with the <strong>Data Protection Act [Chapter 11:12]</strong> of Zimbabwe.</p>
 
             <h2 style={{ fontSize: '24px', margin: '40px 0 20px', color: 'var(--navy)' }}>2. Data Collection</h2>
             <p>We collect personal information that you provide to us directly through our contact forms, careers portal, or direct communication. This may include:</p>
@@ -34,7 +34,7 @@ export default function Privacy() {
             <p>In compliance with Zimbabwean law, we implement robust technical and organizational measures to prevent unauthorized access, accidental loss, or destruction of personal data.</p>
 
             <h2 style={{ fontSize: '24px', margin: '40px 0 20px', color: 'var(--navy)' }}>5. Your Rights</h2>
-            <p>Under the Data Protection Act, you have the right to request access to, correction of, or deletion of your personal information held by us. For any queries, please contact info@wordcroft.co.zw.</p>
+            <p>Under the Data Protection Act, you have the right to request access to, correction of, or deletion of your personal information held by us. For any queries, please contact hello@nashied.com.</p>
           </div>
         </ScrollReveal>
       </div>

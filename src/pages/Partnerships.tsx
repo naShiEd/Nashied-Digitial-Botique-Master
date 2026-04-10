@@ -45,7 +45,7 @@ export default function Partnerships() {
               <div>
                 <h2 style={{ fontSize: '32px', color: 'var(--white)', marginBottom: '24px' }}>{page.storyTitle}</h2>
                 <p style={{ color: 'var(--gray)', fontSize: '18px', lineHeight: 1.6, marginBottom: '24px' }}>
-                  {page.storyDesc.replace('Wordcroft', content.global.companyName)}
+                  {page.storyDesc.replace('Nashied', content.global.companyName)}
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
                   {['Fuel Suppliers', 'Industrial Operators', 'Regional Distributors', 'Infrastructure Partners'].map(p => (

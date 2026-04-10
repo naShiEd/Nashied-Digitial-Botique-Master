@@ -97,7 +97,7 @@ export default function Contact() {
                    </div>
                    <h2 style={{ fontSize: '32px', color: 'var(--white)', marginBottom: '16px' }}>Message Received</h2>
                    <p style={{ color: 'var(--gray)', fontSize: '18px', lineHeight: 1.6, marginBottom: '32px' }}>
-                     Thank you for reaching out. A Wordcroft regional representative will review your inquiry and contact you shortly.
+                     Thank you for reaching out. A Nashied regional representative will review your inquiry and contact you shortly.
                    </p>
                    <button onClick={() => setIsSubmitted(false)} className="btn-primary" style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'var(--white)' }}>Send another message</button>
                 </div>

@@ -13,7 +13,7 @@ const navLinks = [
     label: 'About us',
     href: '/about',
     children: [
-      { label: 'About us', description: 'Wordcroft as a leading logistics and transportation partner.', href: '/about' },
+      { label: 'About us', description: 'Nashied Digital Boutique as a leading logistics and transportation partner.', href: '/about' },
       { label: 'Our team', description: 'Meet our key leadership and operational team.', href: '/team' },
       { label: 'Mission, purpose and values', description: 'Our core commitment to logistics excellence.', href: '/mission-values' },
       { label: 'Careers', description: 'Join our growing logistics network.', href: '/careers' },

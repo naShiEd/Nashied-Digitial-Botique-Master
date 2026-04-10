@@ -7,7 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
-import Partnerships from './pages/Partnerships';
+import Hosting from './pages/Hosting';
 import Contact from './pages/Contact';
 import MissionValues from './pages/MissionValues';
 import Sustainability from './pages/Sustainability';
@@ -77,8 +77,8 @@ function App() {
             <Route path="/meet-the-team" element={<Team />} />
             <Route path="/team/:id" element={<TeamMember />} />
             <Route path="/mission-values" element={<MissionValues />} />
-            <Route path="/partnerships" element={<Partnerships />} />
-            <Route path="/partners" element={<Partnerships />} />
+            <Route path="/hosting" element={<Hosting />} />
+            <Route path="/cloud" element={<Hosting />} />
             <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/news" element={<News />} />

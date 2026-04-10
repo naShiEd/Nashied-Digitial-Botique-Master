@@ -9,7 +9,7 @@ import {
 
 type ActiveTab =
   | 'global' | 'home' | 'about' | 'missionValues'
-  | 'partnerships' | 'sustainability' | 'news' | 'insights' | 'careers'
+  | 'hosting' | 'sustainability' | 'news' | 'insights' | 'careers'
   | 'services' | 'team' | 'faqs';
 
 export default function AdminDashboard() {
@@ -121,7 +121,7 @@ export default function AdminDashboard() {
     { id: 'home',         icon: Home,        label: 'Home Experience' },
     { id: 'about',        icon: Users,       label: 'Company Story' },
     { id: 'missionValues',icon: ShieldCheck, label: 'Mission & Values' },
-    { id: 'partnerships', icon: Package,     label: 'Partnerships' },
+    { id: 'hosting',      icon: ShieldCheck, label: 'Hosting & Cloud' },
     { id: 'sustainability',icon: Leaf,       label: 'Sustainability' },
     { id: 'news',         icon: FileText,    label: 'News & Updates' },
     { id: 'insights',     icon: Globe,       label: 'Insights Portfolio' },
@@ -539,20 +539,20 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* ═══════════════ PARTNERSHIPS ═══════════════ */}
-          {activeTab === 'partnerships' && (
+          {/* ═══════════════ HOSTING ═══════════════ */}
+          {activeTab === 'hosting' && (
             <div className="admin-card">
               <h3 className="admin-card-header">Hero Section</h3>
               <div className="admin-grid">
-                <Field label="Hero Tag"        value={fd.pages.partnerships.hero.tag}   onChange={v => setP('partnerships','hero','tag',v)} />
-                <Field label="Hero Title"       value={fd.pages.partnerships.hero.title} onChange={v => setP('partnerships','hero','title',v)} />
-                <Field label="Hero Description" full area value={fd.pages.partnerships.hero.desc}  onChange={v => setP('partnerships','hero','desc',v)} />
-                <ImageField label="Hero Background Image" full value={fd.pages.partnerships.hero.bg || ''} onChange={v => setP('partnerships','hero','bg',v)} />
+                <Field label="Hero Tag"        value={fd.pages.hosting.hero.tag}   onChange={v => setP('hosting','hero','tag',v)} />
+                <Field label="Hero Title"       value={fd.pages.hosting.hero.title} onChange={v => setP('hosting','hero','title',v)} />
+                <Field label="Hero Description" full area value={fd.pages.hosting.hero.desc}  onChange={v => setP('hosting','hero','desc',v)} />
+                <ImageField label="Hero Background Image" full value={fd.pages.hosting.hero.bg || ''} onChange={v => setP('hosting','hero','bg',v)} />
               </div>
-              <div className="full-width"><SectionDivider title="Network Story Section" /></div>
+              <div className="full-width"><SectionDivider title="Infrastructure Story" /></div>
               <div className="admin-grid">
-                <Field label="Story Title"       full      value={fd.pages.partnerships.storyTitle || ''} onChange={v => setP('partnerships','root','storyTitle',v)} />
-                <Field label="Story Description" full area value={fd.pages.partnerships.storyDesc  || ''} onChange={v => setP('partnerships','root','storyDesc',v)} />
+                <Field label="Story Title"       full      value={fd.pages.hosting.storyTitle || ''} onChange={v => setP('hosting','root','storyTitle',v)} />
+                <Field label="Story Description" full area value={fd.pages.hosting.storyDesc  || ''} onChange={v => setP('hosting','root','storyDesc',v)} />
               </div>
             </div>
           )}

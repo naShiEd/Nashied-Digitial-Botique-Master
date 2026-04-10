@@ -133,15 +133,15 @@
         { "label": "Growth", "val": "We build with long-term business progress in mind." }
       ]
     },
-    "partnerships": {
+    "hosting": {
       "hero": {
-        "tag": "Who We Serve",
-        "title": "Clients & Collabs",
-        "desc": "Nashied is positioned to work with startups, SMEs, and established companies that need a stronger digital presence.",
-        "bg": "/assets/csr/a (10).png"
+        "tag": "Reliable Infrastructure",
+        "title": "Hosting & Cloud",
+        "desc": "Nashied provides reliable hosting and cloud-based support for businesses that need dependable digital infrastructure.",
+        "bg": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
       },
-      "storyTitle": "Practical partner for growth",
-      "storyDesc": "Whether you are an emerging brand or a corporate business, Nashied helps you combine marketing strength with technology-backed execution."
+      "storyTitle": "Digital Continuity & Performance",
+      "storyDesc": "Our hosting solutions include business email setup, managed cloud deployment, and secure storage planning designed for modern teams."
     },
     "news": {
       "hero": {

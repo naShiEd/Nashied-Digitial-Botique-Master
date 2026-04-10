@@ -36,7 +36,7 @@ export default function Footer() {
             <h4 className="footer-heading">Resources</h4>
             <ul>
               <li><Link to="/sustainability">Sustainability</Link></li>
-              <li><Link to="/partnerships">Partnerships</Link></li>
+              <li><Link to="/hosting">Hosting</Link></li>
               <li><Link to="/team">Our Team</Link></li>
               <li><Link to="/sustainability-policy" style={{ color: 'var(--teal)', fontWeight: 600 }}>Eco-Responsibility</Link></li>
             </ul>

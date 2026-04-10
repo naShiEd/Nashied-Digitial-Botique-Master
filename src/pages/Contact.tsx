@@ -138,7 +138,7 @@ export default function Contact() {
                       <option>General Inquiry</option>
                       <option>Logistics & Transport</option>
                       <option>Fuel & Dry Goods</option>
-                      <option>Partnerships</option>
+                      <option>Hosting</option>
                     </select>
                   </div>
                   <div className="form-group" style={{ marginBottom: '32px' }}>

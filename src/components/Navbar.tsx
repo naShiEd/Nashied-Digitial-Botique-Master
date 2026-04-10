@@ -22,8 +22,8 @@ const navLinks = [
     ],
   },
   {
-    label: 'Partners',
-    href: '/partners',
+    label: 'Hosting',
+    href: '/hosting',
     children: [],
   },
   {

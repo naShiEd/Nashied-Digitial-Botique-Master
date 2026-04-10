@@ -8,6 +8,7 @@ export interface CMSContent {
     logo: string;
     contact: {
       email: string;
+      supportEmail?: string;
       phone: string;
       whatsapp: string;
       address: string;

@@ -21,29 +21,31 @@ export default function Home() {
 
   return (
     <div className="page-enter">
-      {/* Hero — full-bleed navy */}
-      <section className="home-hero">
-        <div className="hero-bg-gradient" />
-        <HeroBlob />
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div className="hero-content">
-            <ScrollReveal>
-              <h1 className="hero-title" style={{ fontWeight: 800, color: 'var(--white)', letterSpacing: '-0.04em', maxWidth: '900px', marginBottom: '32px' }}>
-                {page.hero.title.split('\n').map((line: string, i: number) => (
-                  <span key={i} style={{ display: 'block' }}>{line}</span>
-                ))}
-              </h1>
-              <p className="hero-subtitle" style={{ fontSize: '20px', color: 'var(--gray)', maxWidth: '600px', margin: '0 auto 48px', lineHeight: 1.6, textAlign: 'center' }}>
-                 {page.hero.subtitle}
-              </p>
-              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                 <Link to="/contact" className="btn-primary">{page.hero.primaryBtn}</Link>
-                 <Link to="/about" className="btn-outline">{page.hero.secondaryBtn}</Link>
-              </div>
-            </ScrollReveal>
+      {/* Hero - white outer layer, navy content inside */}
+      <div style={{ background: '#ffffff', padding: '4px' }}>
+        <section className="home-hero">
+          <div className="hero-bg-gradient" />
+          <HeroBlob />
+          <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+            <div className="hero-content">
+              <ScrollReveal>
+                <h1 className="hero-title" style={{ fontWeight: 800, color: 'var(--white)', letterSpacing: '-0.04em', maxWidth: '900px', marginBottom: '32px' }}>
+                  {page.hero.title.split('\n').map((line: string, i: number) => (
+                    <span key={i} style={{ display: 'block' }}>{line}</span>
+                  ))}
+                </h1>
+                <p className="hero-subtitle" style={{ fontSize: '20px', color: 'var(--gray)', maxWidth: '600px', margin: '0 auto 48px', lineHeight: 1.6, textAlign: 'center' }}>
+                   {page.hero.subtitle}
+                </p>
+                <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                   <Link to="/contact" className="btn-primary">{page.hero.primaryBtn}</Link>
+                   <Link to="/about" className="btn-outline">{page.hero.secondaryBtn}</Link>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Our Scale Section - Pure CSS Marquee */}
       <section className="scale-slider-section" style={{ padding: '120px 0', position: 'relative', background: 'var(--navy-mid)' }}>

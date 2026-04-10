@@ -14,16 +14,14 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--navy);
-  border: 4px solid var(--white);
-  border-radius: 32px;
+  border-radius: 28px; /* Clean inner radius inside the white wrapper */
 }
 .hero-bg-gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(255, 122, 0, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 80% 70%, rgba(27, 51, 216, 0.1) 0%, transparent 50%),
-              var(--navy);
+  background: radial-gradient(circle at 20% 30%, rgba(255, 122, 0, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(27, 51, 216, 0.25) 0%, transparent 60%),
+              var(--gradient-premium-blue); /* Richer premium background */
   z-index: 0;
 }
 .hero-content {

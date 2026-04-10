@@ -27,7 +27,7 @@ const navLinks = [
     children: [],
   },
   {
-    label: 'Sustainability',
+    label: 'Our Work',
     href: '/sustainability',
     children: [],
   },

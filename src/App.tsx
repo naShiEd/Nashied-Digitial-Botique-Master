@@ -1,84 +1,99 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Work from "./pages/Work";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import ProjectInquiry from "./pages/ProjectInquiry";
-import ProjectDetail from "./pages/ProjectDetail";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
-import Tasks from "./pages/Tasks";
-import Clients from "./pages/Clients";
-import Projects from "./pages/Projects";
-import Finance from "./pages/Finance";
-import Purchases from "./pages/Purchases";
-import Payroll from "./pages/Payroll";
-import Reports from "./pages/Reports";
-import ServicesDashboard from "./pages/ServicesDashboard";
-import Documents from "./pages/Documents";
-import Settings from "./pages/Settings";
-import ProjectInternal from "./pages/ProjectInternal";
-import NotFound from "./pages/NotFound";
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import Lenis from 'lenis';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import About from './pages/About';
+import Team from './pages/Team';
+import Partnerships from './pages/Partnerships';
+import Contact from './pages/Contact';
+import MissionValues from './pages/MissionValues';
+import Sustainability from './pages/Sustainability';
+import Careers from './pages/Careers';
+import News from './pages/News';
+import Insights from './pages/Insights';
+import TeamMember from './pages/TeamMember';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Cookies from './pages/Cookies';
+import SustainabilityPolicy from './pages/SustainabilityPolicy';
+import AdminDashboard from './admin/AdminDashboard';
+import Login from './admin/Login';
+import PageLoader from './components/PageLoader';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { CMSProvider } from './CMSContext';
+import './App.css';
 
-import ClientPortal from "./pages/ClientPortal";
-import { AuthProvider } from "./contexts/AuthContext";
-import { FloatingInquiry } from "./components/FloatingInquiry";
+/** Main public site layout — wraps all public pages */
+function SiteLayout() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.4,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1.2,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => lenis.destroy();
+  }, []);
 
-import { PublicLayout } from "./components/PublicLayout";
+  return (
+    <div className="app-container">
+      <PageLoader />
+      <FloatingWhatsApp />
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
-const queryClient = new QueryClient();
+function App() {
+  return (
+    <CMSProvider>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          {/* ── Admin routes — standalone, no Navbar/Footer ── */}
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/login" element={<Login />} />
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <AuthProvider>
-        <Toaster />
-        <Sonner />
-        <FloatingInquiry />
-        <BrowserRouter>
-          <Routes>
-            {/* Dashboard and Auth Routes (No Smooth Scroll) */}
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/dashboard/tasks" element={<Tasks />} />
-            <Route path="/dashboard/clients" element={<Clients />} />
-            <Route path="/dashboard/projects" element={<Projects />} />
-            <Route path="/dashboard/projects/:id" element={<ProjectInternal />} />
-            <Route path="/dashboard/finance" element={<Finance />} />
-            <Route path="/dashboard/purchases" element={<Purchases />} />
-            <Route path="/dashboard/payroll" element={<Payroll />} />
-            <Route path="/dashboard/reports" element={<Reports />} />
-            <Route path="/dashboard/services" element={<ServicesDashboard />} />
-            <Route path="/dashboard/documents" element={<Documents />} />
-            <Route path="/dashboard/settings" element={<Settings />} />
-            <Route path="/portal/:type/:id" element={<ClientPortal />} />
-
-            {/* Public Routes with Premium Smooth Scroll & Progress */}
-            <Route element={<PublicLayout><Index /></PublicLayout>} path="/" />
-            <Route element={<PublicLayout><Work /></PublicLayout>} path="/work" />
-            <Route element={<PublicLayout><ProjectDetail /></PublicLayout>} path="/work/:slug" />
-            <Route element={<PublicLayout><Services /></PublicLayout>} path="/services" />
-            <Route element={<PublicLayout><About /></PublicLayout>} path="/about" />
-            <Route element={<PublicLayout><Contact /></PublicLayout>} path="/contact" />
-            <Route element={<PublicLayout><ProjectInquiry /></PublicLayout>} path="/project-inquiry" />
-            <Route element={<PublicLayout><Blog /></PublicLayout>} path="/blog" />
-            <Route element={<PublicLayout><BlogPost /></PublicLayout>} path="/blog/:id" />
-
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+          {/* ── Public site routes — wrapped in SiteLayout ── */}
+          <Route element={<SiteLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/our-team" element={<Team />} />
+            <Route path="/meet-the-team" element={<Team />} />
+            <Route path="/team/:id" element={<TeamMember />} />
+            <Route path="/mission-values" element={<MissionValues />} />
+            <Route path="/partnerships" element={<Partnerships />} />
+            <Route path="/partners" element={<Partnerships />} />
+            <Route path="/sustainability" element={<Sustainability />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/sustainability-policy" element={<SustainabilityPolicy />} />
+            <Route path="*" element={<Home />} />
+          </Route>
+        </Routes>
+      </Router>
+    </CMSProvider>
+  );
+}
 
 export default App;

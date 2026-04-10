@@ -4,8 +4,9 @@
     "logo": "/logo.png",
     "contact": {
       "email": "hello@nashied.com",
-      "phone": "+263 (0) ...",
-      "whatsapp": "+263...",
+      "supportEmail": "hosting@nashieddigital.co.zw",
+      "phone": "+263 78 539 1003",
+      "whatsapp": "+263 78 539 1003",
       "city": "Harare",
       "address": "Digital Boutique HQ",
       "postal": "Zimbabwe"
@@ -141,7 +142,60 @@
         "bg": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
       },
       "storyTitle": "Digital Continuity & Performance",
-      "storyDesc": "Our hosting solutions include business email setup, managed cloud deployment, and secure storage planning designed for modern teams."
+      "storyDesc": "Our hosting solutions include business email setup, managed cloud deployment, and secure storage planning designed for modern teams.",
+      "promo": "Free .CO.ZW domain registration | Renewal: $5",
+      "plans": [
+        {
+          "name": "BRONZE",
+          "price": "39.99",
+          "period": "/YEAR",
+          "features": [
+            "5 GB Storage",
+            "5 Email Accounts",
+            "10 GB Bandwidth",
+            "1 Sub-Domain",
+            "1 MySQL Database",
+            "1 FTP Account",
+            "99.9% Uptime Guarantee",
+            "FREE SSL Certificate",
+            "Free Daily Backup"
+          ]
+        },
+        {
+          "name": "SILVER",
+          "price": "69.99",
+          "period": "/YEAR",
+          "features": [
+            "10 GB Storage",
+            "10 Email Accounts",
+            "10 GB Bandwidth",
+            "4 Sub-Domains",
+            "2 MySQL Databases",
+            "2 FTP Accounts",
+            "99.9% Uptime Guarantee",
+            "FREE SSL Certificate",
+            "Free Daily Backup",
+            "Malware Scanning & Quarantine"
+          ]
+        },
+        {
+          "name": "GOLD",
+          "price": "90.99",
+          "period": "/YEAR",
+          "features": [
+            "20 GB Storage",
+            "12 Email Accounts",
+            "20 GB Bandwidth",
+            "10 Sub-Domains",
+            "5 MySQL Databases",
+            "5 FTP Accounts",
+            "99.9% Uptime Guarantee",
+            "FREE SSL Certificate",
+            "Free Daily Backup",
+            "Malware Scanning & Quarantine"
+          ]
+        }
+      ]
     },
     "news": {
       "hero": {
